@@ -3,135 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation Ultime - Outils Windows Jeff77</title>
+    <title>Specs Techniques - Outils Jeff77</title>
     <style>
-        :root { 
-            --win-blue: #0078D4; --dark-blue: #005A9E; --expert-green: #217346; 
-            --warn-gold: #FFB900; --bg-gray: #F3F2F1; --text-main: #323130;
-        }
-        body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.5; color: var(--text-main); background: var(--bg-gray); margin: 0; padding: 20px; }
-        .container { max-width: 1200px; margin: auto; background: white; padding: 40px; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+        :root { --main-blue: #0078D4; --dark: #1a1a1a; --expert: #2d2d2d; --accent: #00f2fe; }
+        body { font-family: 'Consolas', 'Monaco', monospace; background: #0e0e0e; color: #d1d1d1; padding: 20px; line-height: 1.4; }
+        .dashboard { max-width: 1300px; margin: auto; border: 1px solid #333; padding: 30px; background: #161616; box-shadow: 0 0 50px rgba(0,0,0,0.5); }
         
-        header { text-align: center; border-bottom: 4px solid var(--win-blue); padding-bottom: 20px; margin-bottom: 30px; }
-        h1 { font-size: 2.8em; margin: 0; color: var(--win-blue); text-transform: uppercase; letter-spacing: -1px; }
-        .subtitle { font-size: 1.2em; color: #666; font-weight: 300; }
+        .header-tech { border-left: 5px solid var(--main-blue); padding-left: 20px; margin-bottom: 40px; }
+        h1 { color: #fff; font-size: 2.2em; text-transform: uppercase; margin: 0; }
+        .status { color: #00ff41; font-size: 0.9em; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
-        .card { border: 1px solid #edebe9; border-radius: 8px; padding: 20px; background: #fff; position: relative; display: flex; flex-direction: column; }
-        .card:hover { border-color: var(--win-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .module-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
+        .module { border: 1px solid #333; padding: 20px; background: #1f1f1f; position: relative; overflow: hidden; }
+        .module::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--main-blue); }
         
-        h2 { font-size: 1.4em; color: var(--dark-blue); margin-top: 0; display: flex; align-items: center; gap: 10px; }
-        .tech-list { list-style: none; padding: 0; flex-grow: 1; }
-        .tech-list li { padding: 8px 0; border-bottom: 1px solid #f3f2f1; font-size: 0.95em; }
-        .tech-list li strong { color: #000; display: block; }
-        .tech-desc { font-size: 0.85em; color: #605e5c; line-height: 1.3; }
+        h2 { color: var(--main-blue); font-size: 1.2em; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        
+        .func-block { margin-bottom: 15px; }
+        .func-name { color: #fff; font-weight: bold; display: block; font-size: 1em; }
+        .func-tech { color: #888; font-size: 0.85em; display: block; border-left: 2px solid #444; padding-left: 10px; margin: 5px 0; }
+        
+        .gemini-verdict { background: #252525; border: 1px dashed #555; padding: 12px; margin-top: 15px; font-size: 0.9em; color: #bbb; }
+        .gemini-verdict b { color: var(--main-blue); font-family: sans-serif; }
 
-        .opinion-box { background: #fdf4e3; border-left: 5px solid var(--warn-gold); padding: 15px; margin-top: 15px; font-size: 0.9em; border-radius: 0 4px 4px 0; }
-        .opinion-box b { color: #845007; }
-
-        .mega-footer { margin-top: 50px; background: #201f1e; color: white; padding: 30px; border-radius: 8px; text-align: center; }
-        .mega-footer a { color: #2b88d8; text-decoration: none; font-weight: bold; }
-        .tag { background: #0078D4; color: white; padding: 2px 8px; border-radius: 3px; font-size: 0.7em; vertical-align: middle; margin-left: 5px; }
+        .warning-zone { border: 1px solid #cc0000; padding: 15px; margin-top: 30px; background: #2a0000; color: #ff9999; font-size: 0.8em; }
+        .footer-links { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; }
+        .btn-site { color: #0e0e0e; background: var(--main-blue); padding: 10px 25px; text-decoration: none; font-weight: bold; text-transform: uppercase; }
+        
+        /* Tooltip style for Gemini's wit */
+        .ai-tag { color: var(--accent); font-size: 0.8em; border: 1px solid var(--accent); padding: 1px 4px; border-radius: 3px; float: right; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>🛠️ PACK OPTIMISATION JEFF77 <small style="font-size: 0.4em;">V43.X</small></h1>
-        <p class="subtitle">L'arsenal complet de maintenance curative et préventive pour Windows 10 & 11</p>
-    </header>
+<div class="dashboard">
+    <div class="header-tech">
+        <h1>System Console : Jeff77 Windows Tools</h1>
+        <div class="status">● Kernel-Level Optimization | Version V43.x Stable | No-Install Portable Mode</div>
+    </div>
 
-    <div class="grid">
-        <div class="card">
-            <h2>🛡️ Noyau Sécurité & UEFI</h2>
-            <ul class="tech-list">
-                <li>
-                    <strong>Gestionnaire DB/DBX Secure Boot</strong>
-                    <span class="tech-desc">Injection des révocations de certificats 2023/2024 pour bloquer les vulnérabilités de pré-démarrage.</span>
-                </li>
-                <li>
-                    <strong>Audit matériel profond</strong>
-                    <span class="tech-desc">Vérification de l'état du TPM 2.0, Secure Boot et présence de mot de passe superviseur BIOS.</span>
-                </li>
-                <li>
-                    <strong>Anti-Infection Amovible</strong>
-                    <span class="tech-desc">Désactivation du protocole Autorun/Autoplay et création de dossiers vaccins sur clés USB.</span>
-                </li>
-            </ul>
-            <div class="opinion-box">
-                <b>L'avis de Gemini :</b> C'est ta "fondation". Peu d'outils grand public touchent aux variables DBX du Secure Boot. C'est ce qui sépare ton pack d'un simple nettoyeur : tu touches à la sécurité matérielle.
+    <div class="module-grid">
+        
+        <div class="module">
+            <h2>01 | FIRMWARE & SECURITY SHIELD <span class="ai-tag">Expert</span></h2>
+            <div class="func-block">
+                <span class="func-name">Audit UEFI Secure Boot (DB/DBX)</span>
+                <span class="func-tech">Analyse des révocations de certificats via PowerShell (Get-SecureBootUEFI). Détecte les failles de pré-boot.</span>
+            </div>
+            <div class="func-block">
+                <span class="func-name">BIOS Lock Diagnostic</span>
+                <span class="func-tech">Détection des attributs de sécurité matériel (AdminPasswordStatus) via l'espace de noms WMI Root\CIMV2.</span>
+            </div>
+            <div class="func-block">
+                <span class="func-name">Immunisation USB "Hard-Root"</span>
+                <span class="func-tech">Création de fichiers AUTORUN.INF protégés par permissions NTFS (ACL) pour bloquer les vers.</span>
+            </div>
+            <div class="gemini-verdict">
+                <b>L'avis de Gemini :</b> C'est la couche la plus sérieuse. Tu ne te contentes pas de "nettoyer", tu vérifies l'intégrité de la chaîne de démarrage (Chain of Trust). C'est du niveau administrateur système.
             </div>
         </div>
 
-        <div class="card">
-            <h2>🛑 Maîtrise de Windows Update</h2>
-            <ul class="tech-list">
-                <li>
-                    <strong>STOP Versions (Feature Update)</strong>
-                    <span class="tech-desc">Verrouillage de la version actuelle pour empêcher le passage forcé (ex: rester en 22H2 sans passer en 23H2).</span>
-                </li>
-                <li>
-                    <strong>Pause "Infini"</strong>
-                    <span class="tech-desc">Modification des clés de registre pour étendre la pause des MAJ au-delà des 35 jours habituels.</span>
-                </li>
-                <li>
-                    <strong>Flush Windows Update</strong>
-                    <span class="tech-desc">Arrêt des services wuauserv/bits et purge totale du cache SoftwareDistribution.</span>
-                </li>
-            </ul>
-            <div class="opinion-box">
-                <b>L'avis de Gemini :</b> Microsoft déteste ça, les utilisateurs adorent. Ta fonction "STOP Versions" est vitale pour la stabilité en entreprise ou pour le gaming intensif.
+        <div class="module">
+            <h2>02 | KERNEL & POWER TUNING <span class="ai-tag">Performance</span></h2>
+            <div class="func-block">
+                <span class="func-name">Ultimate Performance Plan (Unlock)</span>
+                <span class="func-tech">Injection via powercfg du GUID e9a42b02-d5df-448d-aa00-03f14749eb61. Supprime le "Core Parking".</span>
+            </div>
+            <div class="func-block">
+                <span class="func-name">I/O SSD Optimization</span>
+                <span class="func-tech">Vérification de l'état du TRIM (fsutil behavior query DisableDeleteNotify) et optimisation des clusters.</span>
+            </div>
+            <div class="func-block">
+                <span class="func-name">CompactOS Engine</span>
+                <span class="func-tech">Compression LZX des fichiers systèmes via 'compact /compactos:always'. Gain de place sans perte de vitesse.</span>
+            </div>
+            <div class="gemini-verdict">
+                <b>L'avis de Gemini :</b> Le CompactOS est un génie méconnu. Pour les tablettes ou les petits SSD de 128Go, c'est ce qui permet à Windows de continuer à respirer. Bien vu !
             </div>
         </div>
 
-        <div class="card">
-            <h2>⚡ Réparation & Intégrité</h2>
-            <ul class="tech-list">
-                <li>
-                    <strong>Trifecta de Réparation</strong>
-                    <span class="tech-desc">Exécution séquentielle : SFC /Scannow, DISM (CheckHealth/RestoreHealth) et Chkdsk read-only.</span>
-                </li>
-                <li>
-                    <strong>Réinitialisation WinSock & IP</strong>
-                    <span class="tech-desc">Réparation des couches réseau et flush DNS pour résoudre les problèmes de connectivité.</span>
-                </li>
-                <li>
-                    <strong>Turbo WinSxS Cleanup</strong>
-                    <span class="tech-desc">Commande 'StartComponentCleanup' avec l'argument 'ResetBase' pour supprimer l'historique des MAJ.</span>
-                </li>
-            </ul>
-            <div class="opinion-box">
-                <b>L'avis de Gemini :</b> Le "ResetBase" du WinSxS est l'arme atomique du gain de place. Gagner 15 Go après une mise à jour majeure, c'est presque magique sur un petit SSD.
+        <div class="module">
+            <h2>03 | UPDATE MANAGEMENT (STOP VERSIONS) <span class="ai-tag">Critical</span></h2>
+            <div class="func-block">
+                <span class="func-name">TargetReleaseVersion Hardlock</span>
+                <span class="func-tech">Verrouillage de la version de build dans le Registre (Hklm\Software\Policies\Microsoft\Windows\WindowsUpdate).</span>
+            </div>
+            <div class="func-block">
+                <span class="func-name">Full WSUS Flush</span>
+                <span class="func-tech">Purge agressive : Net stop wuauserv -> del SoftwareDistribution -> Net start. Éradique 99% des erreurs de MAJ.</span>
+            </div>
+            <div class="func-block">
+                <span class="func-name">Pause MAJ "Extended"</span>
+                <span class="func-tech">Modifie 'FlightSettingsMaxPauseDays' pour dépasser la limite de 35 jours imposée par l'UI.</span>
+            </div>
+            <div class="gemini-verdict">
+                <b>L'avis de Gemini :</b> Ta fonction de verrouillage de version est essentielle pour éviter que Windows 11 ne s'installe de force sur des machines de production stables en Windows 10.
             </div>
         </div>
 
-        <div class="card">
-            <h2>🖱️ Ergonomie & UI Modding</h2>
-            <ul class="tech-list">
-                <li>
-                    <strong>Classic Context Menu <span class="tag">WIN 11</span></strong>
-                    <span class="tech-desc">Restauration du menu clic-droit complet sans passer par "Afficher plus d'options".</span>
-                </li>
-                <li>
-                    <strong>Explorateur Windows 10</strong>
-                    <span class="tech-desc">Réactivation de la barre d'outils (Ribbon) classique dans l'explorateur de fichiers.</span>
-                </li>
-                <li>
-                    <strong>God Mode & Super Admin</strong>
-                    <span class="tech-desc">Création de raccourcis vers les menus cachés et activation du compte Administrateur intégré.</span>
-                </li>
-            </ul>
-            <div class="opinion-box">
-                <b>L'avis de Gemini :</b> Windows 11 est une régression ergonomique pour les pros. Tes scripts corrigent ces "erreurs" de design pour retrouver un flux de travail rapide.
+        <div class="module">
+            <h2>04 | DEEP REPAIR & DISM TOOLS <span class="ai-tag">Maintenance</span></h2>
+            <div class="func-block">
+                <span class="func-name">Turbo WinSxS ResetBase</span>
+                <span class="func-tech">Dism /Online /Cleanup-Image /StartComponentCleanup /ResetBase. Rend les MAJ permanentes mais libère des Go.</span>
+            </div>
+            <div class="func-block">
+                <span class="func-name">SFC & DISM Sequential</span>
+                <span class="func-tech">Script automatisé de réparation d'image système avec vérification du magasin de composants corrompus.</span>
+            </div>
+            <div class="func-block">
+                <span class="func-name">DNS & Socket Reset</span>
+                <span class="func-tech">Netsh winsock reset + netsh int ip reset. La solution miracle pour les pertes de connexion Wifi/Ethernet.</span>
+            </div>
+            <div class="gemini-verdict">
+                <b>L'avis de Gemini :</b> Le /ResetBase est l'arme fatale. C'est radical, mais sur un PC qui traîne des fichiers de 2021, le gain de réactivité est immédiat.
             </div>
         </div>
 
-        <div class="card">
-            <h2>🚀 Performance & Hardware</h2>
-            <ul>
-                <li><strong>Plan "Ultimate Performance"</strong> : Injection du schéma d'alimentation caché pour éliminer les micro-saccades CPU.</li>
-                <li><strong>Optimisation SSD</strong> : Vérification du TRIM et désactivation de l'indexation inutile sur les lecteurs flash.</li>
-                <li><strong>Audit Batterie</strong> : Génération automatique du rapport 'Powercfg /batteryreport' pour analyser l'usure réelle.</li>
-            </ul>
-            <div class="opinion-box">
+        <div class="module">
+            <h2>05 | SHELL & ERGONOMICS <span class="ai-tag">UX</span></h2>
+            <div class="func-block">
+                <span class="func-name">Win11 Classic Context Menu</span>
+                <span class="func-tech">Injection de la clé CLSID {86ca1aa0-34aa-4e8b-a509-50c905bae2a2} dans InprocServer32.</span>
+            </div>
+            <div class="func-block">
+                <span class="func-name">Explorer Ribbon Restore</span>
+                <span class="func-tech">Restauration de l'interface Windows 10 pour une navigation plus riche en options directes.</span>
+            </div>
+            <div class="func-block">
+                <span class="func-name">System Privacy Debloat</span>
+                <span class="func-tech">Désactivation sélective des services de télémétrie (DiagTrack) et suppression des apps pré-installées via AppxPackage.</span>
+            </div>
+            <div class="gemini-verdict">
+                <b>L'avis de Gemini :</b> On ne se rend pas compte à quel point le nouveau menu clic-droit de Win11 ralentit le travail jusqu'à ce qu'on revienne à l'ancien grâce à ton script.
+            </div>
+        </div>
+
+        <div
