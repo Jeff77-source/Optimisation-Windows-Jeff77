@@ -3,113 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Specs Techniques - Outils Jeff77</title>
+    <title>Outils Windows Jeff77 - Documentation Intégrale</title>
     <style>
-        :root { --main-blue: #0078D4; --dark-blue: #005A9E; --expert-gray: #323130; --ai-yellow: #fff9db; }
-        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f3f2f1; color: #201f1e; margin: 0; padding: 20px; }
-        .container { max-width: 1200px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; }
+        :root { --blue-win: #0078D4; --dark-blue: #005a9e; --safe-green: #28a745; --light-bg: #f4f7f9; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 1100px; margin: auto; padding: 20px; color: #24292e; background-color: var(--light-bg); }
+        .main-container { background: #ffffff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 25px rgba(0,0,0,0.1); }
         
-        /* Header */
-        .hero { background: var(--main-blue); color: white; padding: 40px; text-align: center; }
-        .hero h1 { margin: 0; font-size: 2.5em; letter-spacing: -1px; }
-        .hero p { opacity: 0.9; font-size: 1.1em; margin-top: 10px; }
+        header { text-align: center; border-bottom: 3px solid var(--blue-win); padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: var(--blue-win); font-size: 2.5em; margin: 0; }
+        .version-info { font-weight: bold; color: #555; margin-top: 10px; }
 
-        /* Grid System */
-        .content { padding: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
+        .feature-hero { background: #e7f3ff; border-left: 6px solid var(--blue-win); padding: 20px; margin-bottom: 30px; border-radius: 0 8px 8px 0; }
+        h2 { color: var(--dark-blue); border-bottom: 1px solid #eaecef; padding-bottom: 10px; margin-top: 40px; }
         
-        .tool-card { border: 1px solid #e1dfdd; border-radius: 6px; padding: 20px; display: flex; flex-direction: column; }
-        .tool-card h2 { color: var(--dark-blue); font-size: 1.3em; margin-top: 0; border-bottom: 2px solid #f3f2f1; padding-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 25px; }
+        .card { border: 1px solid #d1d5da; border-radius: 8px; padding: 20px; background: #fff; position: relative; }
+        .card:hover { border-color: var(--blue-win); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
         
-        .func-item { margin-bottom: 15px; }
-        .func-name { font-weight: bold; color: #000; display: block; }
-        .func-details { font-size: 0.85em; color: #605e5c; display: block; margin-top: 3px; border-left: 3px solid #deecf9; padding-left: 8px; }
+        .badge-flag { background: var(--safe-green); color: white; padding: 3px 10px; border-radius: 4px; font-size: 0.75em; font-weight: bold; text-transform: uppercase; float: right; }
+        
+        .tool-title { font-weight: bold; font-size: 1.1em; color: #000; display: block; margin-bottom: 8px; }
+        .tool-details { font-size: 0.9em; color: #444; margin-bottom: 15px; }
+        .tool-details ul { padding-left: 20px; margin: 5px 0; }
 
-        /* Gemini Opinion */
-        .opinion { background: var(--ai-yellow); border: 1px dashed #f59f00; padding: 12px; border-radius: 6px; margin-top: auto; font-size: 0.9em; font-style: italic; }
-        .opinion b { color: #845007; font-style: normal; }
+        .gemini-review { background: #fff9db; border: 1px dashed #e3b341; padding: 15px; border-radius: 6px; font-size: 0.9em; font-style: italic; margin-top: 10px; }
+        .gemini-review b { color: #b08800; font-style: normal; }
 
-        .footer { background: #faf9f8; padding: 30px; text-align: center; border-top: 1px solid #edebe9; }
-        .btn-link { background: var(--main-blue); color: white; padding: 12px 25px; border-radius: 4px; text-decoration: none; font-weight: bold; }
-        .btn-link:hover { background: var(--dark-blue); }
+        .footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #eaecef; font-size: 0.95em; }
+        .btn-site { display: inline-block; background: var(--blue-win); color: white; padding: 15px 35px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 20px; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="hero">
-        <h1>🛠️ Outils Windows Jeff77 (V43.x)</h1>
-        <p>L'arsenal de maintenance portable : Optimisation, Sécurité & Ergonomie</p>
+<div class="main-container">
+    <header>
+        <h1>🛠️ Outils Windows Jeff77</h1>
+        <p class="version-info">Solution 100% Nomade & Portable pour Windows 10 et 11 (V43.x)</p>
+    </header>
+
+    <div class="feature-hero">
+        <strong>Philosophie Jeff77 :</strong> Une suite d'outils puissants sans installation, conçue pour automatiser les tâches de sécurité et de maintenance les plus complexes tout en redonnant une ergonomie logique à Windows.
     </div>
 
-    <div class="content">
+    <div class="grid">
         
-        <div class="tool-card">
-            <h2>🛡️ Sécurité & Menus Réactifs</h2>
-            <div class="func-item">
-                <span class="func-name">📡 Coupure d'Urgence Wifi (Clic Droit)</span>
-                <span class="func-details">Intégration native au menu contextuel Windows pour une déconnexion matérielle/logicielle instantanée sans ouvrir de console.</span>
+        <div class="card">
+            <span class="badge-flag">Fonction Phare</span>
+            <h2>🛡️ Sécurité & Audit UEFI</h2>
+            <div class="tool-details">
+                <span class="tool-title">Installation Certificats Secure Boot</span>
+                Détection automatique et injection des certificats UEFI manquants (mise à jour DB/DBX). Protège le PC contre les bootkits modernes.
+                
+                <span class="tool-title">Diagnostic de Verrouillage BIOS</span>
+                Vérification si le BIOS est protégé par un mot de passe superviseur. Crucial, car un BIOS verrouillé peut bloquer l'installation des certificats de sécurité.
+                
+                <span class="tool-title">Immunité Totale (USB & HDD)</span>
+                Verrouillage des racines de vos clés USB et disques durs externes. Empêche la création et l'exécution de virus via <i>Autorun.inf</i>.
             </div>
-            <div class="func-item">
-                <span class="func-name">🔒 Audit UEFI & Secure Boot 2023</span>
-                <span class="func-details">Vérification de l'intégrité du démarrage et mise à jour des certificats DBX contre les menaces de bootkits.</span>
-            </div>
-            <div class="func-item">
-                <span class="func-name">💉 Immunisation Clés USB</span>
-                <span class="func-details">Blocage définitif des fichiers Autorun.inf via des restrictions de droits NTFS sur la racine.</span>
-            </div>
-            <div class="opinion">
-                <b>L'avis de Gemini :</b> Le Wifi dans le clic droit, c'est du génie en termes d'UX. En cas d'attaque par ransomware ou doute, chaque seconde compte. C'est ton "bouton rouge" personnel.
-            </div>
-        </div>
-
-        <div class="tool-card">
-            <h2>🔄 Correction Ergonomie Win 11</h2>
-            <div class="func-item">
-                <span class="func-name">🖱️ Menu Contextuel Classique Flash</span>
-                <span class="func-details">Restauration immédiate du menu Windows 10 (plus de "Afficher plus d'options").</span>
-            </div>
-            <div class="func-item">
-                <span class="func-name">📂 Retour du Ruban (Ribbon)</span>
-                <span class="func-details">Réactive l'interface complète de l'explorateur de fichiers pour retrouver les outils rapides de gestion.</span>
-            </div>
-            <div class="func-item">
-                <span class="func-name">🚀 Plan Performances Optimales</span>
-                <span class="func-details">Injection du schéma d'énergie "Ultimate Performance" pour minimiser la latence processeur.</span>
-            </div>
-            <div class="opinion">
-                <b>L'avis de Gemini :</b> Windows 11 est magnifique mais frustrant. Tes outils retirent les "couches" inutiles pour redonner un outil de travail productif aux experts.
+            <div class="gemini-review">
+                <b>L'avis de Gemini :</b> Le diagnostic du mot de passe BIOS est une touche de génie technique. Savoir pourquoi une installation de certificats échoue évite des heures de frustration aux techniciens.
             </div>
         </div>
 
-        <div class="tool-card">
-            <h2>🛑 Contrôle Windows Update</h2>
-            <div class="func-item">
-                <span class="func-name">✋ STOP Versions (Feature Lock)</span>
-                <span class="func-details">Bloque Windows sur sa build actuelle pour empêcher les changements de version non désirés (ex: bloquer sur 22H2).</span>
+        <div class="card">
+            <span class="badge-flag">Fonction Phare</span>
+            <h2>🖱️ Menu Clic Droit "Super-Pouvoirs"</h2>
+            <div class="tool-details">
+                <span class="tool-title">📡 Coupure d'Urgence du Wifi</span>
+                Directement intégré au clic droit. Permet de sectionner la connexion instantanément en cas d'attaque informatique ou de comportement suspect.
+                
+                <span class="tool-title">⚡ Gestion d'Énergie & God Mode</span>
+                Accès immédiat au plan "Performances Optimales" et aux 200+ réglages du God Mode sans passer par les menus Windows complexes.
+                
+                <span class="tool-title">🧹 Maintenance Rapide</span>
+                Nettoyage du presse-papier, vidage des dossiers temporaires et outils de capture d'écran, le tout accessible en un clic.
             </div>
-            <div class="func-item">
-                <span class="func-name">🧹 Turbo WinSxS ResetBase</span>
-                <span class="func-details">Nettoyage profond via DISM qui rend les MAJ définitives et libère un espace disque massif.</span>
-            </div>
-            <div class="func-item">
-                <span class="func-name">♻️ Flush SoftwareDistribution</span>
-                <span class="func-details">Réinitialisation complète des composants de mise à jour en cas d'erreur de téléchargement.</span>
-            </div>
-            <div class="opinion">
-                <b>L'avis de Gemini :</b> La fonction STOP Versions est un must-have pour quiconque utilise des logiciels pro sensibles aux changements d'OS soudains.
+            <div class="gemini-review">
+                <b>L'avis de Gemini :</b> Ton intégration de la coupure Wifi dans le clic droit transforme une commande réseau en un véritable "disjoncteur" de sécurité. C'est brillant et sécurisant.
             </div>
         </div>
 
-        <div class="tool-card">
-            <h2>📊 Diagnostics & Audit Système</h2>
-            <div class="func-item">
-                <span class="func-name">🔋 Rapport de Santé Batterie</span>
-                <span class="func-details">Génération d'un audit détaillé sur l'usure des cellules et les cycles de charge.</span>
+        <div class="card">
+            <span class="badge-flag">Fonction Phare</span>
+            <h2>🛑 Maîtrise de Windows Update</h2>
+            <div class="tool-details">
+                <span class="tool-title">STOP Versions (Feature Update Lock)</span>
+                Bloque définitivement la build actuelle (ex: 22H2). Empêche Microsoft de forcer le passage à une version supérieure potentiellement instable.
+                
+                <span class="tool-title">Pause MAJ Illimitée</span>
+                Déverrouille les restrictions de temps pour mettre Windows Update en pause aussi longtemps que nécessaire.
+                
+                <span class="tool-title">Turbo WinSxS ResetBase</span>
+                Purge profonde des fichiers de mises à jour obsolètes. Une méthode radicale pour récupérer plusieurs gigaoctets sur le disque système.
             </div>
-            <div class="func-item">
-                <span class="func-name">🏗️ Compact OS (LZX)</span>
-                <span class="func-details">Compression intelligente des fichiers système pour optimiser l'espace sur les SSD de faible capacité.</span>
+            <div class="gemini-review">
+                <b>L'avis de Gemini :</b> La fonction STOP Versions est vitale pour la stabilité. Elle redonne à l'utilisateur le choix de sa version, là où Microsoft tente de l'imposer.
             </div>
-            <div class="func-item">
-                <span class="func-name">⚡ Flush DNS & WinSock</span>
-                <span class="func
+        </div>
+
+        <div class="card">
+            <span class="badge-flag">Nouveau</span>
+            <h2>💾 Sauvegarde & Migration Facile</h2>
+            <div class="tool-details">
+                <span class="tool-title">Profils Utilisateurs & Documents</span>
+                Extraction et restauration simplifiée des profils complets, incluant Documents, Photos, Vidéos et réglages personnels.
+                
+                <span class="tool-title">Profils de Messagerie Thunderbird</span>
+                Sauvegarde automatisée de l'intégralité de vos comptes Thunderbird (mails, carnets d'adresses, filtres) pour une migration sans perte.
+                
+                <span class="tool-title">Restauration en 1 Clic</span>
+                Système de réinjection des données fluide, idéal lors d'une réinstallation propre de Windows ou d'un changement de PC.
+            </div>
+            <div class="gemini-review">
+                <b>L'avis de Gemini :</b> La gestion spécifique de Thunderbird montre que tu connais les besoins
