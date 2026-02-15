@@ -3,36 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outils Windows Jeff77 - Documentation Intégrale</title>
+    <title>Outils Windows Jeff77 - L'Excellence Technique</title>
     <style>
-        :root { --blue-win: #0078D4; --dark-blue: #005a9e; --safe-green: #28a745; --light-bg: #f4f7f9; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 1150px; margin: auto; padding: 20px; color: #24292e; background-color: var(--light-bg); }
-        .main-container { background: #ffffff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 25px rgba(0,0,0,0.1); }
+        :root { --blue-win: #0078D4; --dark-blue: #005a9e; --safe-green: #28a745; --light-bg: #f8f9fa; }
+        body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 1200px; margin: auto; padding: 20px; color: #333; background-color: var(--light-bg); }
+        .main-container { background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 5px 30px rgba(0,0,0,0.1); }
         
-        header { text-align: center; border-bottom: 3px solid var(--blue-win); padding-bottom: 20px; margin-bottom: 30px; }
-        h1 { color: var(--blue-win); font-size: 2.5em; margin: 0; }
-        .version-info { font-weight: bold; color: #555; margin-top: 10px; }
+        header { text-align: center; border-bottom: 4px solid var(--blue-win); padding-bottom: 25px; margin-bottom: 35px; }
+        h1 { color: var(--blue-win); font-size: 2.8em; margin: 0; text-transform: uppercase; letter-spacing: -1px; }
+        .tagline { font-size: 1.2em; color: #666; font-weight: bold; margin-top: 5px; }
 
-        .feature-hero { background: #e7f3ff; border-left: 6px solid var(--blue-win); padding: 20px; margin-bottom: 30px; border-radius: 0 8px 8px 0; }
-        h2 { color: var(--dark-blue); border-bottom: 1px solid #eaecef; padding-bottom: 10px; margin-top: 40px; }
+        .intro-box { background: #e7f3ff; border-left: 6px solid var(--blue-win); padding: 20px; margin-bottom: 30px; border-radius: 4px; }
         
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 25px; }
-        .card { border: 1px solid #d1d5da; border-radius: 8px; padding: 20px; background: #fff; position: relative; display: flex; flex-direction: column; }
+        h2 { color: var(--dark-blue); border-bottom: 2px solid #eaecef; padding-bottom: 10px; margin-top: 45px; display: flex; align-items: center; }
         
-        .badge-flag { background: var(--safe-green); color: white; padding: 3px 10px; border-radius: 4px; font-size: 0.75em; font-weight: bold; text-transform: uppercase; float: right; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; }
+        .card { border: 1px solid #d1d5da; border-radius: 10px; padding: 25px; background: #fff; display: flex; flex-direction: column; transition: 0.3s; }
+        .card:hover { border-color: var(--blue-win); transform: translateY(-2px); }
         
-        .tool-title { font-weight: bold; font-size: 1.1em; color: #000; display: block; margin-top: 15px; margin-bottom: 5px; }
-        .tool-details { font-size: 0.9em; color: #444; margin-bottom: 15px; flex-grow: 1; }
+        .phare-badge { background: #d93025; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8em; font-weight: bold; float: right; }
+        
+        .tool-title { font-weight: bold; font-size: 1.2em; color: #000; display: block; margin-top: 15px; border-left: 4px solid var(--blue-win); padding-left: 10px; }
+        .tool-details { font-size: 0.95em; color: #444; margin: 10px 0 20px 0; flex-grow: 1; }
+        .tool-details ul { padding-left: 20px; }
+        .tool-details li { margin-bottom: 8px; }
 
-        .gemini-review { background: #fff9db; border: 1px dashed #e3b341; padding: 12px; border-radius: 6px; font-size: 0.9em; font-style: italic; margin-top: 10px; }
-        .gemini-review b { color: #b08800; font-style: normal; }
+        .gemini-opinion { background: #fff9db; border: 1px dashed #e3b341; padding: 15px; border-radius: 8px; font-size: 0.95em; font-style: italic; }
+        .gemini-opinion b { color: #b08800; font-style: normal; }
 
-        /* Verdict Final */
-        .verdict-final { background: #f6f8fa; border: 2px solid var(--safe-green); border-radius: 10px; padding: 30px; margin-top: 50px; text-align: center; }
-        .star-rating { color: #e3b341; font-size: 2em; margin: 10px 0; font-weight: bold; }
+        /* Bloc de notation final */
+        .verdict-box { background: #f1f8ff; border: 2px solid var(--blue-win); border-radius: 15px; padding: 40px; margin-top: 60px; text-align: center; }
+        .star-rating { color: #e3b341; font-size: 3em; margin: 15px 0; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+        .final-note { font-size: 1.4em; font-weight: bold; color: var(--dark-blue); }
 
-        .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eaecef; font-size: 0.95em; }
-        .btn-site { display: inline-block; background: var(--blue-win); color: white; padding: 15px 35px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 20px; }
+        .footer { text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid #eaecef; }
+        .btn-official { display: inline-block; background: var(--blue-win); color: white; padding: 18px 45px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1em; transition: 0.3s; }
+        .btn-official:hover { background: var(--dark-blue); box-shadow: 0 5px 15px rgba(0,120,212,0.3); }
     </style>
 </head>
 <body>
@@ -40,42 +46,24 @@
 <div class="main-container">
     <header>
         <h1>🛠️ Outils Windows Jeff77</h1>
-        <p class="version-info">L'arsenal ultime de maintenance nomade (V43.x)</p>
+        <div class="tagline">La Boîte à Outils Système de Référence • Version V43.x</div>
     </header>
 
-    <div class="feature-hero">
-        <strong>Concept :</strong> Une boîte à outils 100% portable conçue pour automatiser la sécurité UEFI, la sauvegarde de données et l'optimisation profonde sans jamais rien installer sur le PC.
+    <div class="intro-box">
+        <strong>Expertise & Mobilité :</strong> Un arsenal 100% portable, sans aucune installation, conçu pour les techniciens et les utilisateurs exigeants. Une solution unique pour réparer, sécuriser et optimiser Windows 10 et 11.
     </div>
 
     <div class="grid">
         
         <div class="card">
-            <span class="badge-flag">PHARE</span>
-            <h2>🛡️ Sécurité & Audit UEFI</h2>
+            <div><span class="phare-badge">FONCTION PHARE</span></div>
+            <h2>🛡️ Sécurité Avancée & UEFI</h2>
             <div class="tool-details">
-                <span class="tool-title">Installation Certificats Secure Boot</span>
-                Injecte les certificats UEFI manquants (DB/DBX) pour combler les failles critiques.
+                <span class="tool-title">Gestionnaire de Certificats Secure Boot</span>
+                Analyse la base de signatures UEFI et installe automatiquement les certificats manquants (DB/DBX) pour combler les failles de sécurité majeures.
                 
-                <span class="tool-title">Diagnostic BIOS & Mot de Passe</span>
-                Détecte si un mot de passe BIOS bloque l'accès aux variables UEFI, empêchant ainsi l'installation des certificats de sécurité.
+                <span class="tool-title">Audit BIOS & Verrouillage Mot de Passe</span>
+                Détecte si le BIOS/UEFI est protégé par un mot de passe. Cette vérification est capitale car un BIOS verrouillé empêche l'injection de nouveaux certificats de sécurité.
                 
-                <span class="tool-title">Immunité USB & Disques Durs</span>
-                Verrouillage par permissions NTFS des racines de supports amovibles pour bloquer définitivement les infections par <i>Autorun.inf</i>.
-            </div>
-            <div class="gemini-review">
-                <b>L'avis de Gemini :</b> La détection du verrouillage BIOS est un diagnostic brillant. C'est l'étape que tout le monde oublie et qui explique bien des échecs de sécurisation.
-            </div>
-        </div>
-
-        <div class="card">
-            <span class="badge-flag">PHARE</span>
-            <h2>🖱️ Menu Clic Droit Étendu</h2>
-            <div class="tool-details">
-                <span class="tool-title">📡 Coupure d'Urgence du Wifi</span>
-                Directement inclus dans le clic droit pour couper instantanément la connexion en cas d'attaque informatique (Ransomware, intrusion).
-                
-                <span class="tool-title">⚡ Panoplie "Super-Pouvoirs"</span>
-                Gestion d'énergie (Performances Optimales), accès God Mode, nettoyage du presse-papier et outils de capture en un clic.
-                
-                <span class="tool-title">🔄 Menu Windows 11 Classic</span>
-                Restauration du clic droit classique et du ruban (Ribbon) de l'explorateur pour retrouver
+                <span class="tool-title">Immunité des Supports (USB & HDD)</span>
+                Verrouille la racine de vos clés USB et disques durs externes via des permissions NTFS strictes, rend
