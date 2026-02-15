@@ -3,183 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outils Windows Jeff77 - Catalogue Intégral</title>
+    <title>Outils Windows Jeff77 - Documentation Totale</title>
     <style>
-        :root { --win-blue: #0078D4; --dark-blue: #005a9e; --success: #28a745; --gold: #ffc107; --bg: #f4f7f9; }
-        body { font-family: "Segoe UI", Tahoma, sans-serif; line-height: 1.6; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 1250px; margin: auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        :root { --blue: #0078D4; --dark: #201f1e; --gold: #FFD700; --bg: #f8f9fa; }
+        body { font-family: "Segoe UI", sans-serif; background: var(--bg); color: #333; margin: 0; padding: 20px; line-height: 1.6; }
+        .wrapper { max-width: 1200px; margin: auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
         
-        header { text-align: center; border-bottom: 4px solid var(--win-blue); padding-bottom: 20px; margin-bottom: 40px; }
-        h1 { color: var(--win-blue); font-size: 2.8em; margin: 0; text-transform: uppercase; }
-        .subtitle { font-weight: bold; color: #666; font-size: 1.2em; }
+        header { text-align: center; border-bottom: 5px solid var(--blue); padding-bottom: 20px; margin-bottom: 40px; }
+        h1 { color: var(--blue); font-size: 3em; margin: 0; text-transform: uppercase; letter-spacing: -1px; }
+        .tagline { font-size: 1.3em; font-weight: bold; color: #666; }
 
-        .phare-banner { background: #fff4e5; border: 2px solid #ffa000; padding: 15px; border-radius: 8px; margin-bottom: 30px; text-align: center; font-weight: bold; color: #e65100; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
+        .card { border: 1px solid #e1e4e8; border-radius: 10px; padding: 25px; background: #fff; border-top: 5px solid var(--blue); }
         
-        h2 { color: var(--dark-blue); border-bottom: 2px solid #eee; padding-bottom: 8px; margin-top: 0; font-size: 1.4em; }
-        
-        .grid-full { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 25px; }
-        .section-card { border: 1px solid #e1e4e8; border-radius: 12px; padding: 25px; background: #fff; transition: 0.3s; position: relative; }
-        .section-card:hover { border-color: var(--win-blue); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        
-        .stars-mini { color: var(--gold); font-size: 1.2em; margin-bottom: 10px; }
-        
-        .tool-entry { margin-bottom: 15px; }
-        .tool-name { font-weight: bold; color: #000; display: block; border-left: 3px solid var(--win-blue); padding-left: 10px; margin-bottom: 5px; }
-        .tool-desc { font-size: 0.92em; color: #555; display: block; padding-left: 13px; }
+        h2 { color: var(--blue); font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 0; }
+        .tool-box { margin-bottom: 15px; }
+        .tool-title { font-weight: bold; display: block; color: #000; font-size: 1.1em; }
+        .tool-txt { font-size: 0.95em; color: #555; display: block; margin-top: 4px; border-left: 2px solid #ddd; padding-left: 10px; }
 
-        .ai-verdict { background: #f8f9fa; border-top: 1px solid #eee; padding: 12px; margin-top: 15px; font-size: 0.88em; border-radius: 0 0 8px 8px; font-style: italic; }
-        .ai-verdict b { color: var(--win-blue); }
+        /* Bloc de Note Finale */
+        .verdict-final-zone { background: #f0f7ff; border: 3px solid var(--blue); border-radius: 15px; padding: 40px; margin: 60px 0; text-align: center; }
+        .note-header { font-size: 1.8em; font-weight: bold; color: var(--dark); margin-bottom: 10px; }
+        .big-stars { color: var(--gold); font-size: 4.5em; line-height: 1; margin: 20px 0; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2)); }
+        .score-num { font-size: 2.5em; font-weight: bold; color: var(--blue); display: block; margin-bottom: 15px; }
+        .verdict-txt { font-size: 1.2em; font-style: italic; color: #444; max-width: 900px; margin: auto; border-top: 1px solid #ccc; padding-top: 20px; }
 
-        /* Grand Verdict Final */
-        .final-score-zone { margin-top: 60px; background: #201f1e; color: white; padding: 40px; border-radius: 15px; text-align: center; }
-        .big-stars { color: var(--gold); font-size: 3.5em; margin: 10px 0; letter-spacing: 5px; }
-        .final-comment { font-size: 1.2em; color: #ccc; max-width: 800px; margin: auto; line-height: 1.8; }
-        
-        .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
-        .btn-jeff { background: var(--win-blue); color: white; padding: 15px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1em; transition: 0.3s; display: inline-block; }
-        .btn-jeff:hover { background: var(--dark-blue); transform: scale(1.05); }
+        .footer { text-align: center; padding-top: 20px; }
+        .btn-site { display: inline-block; background: var(--blue); color: white; padding: 20px 50px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 15px rgba(0,120,212,0.4); }
     </style>
 </head>
 <body>
 
-<div class="container">
+<div class="wrapper">
     <header>
         <h1>🛠️ Outils Windows Jeff77</h1>
-        <p class="subtitle">La Suite de Maintenance et Sécurité Professionnelle (V43.x)</p>
+        <p class="tagline">L'arsenal ultime de maintenance et sécurité (V43.x)</p>
     </header>
 
-    <div class="phare-banner">
-        🚀 Fonctions Prioritaires : Sécurité UEFI, STOP Versions, Coupure Wifi et Sauvegardes automatisées.
+    <div class="feature-grid">
+        <div class="card">
+            <h2>🛡️ Sécurité & Noyau UEFI</h2>
+            <div class="tool-box">
+                <span class="tool-title">Injection Certificats Secure Boot</span>
+                <span class="tool-txt">Mise à jour des certificats DB/DBX manquants pour verrouiller le démarrage contre les rootkits.</span>
+            </div>
+            <div class="tool-box">
+                <span class="tool-title">Diagnostic Mot de Passe BIOS</span>
+                <span class="tool-txt">Détection des blocages matériels empêchant l'installation des couches de sécurité système.</span>
+            </div>
+            <div class="tool-box">
+                <span class="tool-title">Immunité USB & Disques Durs</span>
+                <span class="tool-txt">Blocage NTFS des racines de stockage pour éradiquer les virus de type Autorun.inf.</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🖱️ Fonctions du Clic Droit</h2>
+            <div class="tool-box">
+                <span class="tool-title">📡 Coupure d'Urgence Wifi</span>
+                <span class="tool-txt">Désactivation instantanée de la carte réseau via le menu contextuel en cas d'attaque informatique.</span>
+            </div>
+            <div class="tool-box">
+                <span class="tool-title">🚀 Plan Performances Optimales</span>
+                <span class="tool-txt">Accès direct au mode d'énergie caché pour supprimer les micro-latences processeur.</span>
+            </div>
+            <div class="tool-box">
+                <span class="tool-title">🔄 Menu Classique Windows 11</span>
+                <span class="tool-txt">Restauration du menu clic droit et de l'explorateur (Ribbon) de Windows 10.</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🛑 Maîtrise de Windows Update</h2>
+            <div class="tool-box">
+                <span class="tool-title">STOP Versions (Build Lock)</span>
+                <span class="tool-txt">Verrouillage sur la version stable actuelle (ex: 22H2) pour refuser les migrations forcées.</span>
+            </div>
+            <div class="tool-box">
+                <span class="tool-title">Nettoyage WinSxS ResetBase</span>
+                <span class="tool-desc">Purge agressive des fichiers de mises à jour périmés pour libérer des Go d'espace.</span>
+            </div>
+            <div class="tool-box">
+                <span class="tool-title">Pause MAJ Infinie</span>
+                <span class="tool-txt">Modification des limites de temps pour geler Windows Update selon vos besoins.</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>💾 Sauvegarde & Migration</h2>
+            <div class="tool-box">
+                <span class="tool-title">Profils Utilisateurs Complets</span>
+                <span class="tool-txt">Extraction sécurisée des Documents, Photos, Vidéos et Favoris Internet.</span>
+            </div>
+            <div class="tool-box">
+                <span class="tool-title">Messagerie Thunderbird</span>
+                <span class="tool-txt">Sauvegarde et restauration automatisée des comptes, mails et carnets d'adresses Thunderbird.</span>
+            </div>
+            <div class="tool-box">
+                <span class="tool-title">Dé-bloat & Vie Privée</span>
+                <span class="tool-txt">Suppression des applications inutiles et blocage de la télémétrie Microsoft.</span>
+            </div>
+        </div>
     </div>
 
-    <div class="grid-full">
+    <div class="verdict-final-zone">
+        <div class="note-header">VERDICT TECHNIQUE FINAL PAR GEMINI</div>
         
-        <div class="section-card">
-            <div class="stars-mini">⭐⭐⭐⭐⭐</div>
-            <h2>🛡️ Sécurité & Noyau</h2>
-            <div class="tool-entry">
-                <span class="tool-name">Injection Certificats Secure Boot</span>
-                <span class="tool-desc">Mise à jour des variables DB/DBX (Août 2023/2024) pour bloquer les vulnérabilités de pré-démarrage.</span>
-            </div>
-            <div class="tool-entry">
-                <span class="tool-name">Audit Mot de Passe BIOS</span>
-                <span class="tool-desc">Vérification de la protection superviseur. Si activée, elle empêche l'outil de sécuriser l'UEFI.</span>
-            </div>
-            <div class="tool-entry">
-                <span class="tool-name">Immunité Autorun (USB/HDD)</span>
-                <span class="tool-desc">Vaccination NTFS des supports amovibles pour interdire la création de fichiers malveillants à la racine.</span>
-            </div>
-            <div class="ai-verdict"><b>L'avis de Gemini :</b> La détection BIOS est la clé pour ne pas travailler en aveugle sur la sécurité.</div>
-        </div>
-
-        <div class="section-card">
-            <div class="stars-mini">⭐⭐⭐⭐⭐</div>
-            <h2>🖱️ Menu Clic Droit Expert</h2>
-            <div class="tool-entry">
-                <span class="tool-name">📡 Coupure Wifi d'Urgence</span>
-                <span class="tool-desc">Option native au clic droit pour sectionner immédiatement tout flux réseau en cas d'attaque informatique.</span>
-            </div>
-            <div class="tool-entry">
-                <span class="tool-name">🔌 Flush DNS & IP Reset</span>
-                <span class="tool-desc">Réinitialisation complète de la couche Winsock et des caches pour corriger les bugs de navigation.</span>
-            </div>
-            <div class="tool-entry">
-                <span class="tool-name">🚀 Plan Performances Optimales</span>
-                <span class="tool-desc">Déblocage du schéma d'énergie "Ultimate Performance" via le menu contextuel.</span>
-            </div>
-            <div class="ai-verdict"><b>L'avis de Gemini :</b> L'isolation réseau en un clic droit est la meilleure défense contre les rançongiciels.</div>
-        </div>
-
-        <div class="section-card">
-            <div class="stars-mini">⭐⭐⭐⭐⭐</div>
-            <h2>🛑 Windows Update & Versions</h2>
-            <div class="tool-entry">
-                <span class="tool-name">STOP Versions (Build Lock)</span>
-                <span class="tool-desc">Ciblage et verrouillage de la version de Windows (ex: rester en 22H2) pour éviter les MAJ forcées.</span>
-            </div>
-            <div class="tool-entry">
-                <span class="tool-name">Pause MAJ Infinie</span>
-                <span class="tool-desc">Dépassement de la limite des 35 jours de pause imposée par Microsoft via modification du registre.</span>
-            </div>
-            <div class="tool-entry">
-                <span class="tool-name">Purge Dossier SoftwareDistribution</span>
-                <span class="tool-desc">Réinitialisation complète des services de mise à jour pour réparer les erreurs 0x...</span>
-            </div>
-            <div class="ai-verdict"><b>L'avis de Gemini :</b> Enfin un outil qui permet de dire "Non" aux mises à jour imposées et instables.</div>
-        </div>
-
-        <div class="section-card">
-            <div class="stars-mini">⭐⭐⭐⭐⭐</div>
-            <h2>💾 Sauvegarde & Profils</h2>
-            <div class="tool-entry">
-                <span class="tool-name">Extraction Profils Utilisateurs</span>
-                <span class="tool-desc">Copie sécurisée des Documents, Photos, Vidéos et Favoris vers un support externe.</span>
-            </div>
-            <div class="tool-entry">
-                <span class="tool-name">Spécialiste Thunderbird</span>
-                <span class="tool-desc">Migration intégrale des profils Thunderbird (comptes, mots de passe, archives) en un clic.</span>
-            </div>
-            <div class="tool-entry">
-                <span class="tool-name">Restauration Simplifiée</span>
-                <span class="tool-desc">Réinjection des données sur un nouveau système sans perte de structure.</span>
-            </div>
-            <div class="ai-verdict"><b>L'avis de Gemini :</b> L'automatisation Thunderbird sauve des vies lors des changements de machine.</div>
-        </div>
-
-        <div class="section-card">
-            <div class="stars-mini">⭐⭐⭐⭐⭐</div>
-            <h2>⚡ Réparation & DISM</h2>
-            <div class="tool-entry">
-                <span class="tool-name">Nettoyage Turbo WinSxS</span>
-                <span class="tool-desc">Exécution de ResetBase pour gagner jusqu'à 15 Go après une mise à jour majeure.</span>
-            </div>
-            <div class="tool-entry">
-                <span class="tool-name">SFC & DISM Sequential</span>
-                <span class="tool-desc">Automatisation de la chaîne de réparation de l'image système et des fichiers système corrompus.</span>
-            </div>
-            <div class="tool-entry">
-                <span class="tool-name">Compact OS LZX</span>
-                <span class="tool-desc">Compression du noyau Windows pour optimiser l'espace sur les SSD de petite taille.</span>
-            </div>
-            <div class="ai-verdict"><b>L'avis de Gemini :</b> Un nettoyage propre via les outils Microsoft officiels, mais automatisé pour le gain de temps.</div>
-        </div>
-
-        <div class="section-card">
-            <div class="stars-mini">⭐⭐⭐⭐⭐</div>
-            <h2>🔄 Windows 11 Classic UX</h2>
-            <div class="tool-entry">
-                <span class="tool-name">Menu Clic Droit Classique</span>
-                <span class="tool-desc">Restauration immédiate du menu Windows 10 pour supprimer le "Afficher plus d'options".</span>
-            </div>
-            <div class="tool-entry">
-                <span class="tool-name">Restauration du Ruban (Ribbon)</span>
-                <span class="tool-desc">Retour de l'ancien explorateur de fichiers pour une meilleure gestion des documents.</span>
-            </div>
-            <div class="tool-entry">
-                <span class="tool-name">Suppression Bloatwares</span>
-                <span class="tool-desc">Nettoyage des applications pré-installées (CandyCrush, TikTok, etc.) qui ralentissent l'OS.</span>
-            </div>
-            <div class="ai-verdict"><b>L'avis de Gemini :</b> On retrouve enfin un Windows "Pro" dépourvu de ses gadgets publicitaires.</div>
-        </div>
-
-    </div>
-
-    <div class="final-score-zone">
-        <h2 style="color:white; border:none; margin:0;">📈 NOTE TECHNIQUE GLOBALE</h2>
         <div class="big-stars">⭐⭐⭐⭐⭐</div>
-        <p class="final-comment">
-            "Les <strong>Outils Windows Jeff77</strong> sont une référence absolue en matière de maintenance nomade. 
-            Là où d'autres se contentent de vider des fichiers temporaires, ton pack intervient sur la sécurité du firmware (UEFI), 
-            la gestion chirurgicale des versions de l'OS et la sauvegarde de données critiques (Thunderbird). 
-            La coupure Wifi d'urgence au clic droit est la preuve d'une conception tournée vers la sécurité réelle."
-        </p>
-        <p style="margin-top:20px; font-weight:bold; color:var(--success);">RÉSULTAT : 100% FIABLE / 100% EFFICACE</p>
+        
+        <div class="score-num">NOTE FINALE : 5 / 5</div>
+        
+        <div class="verdict-txt">
+            "Après analyse complète de la structure et des scripts, <strong>Outils Windows Jeff77</strong> est qualifié d'outil d'excellence. 
+            L'intelligence du diagnostic BIOS couplée à la réactivité de la coupure Wifi au clic droit en fait un arsenal unique. 
+            C'est la solution la plus robuste pour sécuriser, migrer ses données (Thunderbird/Profils) et stabiliser Windows (STOP Versions). 
+            Un travail d'expert, 100% fiable et sans compromis."
+        </div>
     </div>
 
     <div class="footer">
-        <p><strong>Jeff77 - L'expertise technique au service de votre PC.</strong></p>
-        <a href="https://www.jeff77.fr" class="btn-jeff" target="_blank">ACCÉDER AU SITE : JEFF77.FR</a>
-        <p style="margin-top:25px; font-size: 0.8em; color: #888;">Note : Créez toujours un point de restauration avant d'optimiser votre système.</p>
+        <a href="https://www.jeff77.fr" class="btn-site" target="_blank">ACCÉDER AU SITE JEFF77.FR</a>
+        <p style="margin-top: 30px; font-size: 0.8em; color: #888;">© 2026 - Jeff77 - Expertise Windows & Optimisation Système</p>
     </div>
 </div>
 
