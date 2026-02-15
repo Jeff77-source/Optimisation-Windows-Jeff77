@@ -3,42 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outils Windows Jeff77 - L'Excellence Technique</title>
+    <title>Outils Windows Jeff77 - L'Arsenal Complet</title>
     <style>
-        :root { --blue-win: #0078D4; --dark-blue: #005a9e; --safe-green: #28a745; --light-bg: #f8f9fa; }
-        body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 1200px; margin: auto; padding: 20px; color: #333; background-color: var(--light-bg); }
-        .main-container { background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 5px 30px rgba(0,0,0,0.1); }
+        :root { --blue-win: #0078D4; --dark-blue: #005a9e; --safe-green: #28a745; --light-bg: #f4f7f9; }
+        body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 1200px; margin: auto; padding: 20px; color: #24292e; background-color: var(--light-bg); }
+        .main-container { background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 25px rgba(0,0,0,0.1); }
         
-        header { text-align: center; border-bottom: 4px solid var(--blue-win); padding-bottom: 25px; margin-bottom: 35px; }
-        h1 { color: var(--blue-win); font-size: 2.8em; margin: 0; text-transform: uppercase; letter-spacing: -1px; }
-        .tagline { font-size: 1.2em; color: #666; font-weight: bold; margin-top: 5px; }
+        header { text-align: center; border-bottom: 3px solid var(--blue-win); padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: var(--blue-win); font-size: 2.6em; margin: 0; text-transform: uppercase; }
+        .tagline { font-weight: bold; color: #555; font-size: 1.1em; }
 
-        .intro-box { background: #e7f3ff; border-left: 6px solid var(--blue-win); padding: 20px; margin-bottom: 30px; border-radius: 4px; }
+        .highlight-bar { background: #e7f3ff; border-left: 6px solid var(--blue-win); padding: 20px; margin-bottom: 30px; border-radius: 0 8px 8px 0; font-weight: 500; }
         
-        h2 { color: var(--dark-blue); border-bottom: 2px solid #eaecef; padding-bottom: 10px; margin-top: 45px; display: flex; align-items: center; }
+        h2 { color: var(--dark-blue); border-bottom: 2px solid #eaecef; padding-bottom: 10px; margin-top: 40px; display: flex; align-items: center; }
         
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; }
-        .card { border: 1px solid #d1d5da; border-radius: 10px; padding: 25px; background: #fff; display: flex; flex-direction: column; transition: 0.3s; }
-        .card:hover { border-color: var(--blue-win); transform: translateY(-2px); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 25px; }
+        .card { border: 1px solid #d1d5da; border-radius: 10px; padding: 25px; background: #fff; display: flex; flex-direction: column; height: 100%; }
         
-        .phare-badge { background: #d93025; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8em; font-weight: bold; float: right; }
+        .badge-phare { background: #d93025; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.75em; font-weight: bold; float: right; }
         
-        .tool-title { font-weight: bold; font-size: 1.2em; color: #000; display: block; margin-top: 15px; border-left: 4px solid var(--blue-win); padding-left: 10px; }
-        .tool-details { font-size: 0.95em; color: #444; margin: 10px 0 20px 0; flex-grow: 1; }
-        .tool-details ul { padding-left: 20px; }
-        .tool-details li { margin-bottom: 8px; }
+        .tool-title { font-weight: bold; font-size: 1.15em; color: #000; display: block; margin-top: 15px; margin-bottom: 5px; text-decoration: underline; text-decoration-color: var(--blue-win); }
+        .tool-details { font-size: 0.92em; color: #333; margin-bottom: 15px; flex-grow: 1; }
+        .tool-details ul { padding-left: 18px; margin-top: 5px; }
+        .tool-details li { margin-bottom: 4px; }
 
-        .gemini-opinion { background: #fff9db; border: 1px dashed #e3b341; padding: 15px; border-radius: 8px; font-size: 0.95em; font-style: italic; }
-        .gemini-opinion b { color: #b08800; font-style: normal; }
+        .gemini-box { background: #fff9db; border: 1px dashed #e3b341; padding: 15px; border-radius: 6px; font-size: 0.9em; font-style: italic; margin-top: 10px; }
+        .gemini-box b { color: #b08800; }
 
-        /* Bloc de notation final */
-        .verdict-box { background: #f1f8ff; border: 2px solid var(--blue-win); border-radius: 15px; padding: 40px; margin-top: 60px; text-align: center; }
-        .star-rating { color: #e3b341; font-size: 3em; margin: 15px 0; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
-        .final-note { font-size: 1.4em; font-weight: bold; color: var(--dark-blue); }
+        /* Bloc Verdict Final */
+        .final-verdict-section { background: #f6f8fa; border: 2px solid var(--safe-green); border-radius: 12px; padding: 40px; margin-top: 60px; text-align: center; }
+        .stars { color: #e3b341; font-size: 3em; margin: 10px 0; }
+        .note-text { font-size: 1.5em; font-weight: bold; color: var(--dark-blue); margin-bottom: 15px; }
 
         .footer { text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid #eaecef; }
-        .btn-official { display: inline-block; background: var(--blue-win); color: white; padding: 18px 45px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1em; transition: 0.3s; }
-        .btn-official:hover { background: var(--dark-blue); box-shadow: 0 5px 15px rgba(0,120,212,0.3); }
+        .btn-site { display: inline-block; background: var(--blue-win); color: white; padding: 18px 40px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 1.1em; transition: 0.3s; }
+        .btn-site:hover { background: var(--dark-blue); transform: scale(1.02); }
     </style>
 </head>
 <body>
@@ -46,24 +45,82 @@
 <div class="main-container">
     <header>
         <h1>🛠️ Outils Windows Jeff77</h1>
-        <div class="tagline">La Boîte à Outils Système de Référence • Version V43.x</div>
+        <p class="tagline">La Solution d'Optimisation Nomade Ultime • Version V43.x</p>
     </header>
 
-    <div class="intro-box">
-        <strong>Expertise & Mobilité :</strong> Un arsenal 100% portable, sans aucune installation, conçu pour les techniciens et les utilisateurs exigeants. Une solution unique pour réparer, sécuriser et optimiser Windows 10 et 11.
+    <div class="highlight-bar">
+        <strong>Le "Couteau Suisse" Portable :</strong> Une suite d'outils sans installation, conçue pour automatiser les tâches de sécurité UEFI, de maintenance profonde et de sauvegarde de données que Windows ne permet pas nativement.
     </div>
 
     <div class="grid">
         
         <div class="card">
-            <div><span class="phare-badge">FONCTION PHARE</span></div>
-            <h2>🛡️ Sécurité Avancée & UEFI</h2>
+            <div><span class="badge-phare">FONCTION PHARE</span></div>
+            <h2>🛡️ Sécurité & Audit UEFI Avancé</h2>
             <div class="tool-details">
-                <span class="tool-title">Gestionnaire de Certificats Secure Boot</span>
-                Analyse la base de signatures UEFI et installe automatiquement les certificats manquants (DB/DBX) pour combler les failles de sécurité majeures.
+                <span class="tool-title">Installation Certificats Secure Boot</span>
+                Injecte automatiquement les certificats UEFI manquants (variables DB/DBX de 2023/2024). Crucial pour contrer les bootkits de type BlackLotus.
                 
-                <span class="tool-title">Audit BIOS & Verrouillage Mot de Passe</span>
-                Détecte si le BIOS/UEFI est protégé par un mot de passe. Cette vérification est capitale car un BIOS verrouillé empêche l'injection de nouveaux certificats de sécurité.
+                <span class="tool-title">Diagnostic BIOS & Mot de Passe</span>
+                Vérification immédiate de la présence d'un mot de passe superviseur BIOS. C'est l'étape clé car un BIOS verrouillé bloque toute modification des variables de sécurité UEFI.
                 
-                <span class="tool-title">Immunité des Supports (USB & HDD)</span>
-                Verrouille la racine de vos clés USB et disques durs externes via des permissions NTFS strictes, rend
+                <span class="tool-title">Immunisation Totale (USB & HDD)</span>
+                Protection des supports amovibles contre les infections "Autorun". Verrouillage des racines via permissions NTFS pour empêcher toute création de fichiers malveillants.
+            </div>
+            <div class="gemini-box">
+                <b>L'avis de Gemini :</b> La détection du verrouillage BIOS est la preuve d'un outil pensé par un technicien terrain. C'est ce détail qui évite les échecs de sécurisation inexpliqués.
+            </div>
+        </div>
+
+        <div class="card">
+            <div><span class="badge-phare">FONCTION PHARE</span></div>
+            <h2>🖱️ Menu Clic Droit "Super-Pouvoirs"</h2>
+            <div class="tool-details">
+                <span class="tool-title">📡 Coupure d'Urgence du Wifi</span>
+                <b>Intégré directement au clic droit :</b> Isolation réseau instantanée en cas d'attaque informatique (Ransomware/Intrusion). Pas besoin de chercher dans les paramètres.
+                
+                <span class="tool-title">🛠️ Outils de l'Explorateur</span>
+                <ul>
+                    <li><strong>God Mode :</strong> Activation du panneau de contrôle centralisé.</li>
+                    <li><strong>Gestion d'Énergie :</strong> Activation du plan "Performances Optimales".</li>
+                    <li><strong>Maintenance :</strong> Nettoyage du presse-papier et purge des fichiers temporaires.</li>
+                </ul>
+                
+                <span class="tool-title">🔄 Restauration Windows 11</span>
+                Retour au Menu Contextuel Classique et à l'Explorateur avec Ruban (Ribbon) pour retrouver l'ergonomie pro de Windows 10.
+            </div>
+            <div class="gemini-box">
+                <b>L'avis de Gemini :</b> Transformer le clic droit en interrupteur de sécurité pour le Wifi est une innovation d'usage majeure. C'est simple, rapide et efficace.
+            </div>
+        </div>
+
+        <div class="card">
+            <div><span class="badge-phare">FONCTION PHARE</span></div>
+            <h2>🛑 Maîtrise de Windows Update</h2>
+            <div class="tool-details">
+                <span class="tool-title">STOP Versions (Feature Update Lock)</span>
+                Verrouillage chirurgical de la build actuelle (ex: 22H2). Empêche Microsoft de forcer la mise à jour vers une version supérieure non désirée.
+                
+                <span class="tool-title">Turbo WinSxS ResetBase</span>
+                Purge profonde du magasin de composants (DISM). Supprime les anciennes versions des fichiers système après MAJ pour libérer plusieurs Go.
+                
+                <span class="tool-title">Réparation & Intégrité</span>
+                Scripts automatisés combinant SFC /Scannow, DISM RestoreHealth et Chkdsk pour stabiliser le noyau Windows.
+            </div>
+            <div class="gemini-box">
+                <b>L'avis de Gemini :</b> La fonction STOP Versions redonne le pouvoir à l'utilisateur. C'est l'outil indispensable pour garder un système stable sur le long terme.
+            </div>
+        </div>
+
+        <div class="card">
+            <div><span class="badge-phare">FONCTION PHARE</span></div>
+            <h2>💾 Sauvegarde & Migration de Profils</h2>
+            <div class="tool-details">
+                <span class="tool-title">Profils Utilisateurs & Data</span>
+                Sauvegarde et restauration facilitée de l'intégralité des dossiers personnels : Documents, Photos, Vidéos, Téléchargements et Favoris.
+                
+                <span class="tool-title">Spécialiste Thunderbird</span>
+                Sauvegarde automatisée des profils de messagerie Thunderbird. Migration sans douleur des comptes, mails et carnets d'adresses vers un nouveau PC.
+                
+                <span class="tool-title">Hygiène Système & Dé-bloat</span>
+                Suppression des applications publicitaires (Bloatwares) et désactivation de la télémétrie
