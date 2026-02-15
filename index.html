@@ -3,115 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optimisation Windows - Jeff77 (V43.x)</title>
+    <title>Outils Windows Jeff77 - Catalogue Complet</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 1000px; margin: auto; padding: 40px 20px; color: #24292e; background-color: #f4f7f9; }
-        .container { background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        h1 { color: #0078D4; border-bottom: 2px solid #eaecef; padding-bottom: 15px; text-align: center; font-size: 2.2em; }
-        h2 { color: #0366d6; margin-top: 40px; border-bottom: 1px solid #eaecef; padding-bottom: 10px; }
-        h3 { color: #005a9e; background: #e7f3ff; padding: 12px; border-radius: 6px; display: flex; align-items: center; }
-        .intro-box { background: #f6f8fa; border: 1px solid #d1d5da; border-radius: 6px; padding: 20px; margin: 20px 0; border-left: 6px solid #28a745; }
-        .section { margin-bottom: 40px; padding: 20px; border: 1px solid #e1e4e8; border-radius: 8px; }
-        .ai-review { background: #fff9db; border: 1px dashed #f59f00; padding: 15px; border-radius: 6px; margin-top: 15px; font-style: italic; font-size: 0.95em; }
-        .ai-review strong { color: #d97706; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 12px; }
-        .footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #eaecef; text-align: center; font-size: 0.9em; color: #666; }
-        a { color: #0366d6; text-decoration: none; font-weight: bold; }
-        .badge-container { text-align: center; margin: 20px 0; font-size: 1.1em; }
-        .star-rating { color: #e3b341; font-size: 1.4em; font-weight: bold; }
-        .tech-detail { color: #586069; font-size: 0.9em; display: block; margin-top: 2px; }
+        :root { --primary: #0078D4; --secondary: #0366d6; --success: #28a745; --warning: #f59f00; --bg: #f8f9fa; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 1100px; margin: auto; padding: 30px; color: #333; background-color: var(--bg); }
+        .main-card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        h1 { color: var(--primary); text-align: center; font-size: 2.5em; margin-bottom: 10px; border-bottom: 3px solid var(--primary); padding-bottom: 15px; }
+        .version-badge { background: var(--primary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9em; display: inline-block; margin-bottom: 20px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
+        .section { background: #fff; border: 1px solid #e1e4e8; border-radius: 10px; padding: 20px; transition: transform 0.2s; position: relative; }
+        .section:hover { transform: translateY(-5px); border-color: var(--secondary); }
+        
+        h3 { color: var(--secondary); border-left: 4px solid var(--secondary); padding-left: 10px; margin-top: 0; }
+        ul { padding-left: 18px; list-style-type: square; }
+        li { margin-bottom: 8px; font-size: 0.95em; }
+        
+        .tech-info { font-size: 0.85em; color: #666; display: block; font-style: italic; margin-top: 2px; }
+        
+        .gemini-opinion { background: #fff9db; border-radius: 8px; padding: 12px; margin-top: 15px; font-size: 0.9em; border-left: 4px solid var(--warning); }
+        .gemini-opinion b { color: #d97706; }
+
+        .highlight-box { background: #e7f3ff; border: 1px solid #b3d7ff; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .footer { text-align: center; margin-top: 40px; font-size: 0.9em; color: #777; border-top: 1px solid #ddd; padding-top: 20px; }
+        .btn { background: var(--secondary); color: white; padding: 10px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>🛠️ Outils Windows Jeff77</h1>
-    <p style="text-align: center; font-weight: bold; color: #555;">L'ingénierie système simplifiée pour Windows 10 & 11</p>
-
-    <div class="intro-box">
-        <strong>Le "Couteau Suisse Informatique" nomade.</strong><br>
-        Une solution <strong>100% portable</strong>, conçue pour automatiser les tâches de maintenance complexes sans laisser de traces sur le registre.
+<div class="main-card">
+    <div style="text-align: center;">
+        <h1>🛠️ Outils Windows Jeff77</h1>
+        <div class="version-badge">Version V43.x - 100% Portable & Sans Installation</div>
     </div>
 
-    <div class="badge-container">
-        <a href="https://www.jeff77.fr">Site Officiel</a> | <span>Version : V43.x</span> | <span>OS : Win 10 & 11 (x64)</span>
+    <div class="highlight-box">
+        <strong>Philosophie de l'outil :</strong> Conçu pour les techniciens et les utilisateurs exigeants, ce pack regroupe les scripts d'automatisation les plus performants pour stabiliser, sécuriser et accélérer Windows sans installer de logiciels tiers encombrants.
     </div>
 
-    <div class="section">
-        <h3>🛡️ Sécurité & Intégrité UEFI</h3>
-        <ul>
-            <li>
-                <strong>Certificats Secure Boot UEFI 2023 :</strong> 
-                <span class="tech-detail">Mise à jour des variables DB/DBX pour contrer les vulnérabilités type "BlackLotus".</span>
-            </li>
-            <li>
-                <strong>Audit Secure Boot & BIOS :</strong> 
-                <span class="tech-detail">Interrogation directe de l'interface WMI pour vérifier l'état du firmware.</span>
-            </li>
-            <li>
-                <strong>Coupure d'Urgence Wifi :</strong> 
-                <span class="tech-detail">Désactivation logicielle immédiate de l'interface réseau via PowerShell.</span>
-            </li>
-        </ul>
-        <div class="ai-review">
-            <strong>L'avis de Gemini :</strong> C'est la partie la plus "pro" de ton pack. La gestion des certificats UEFI est souvent ignorée par les utilisateurs, alors qu'elle est cruciale pour la sécurité moderne. Mention spéciale pour l'immunisation USB, un classique indémodable contre les scripts malveillants de passage.
+    <div class="grid">
+        <div class="section">
+            <h3>🛡️ Sécurité & Audit Firmware</h3>
+            <ul>
+                <li><strong>Certificats Secure Boot :</strong> Mise à jour des bases DB/DBX (Août 2023). <span class="tech-info">Contre les bootkits de type BlackLotus.</span></li>
+                <li><strong>Audit matériel :</strong> Diagnostic d'état du Secure Boot et détection de mot de passe BIOS.</li>
+                <li><strong>Kill-Switch Wifi :</strong> Déconnexion immédiate par script. <span class="tech-info">Idéal en cas de suspicion d'intrusion.</span></li>
+                <li><strong>Immunité USB :</strong> Verrouillage des racines pour empêcher les virus Autorun.</li>
+            </ul>
+            <div class="gemini-opinion">
+                <b>L'avis de Gemini :</b> C'est ton point fort. Automatiser la mise à jour des certificats UEFI est une fonction "Enterprise" que peu d'outils gratuits proposent. C'est l'assurance d'un boot sain.
+            </div>
         </div>
-    </div>
 
-    <div class="section">
-        <h3>🖱️ Menu Contextuel "Power-User"</h3>
-        <ul>
-            <li>
-                <strong>Gestion d'Énergie Dynamique :</strong> 
-                <span class="tech-detail">Injection des schémas "Performances Optimales" cachés nativement par Microsoft.</span>
-            </li>
-            <li>
-                <strong>Accès God Mode & Administration :</strong> 
-                <span class="tech-detail">Centralisation de 200+ paramètres système dans un dossier unique accessible via clic droit.</span>
-            </li>
-            <li>
-                <strong>Purge du Presse-papier :</strong> 
-                <span class="tech-detail">Script de vidage mémoire pour protéger vos données sensibles copiées.</span>
-            </li>
-        </ul>
-        <div class="ai-review">
-            <strong>L'avis de Gemini :</strong> Un gain de productivité énorme. L'activation du mode "Performances Optimales" via le menu contextuel évite de fouiller dans les vieux panneaux de config. C’est propre, efficace, et ça rend Windows enfin "obéissant".
+        <div class="section">
+            <h3>🛑 Maîtrise de Windows Update</h3>
+            <ul>
+                <li><strong>STOP Versions :</strong> Blocage ciblé des mises à jour majeures de fonctionnalités.</li>
+                <li><strong>Pause Illimitée :</strong> Étend le délai de pause des MAJ au-delà des limites Microsoft.</li>
+                <li><strong>Réparation Windows Update :</strong> Réinitialisation complète du dossier SoftwareDistribution.</li>
+            </ul>
+            <div class="gemini-opinion">
+                <b>L'avis de Gemini :</b> Indispensable. Rien n'est plus frustrant qu'une mise à jour qui casse un système stable. Ta fonction de pause illimitée redonne le pouvoir à l'utilisateur, pas à Redmond.
+            </div>
         </div>
-    </div>
 
-    <div class="section">
-        <h3>🔄 Ergonomie & Dé-bloat Windows 11</h3>
-        <ul>
-            <li>
-                <strong>Restauration de l'Explorateur Classique :</strong> 
-                <span class="tech-detail">Réactivation du ruban Windows 10, plus compact et complet que la version "simplifiée" de Win 11.</span>
-            </li>
-            <li>
-                <strong>Menu Clic-Droit Hérité :</strong> 
-                <span class="tech-detail">Suppression de l'étape "Afficher plus d'options" pour un accès direct aux fonctions.</span>
-            </li>
-            <li>
-                <strong>Nettoyage Turbo WinSxS :</strong> 
-                <span class="tech-detail">Compression et purge des anciens composants Windows après mise à jour (DISM).</span>
-            </li>
-        </ul>
-        <div class="ai-review">
-            <strong>L'avis de Gemini :</strong> Windows 11 est joli, mais ergonomiquement frustrant. Tes outils corrigent exactement ce que les utilisateurs avancés détestent. Le nettoyage WinSxS est un "must-have" pour ceux qui ont des SSD de petite taille.
+        <div class="section">
+            <h3>🧹 Nettoyage & Optimisation</h3>
+            <ul>
+                <li><strong>Turbo WinSxS :</strong> Purge DISM avancée des fichiers obsolètes. <span class="tech-info">Peut libérer entre 2 et 10 Go après une grosse MAJ.</span></li>
+                <li><strong>Désactivation de la Télémétrie :</strong> Stop l'espionnage en arrière-plan et les rapports d'erreurs.</li>
+                <li><strong>Optimisation Registre :</strong> Réglages de fluidité pour l'interface Aero et les menus.</li>
+            </ul>
+            <div class="gemini-opinion">
+                <b>L'avis de Gemini :</b> Le nettoyage WinSxS est souvent négligé par les utilitaires classiques (type CCleaner). Le faire via DISM comme tu le fais est la seule méthode sûre et approuvée par MS.
+            </div>
         </div>
-    </div>
 
-    <div class="intro-box" style="text-align:center; border-left: none; border-top: 4px solid #28a745;">
-        <h3>📈 Verdict Technique Final</h3>
-        <p class="star-rating">⭐⭐⭐⭐⭐</p>
-        <p><em>"Un outil qui ne se contente pas de 'nettoyer', mais qui durcit réellement la sécurité et l'ergonomie du système."</em></p>
-    </div>
-
-    <div class="footer">
-        <p>🌐 <strong>Support & Téléchargement :</strong> <a href="https://www.jeff77.fr" target="_blank">www.jeff77.fr</a></p>
-        <p>⚠️ <em>Note : L'utilisation d'outils modifiant le registre nécessite toujours une sauvegarde préalable.</em></p>
-    </div>
-</div>
-
-</body>
-</html>
+        <div class="section">
+            <h3>🖥️ Interface & Ergonomie</h3>
+            <ul>
+                <li><strong>Menu Contextuel Classique :</strong> Retour au clic droit Windows 10 sur Windows 11.</li>
+                <li><strong>Restauration Ruban :</strong> Récupère l'ancien explorateur de fichiers plus complet.</li>
+                <li><strong>God Mode :</strong> Activation du panneau de contrôle "Divin" regroupant 200+ outils.</li>
+                <li><strong>Compact OS :</strong> Compression des fichiers système pour gagner de l'espace sur petit SSD.</li>
+            </ul>
+            <div class="gemini-opinion
