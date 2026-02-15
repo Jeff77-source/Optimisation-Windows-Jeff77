@@ -6,7 +6,7 @@
     <title>Outils Windows Jeff77 - Documentation Intégrale</title>
     <style>
         :root { --blue-win: #0078D4; --dark-blue: #005a9e; --safe-green: #28a745; --light-bg: #f4f7f9; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 1100px; margin: auto; padding: 20px; color: #24292e; background-color: var(--light-bg); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 1150px; margin: auto; padding: 20px; color: #24292e; background-color: var(--light-bg); }
         .main-container { background: #ffffff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 25px rgba(0,0,0,0.1); }
         
         header { text-align: center; border-bottom: 3px solid var(--blue-win); padding-bottom: 20px; margin-bottom: 30px; }
@@ -17,19 +17,21 @@
         h2 { color: var(--dark-blue); border-bottom: 1px solid #eaecef; padding-bottom: 10px; margin-top: 40px; }
         
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 25px; }
-        .card { border: 1px solid #d1d5da; border-radius: 8px; padding: 20px; background: #fff; position: relative; }
-        .card:hover { border-color: var(--blue-win); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .card { border: 1px solid #d1d5da; border-radius: 8px; padding: 20px; background: #fff; position: relative; display: flex; flex-direction: column; }
         
         .badge-flag { background: var(--safe-green); color: white; padding: 3px 10px; border-radius: 4px; font-size: 0.75em; font-weight: bold; text-transform: uppercase; float: right; }
         
-        .tool-title { font-weight: bold; font-size: 1.1em; color: #000; display: block; margin-bottom: 8px; }
-        .tool-details { font-size: 0.9em; color: #444; margin-bottom: 15px; }
-        .tool-details ul { padding-left: 20px; margin: 5px 0; }
+        .tool-title { font-weight: bold; font-size: 1.1em; color: #000; display: block; margin-top: 15px; margin-bottom: 5px; }
+        .tool-details { font-size: 0.9em; color: #444; margin-bottom: 15px; flex-grow: 1; }
 
-        .gemini-review { background: #fff9db; border: 1px dashed #e3b341; padding: 15px; border-radius: 6px; font-size: 0.9em; font-style: italic; margin-top: 10px; }
+        .gemini-review { background: #fff9db; border: 1px dashed #e3b341; padding: 12px; border-radius: 6px; font-size: 0.9em; font-style: italic; margin-top: 10px; }
         .gemini-review b { color: #b08800; font-style: normal; }
 
-        .footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #eaecef; font-size: 0.95em; }
+        /* Verdict Final */
+        .verdict-final { background: #f6f8fa; border: 2px solid var(--safe-green); border-radius: 10px; padding: 30px; margin-top: 50px; text-align: center; }
+        .star-rating { color: #e3b341; font-size: 2em; margin: 10px 0; font-weight: bold; }
+
+        .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eaecef; font-size: 0.95em; }
         .btn-site { display: inline-block; background: var(--blue-win); color: white; padding: 15px 35px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 20px; }
     </style>
 </head>
@@ -38,81 +40,42 @@
 <div class="main-container">
     <header>
         <h1>🛠️ Outils Windows Jeff77</h1>
-        <p class="version-info">Solution 100% Nomade & Portable pour Windows 10 et 11 (V43.x)</p>
+        <p class="version-info">L'arsenal ultime de maintenance nomade (V43.x)</p>
     </header>
 
     <div class="feature-hero">
-        <strong>Philosophie Jeff77 :</strong> Une suite d'outils puissants sans installation, conçue pour automatiser les tâches de sécurité et de maintenance les plus complexes tout en redonnant une ergonomie logique à Windows.
+        <strong>Concept :</strong> Une boîte à outils 100% portable conçue pour automatiser la sécurité UEFI, la sauvegarde de données et l'optimisation profonde sans jamais rien installer sur le PC.
     </div>
 
     <div class="grid">
         
         <div class="card">
-            <span class="badge-flag">Fonction Phare</span>
+            <span class="badge-flag">PHARE</span>
             <h2>🛡️ Sécurité & Audit UEFI</h2>
             <div class="tool-details">
                 <span class="tool-title">Installation Certificats Secure Boot</span>
-                Détection automatique et injection des certificats UEFI manquants (mise à jour DB/DBX). Protège le PC contre les bootkits modernes.
+                Injecte les certificats UEFI manquants (DB/DBX) pour combler les failles critiques.
                 
-                <span class="tool-title">Diagnostic de Verrouillage BIOS</span>
-                Vérification si le BIOS est protégé par un mot de passe superviseur. Crucial, car un BIOS verrouillé peut bloquer l'installation des certificats de sécurité.
+                <span class="tool-title">Diagnostic BIOS & Mot de Passe</span>
+                Détecte si un mot de passe BIOS bloque l'accès aux variables UEFI, empêchant ainsi l'installation des certificats de sécurité.
                 
-                <span class="tool-title">Immunité Totale (USB & HDD)</span>
-                Verrouillage des racines de vos clés USB et disques durs externes. Empêche la création et l'exécution de virus via <i>Autorun.inf</i>.
+                <span class="tool-title">Immunité USB & Disques Durs</span>
+                Verrouillage par permissions NTFS des racines de supports amovibles pour bloquer définitivement les infections par <i>Autorun.inf</i>.
             </div>
             <div class="gemini-review">
-                <b>L'avis de Gemini :</b> Le diagnostic du mot de passe BIOS est une touche de génie technique. Savoir pourquoi une installation de certificats échoue évite des heures de frustration aux techniciens.
+                <b>L'avis de Gemini :</b> La détection du verrouillage BIOS est un diagnostic brillant. C'est l'étape que tout le monde oublie et qui explique bien des échecs de sécurisation.
             </div>
         </div>
 
         <div class="card">
-            <span class="badge-flag">Fonction Phare</span>
-            <h2>🖱️ Menu Clic Droit "Super-Pouvoirs"</h2>
+            <span class="badge-flag">PHARE</span>
+            <h2>🖱️ Menu Clic Droit Étendu</h2>
             <div class="tool-details">
                 <span class="tool-title">📡 Coupure d'Urgence du Wifi</span>
-                Directement intégré au clic droit. Permet de sectionner la connexion instantanément en cas d'attaque informatique ou de comportement suspect.
+                Directement inclus dans le clic droit pour couper instantanément la connexion en cas d'attaque informatique (Ransomware, intrusion).
                 
-                <span class="tool-title">⚡ Gestion d'Énergie & God Mode</span>
-                Accès immédiat au plan "Performances Optimales" et aux 200+ réglages du God Mode sans passer par les menus Windows complexes.
+                <span class="tool-title">⚡ Panoplie "Super-Pouvoirs"</span>
+                Gestion d'énergie (Performances Optimales), accès God Mode, nettoyage du presse-papier et outils de capture en un clic.
                 
-                <span class="tool-title">🧹 Maintenance Rapide</span>
-                Nettoyage du presse-papier, vidage des dossiers temporaires et outils de capture d'écran, le tout accessible en un clic.
-            </div>
-            <div class="gemini-review">
-                <b>L'avis de Gemini :</b> Ton intégration de la coupure Wifi dans le clic droit transforme une commande réseau en un véritable "disjoncteur" de sécurité. C'est brillant et sécurisant.
-            </div>
-        </div>
-
-        <div class="card">
-            <span class="badge-flag">Fonction Phare</span>
-            <h2>🛑 Maîtrise de Windows Update</h2>
-            <div class="tool-details">
-                <span class="tool-title">STOP Versions (Feature Update Lock)</span>
-                Bloque définitivement la build actuelle (ex: 22H2). Empêche Microsoft de forcer le passage à une version supérieure potentiellement instable.
-                
-                <span class="tool-title">Pause MAJ Illimitée</span>
-                Déverrouille les restrictions de temps pour mettre Windows Update en pause aussi longtemps que nécessaire.
-                
-                <span class="tool-title">Turbo WinSxS ResetBase</span>
-                Purge profonde des fichiers de mises à jour obsolètes. Une méthode radicale pour récupérer plusieurs gigaoctets sur le disque système.
-            </div>
-            <div class="gemini-review">
-                <b>L'avis de Gemini :</b> La fonction STOP Versions est vitale pour la stabilité. Elle redonne à l'utilisateur le choix de sa version, là où Microsoft tente de l'imposer.
-            </div>
-        </div>
-
-        <div class="card">
-            <span class="badge-flag">Nouveau</span>
-            <h2>💾 Sauvegarde & Migration Facile</h2>
-            <div class="tool-details">
-                <span class="tool-title">Profils Utilisateurs & Documents</span>
-                Extraction et restauration simplifiée des profils complets, incluant Documents, Photos, Vidéos et réglages personnels.
-                
-                <span class="tool-title">Profils de Messagerie Thunderbird</span>
-                Sauvegarde automatisée de l'intégralité de vos comptes Thunderbird (mails, carnets d'adresses, filtres) pour une migration sans perte.
-                
-                <span class="tool-title">Restauration en 1 Clic</span>
-                Système de réinjection des données fluide, idéal lors d'une réinstallation propre de Windows ou d'un changement de PC.
-            </div>
-            <div class="gemini-review">
-                <b>L'avis de Gemini :</b> La gestion spécifique de Thunderbird montre que tu connais les besoins
+                <span class="tool-title">🔄 Menu Windows 11 Classic</span>
+                Restauration du clic droit classique et du ruban (Ribbon) de l'explorateur pour retrouver
