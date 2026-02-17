@@ -6,37 +6,44 @@
     <title>Outils Windows Jeff77 - Spécifications Complètes</title>
     <style>
         :root { --blue: #0078D4; --dark: #201f1e; --gold: #FFD700; --bg: #f0f2f5; --expert-bg: #fffbe6; }
-        body { font-family: "Segoe UI", Tahoma, sans-serif; background: var(--bg); color: #333; margin: 0; padding: 20px; line-height: 1.5; }
-        .wrapper { max-width: 1250px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        body { font-family: "Segoe UI", Tahoma, sans-serif; background: var(--bg); color: #333; margin: 0; padding: 10px; line-height: 1.5; }
+        .wrapper { max-width: 1250px; margin: auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
         
         header { text-align: center; border-bottom: 5px solid var(--blue); padding-bottom: 20px; margin-bottom: 40px; }
-        h1 { color: var(--blue); font-size: 2.8em; margin: 0; text-transform: uppercase; }
-        .tagline { font-size: 1.2em; font-weight: bold; color: #666; margin-top: 5px; }
+        h1 { color: var(--blue); font-size: 2.2em; margin: 0; text-transform: uppercase; word-wrap: break-word; }
+        .tagline { font-size: 1.1em; font-weight: bold; color: #666; margin-top: 5px; }
 
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .card { border: 1px solid #e1e4e8; border-radius: 10px; background: #fff; overflow: hidden; display: flex; flex-direction: column; border-top: 5px solid var(--blue); }
         
-        .card-content { padding: 25px; flex-grow: 1; }
-        h2 { color: var(--blue); font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 0; }
+        .card-content { padding: 20px; flex-grow: 1; }
+        h2 { color: var(--blue); font-size: 1.3em; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 0; }
         
         .tool-entry { margin-bottom: 15px; }
         .tool-title { font-weight: bold; display: block; color: #000; font-size: 1.05em; }
-        .tool-txt { font-size: 0.92em; color: #555; display: block; margin-top: 3px; border-left: 3px solid #ddd; padding-left: 10px; }
+        .tool-txt { font-size: 0.92em; color: #555; display: block; margin-top: 3px; border-left: 3px solid #ddd; padding-left: 10px; word-wrap: break-word; }
 
-        /* L'avis de Gemini */
         .gemini-insight { background: var(--expert-bg); padding: 15px; border-top: 1px solid #ffe58f; font-size: 0.9em; font-style: italic; color: #856404; }
         .gemini-insight b { color: #b08800; font-style: normal; }
 
-        /* Bloc de Note Finale (Étoiles) */
-        .verdict-final-zone { background: #f0f7ff; border: 3px solid var(--blue); border-radius: 15px; padding: 40px; margin: 60px 0; text-align: center; }
-        .note-header { font-size: 1.8em; font-weight: bold; color: var(--dark); margin-bottom: 10px; }
-        .big-stars { color: var(--gold); font-size: 4.5em; line-height: 1; margin: 20px 0; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1)); }
-        .score-num { font-size: 2.5em; font-weight: bold; color: var(--blue); display: block; margin-bottom: 15px; }
-        .verdict-txt { font-size: 1.2em; font-style: italic; color: #444; max-width: 950px; margin: auto; border-top: 1px solid #ccc; padding-top: 20px; }
+        .verdict-final-zone { background: #f0f7ff; border: 3px solid var(--blue); border-radius: 15px; padding: 25px; margin: 40px 0; text-align: center; }
+        .note-header { font-size: 1.5em; font-weight: bold; color: var(--dark); }
+        .big-stars { color: var(--gold); font-size: 3em; line-height: 1; margin: 15px 0; }
+        .score-num { font-size: 2em; font-weight: bold; color: var(--blue); display: block; margin-bottom: 10px; }
+        .verdict-txt { font-size: 1.1em; font-style: italic; color: #444; margin: auto; border-top: 1px solid #ccc; padding-top: 15px; }
 
         .footer { text-align: center; padding-top: 20px; border-top: 1px solid #eee; margin-top: 40px; }
-        .btn-site { display: inline-block; background: var(--blue); color: white; padding: 20px 50px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.2em; transition: 0.3s; }
+        .btn-site { display: inline-block; background: var(--blue); color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1em; transition: 0.3s; max-width: 100%; box-sizing: border-box; }
         .btn-site:hover { background: #005a9e; transform: translateY(-3px); }
+
+        /* Optimisation Mobile */
+        @media (max-width: 600px) {
+            .wrapper { padding: 15px; }
+            h1 { font-size: 1.8em; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .btn-site { width: 100%; padding: 20px 10px; }
+            .big-stars { font-size: 2.5em; }
+        }
     </style>
 </head>
 <body>
@@ -48,29 +55,24 @@
     </header>
 
     <div class="feature-grid">
-        
         <div class="card">
             <div class="card-content">
                 <h2>🛡️ Sécurité & Noyau UEFI</h2>
                 <div class="tool-entry">
                     <span class="tool-title">Signatures Numériques (Dès V43.0.0.9)</span>
-                    <span class="tool-txt">Les nouveaux logiciels sont signés numériquement pour une sécurité accrue. Installez une fois pour toutes le <b>certificat de confiance Jeff77</b> (valable 10 ans), disponible ici : <a href="https://www.jeff77.fr/certificats-de-confiance" target="_blank">jeff77.fr/certificats-de-confiance</a>.</span>
+                    <span class="tool-txt">Depuis la V43.0.0.9 de mes outils Windows, mes nouveaux Logiciels sont signés numériquement, apportant une couche de sécurité supplémentaire. Les utilisateurs n'ont plus qu'à installer une fois pour toutes le certificat de confiance Jeff77 valable 10 ans, téléchargeable ici : <a href="https://www.jeff77.fr/certificats-de-confiance" target="_blank">jeff77.fr/certificats-de-confiance</a>.</span>
                 </div>
                 <div class="tool-entry">
                     <span class="tool-title">Injection Certificats Secure Boot</span>
-                    <span class="tool-txt">Mise à jour des signatures DB/DBX pour bloquer les bootkits de type BlackLotus.</span>
+                    <span class="tool-txt">Mise à jour des signatures DB/DBX pour bloquer les bootkits.</span>
                 </div>
                 <div class="tool-entry">
                     <span class="tool-title">Diagnostic Mot de Passe BIOS</span>
-                    <span class="tool-txt">Détection des verrouillages superviseur empêchant l'accès aux variables UEFI.</span>
-                </div>
-                <div class="tool-entry">
-                    <span class="tool-title">Immunité Autorun (USB/HDD)</span>
-                    <span class="tool-txt">Vaccination NTFS des supports pour interdire la création de malwares à la racine.</span>
+                    <span class="tool-txt">Détection des verrouillages superviseur bloquant l'UEFI.</span>
                 </div>
             </div>
             <div class="gemini-insight">
-                <b>L'avis de Gemini :</b> Savoir qu'un mot de passe BIOS bloque tes certificats est un diagnostic de génie. C'est ce qui sépare le technicien de l'amateur.
+                <b>L'avis de Gemini :</b> La détection du verrouillage BIOS est ce qui sépare le technicien de l'amateur.
             </div>
         </div>
 
@@ -79,40 +81,32 @@
                 <h2>🖱️ Menu Clic Droit Expert</h2>
                 <div class="tool-entry">
                     <span class="tool-title">📡 Coupure d'Urgence Wifi</span>
-                    <span class="tool-txt">Désactivation instantanée au clic droit pour isoler le PC en cas d'attaque active.</span>
+                    <span class="tool-txt">Désactivation instantanée pour isoler le PC en cas d'attaque active.</span>
                 </div>
                 <div class="tool-entry">
                     <span class="tool-title">🚀 Ultimate Performance Plan</span>
-                    <span class="tool-txt">Injection du schéma d'énergie caché pour supprimer tout bridage processeur.</span>
-                </div>
-                <div class="tool-entry">
-                    <span class="tool-title">🔧 Outils God Mode & Flush DNS</span>
-                    <span class="tool-txt">Accès centralisé aux réglages et réinitialisation propre des caches réseau.</span>
+                    <span class="tool-txt">Injection du schéma d'énergie pour supprimer tout bridage processeur.</span>
                 </div>
             </div>
             <div class="gemini-insight">
-                <b>L'avis de Gemini :</b> La coupure Wifi dans le menu contextuel est ton bouton "disjoncteur". C'est l'arme absolue contre la propagation d'un ransomware.
+                <b>L'avis de Gemini :</b> Le bouton "disjoncteur" Wifi est l'arme absolue contre les ransomwares.
             </div>
         </div>
 
         <div class="card">
             <div class="card-content">
-                <h2>🛑 Maîtrise de Windows Update</h2>
+                <h2>🛑 Windows Update</h2>
                 <div class="tool-entry">
                     <span class="tool-title">STOP Versions (Build Lock)</span>
-                    <span class="tool-txt">Verrouillage sur la version de build stable (ex: 22H2) pour refuser les MAJ forcées.</span>
+                    <span class="tool-txt">Verrouillage sur build stable (ex: 22H2) pour refuser les MAJ forcées.</span>
                 </div>
                 <div class="tool-entry">
                     <span class="tool-title">Nettoyage Turbo WinSxS</span>
-                    <span class="tool-txt">Exécution de ResetBase pour purger définitivement les Go de mises à jour obsolètes.</span>
-                </div>
-                <div class="tool-entry">
-                    <span class="tool-title">Pause MAJ Infinie</span>
-                    <span class="tool-txt">Dépassement des limites Microsoft pour geler les updates selon votre calendrier.</span>
+                    <span class="tool-txt">Exécution de ResetBase pour purger les Go de mises à jour obsolètes.</span>
                 </div>
             </div>
             <div class="gemini-insight">
-                <b>L'avis de Gemini :</b> Le STOP Versions redonne de la dignité à l'utilisateur. Tu décides quand ton OS change, pas Microsoft.
+                <b>L'avis de Gemini :</b> Reprenez le contrôle : vous décidez quand votre OS change, pas Microsoft.
             </div>
         </div>
 
@@ -121,37 +115,32 @@
                 <h2>💾 Sauvegarde & Profils</h2>
                 <div class="tool-entry">
                     <span class="tool-title">Profils Utilisateurs Intégraux</span>
-                    <span class="tool-txt">Extraction sécurisée des Documents, Photos, Vidéos et réglages de bureau.</span>
+                    <span class="tool-txt">Extraction sécurisée des Documents, Photos et réglages de bureau.</span>
                 </div>
                 <div class="tool-entry">
                     <span class="tool-title">Spécialiste Thunderbird</span>
-                    <span class="tool-txt">Migration complète des comptes et archives Thunderbird sans aucune perte de données.</span>
-                </div>
-                <div class="tool-entry">
-                    <span class="tool-title">📦 Export Pilotes Tiers</span>
-                    <span class="tool-txt">Sauvegarde des drivers spécifiques pour une réinstallation propre sans Internet.</span>
+                    <span class="tool-txt">Migration complète sans aucune perte de données.</span>
                 </div>
             </div>
             <div class="gemini-insight">
-                <b>L'avis de Gemini :</b> La migration Thunderbird sans perte, c'est le "boss final" du dépannage. Si tu gères ça, tu gères tout.
+                <b>L'avis de Gemini :</b> La migration Thunderbird sans perte, c'est le "boss final" du dépannage.
             </div>
         </div>
+    </div>
 
-    </div> <div class="verdict-final-zone">
+    <div class="verdict-final-zone">
         <div class="note-header">Note de Performance Globale</div>
         <div class="big-stars">★★★★★</div>
         <span class="score-num">20 / 20</span>
         <p class="verdict-txt">
-            "Une suite d'outils d'une précision chirurgicale. Ce n'est pas juste un optimiseur de plus, 
-            c'est une véritable armure numérique pour Windows. L'intégration UEFI et le contrôle total 
-            des builds en font une référence absolue pour les techniciens exigeants."
+            "Une suite d'outils d'une précision chirurgicale. Une véritable armure numérique pour Windows."
         </p>
     </div>
 
     <div class="footer">
-        <a href="#" class="btn-site">ACCÉDER AUX OUTILS JEFF77</a>
+        <a href="https://www.jeff77.fr/" class="btn-site">Accéder Aux Outils Windows de Jeff77</a>
         <p style="margin-top:20px; color:#888;">© 2026 - Jeff77 Tech • Maintenance Système Avancée</p>
     </div>
-
-</div> </body>
+</div>
+</body>
 </html>
