@@ -23,7 +23,7 @@
         .tool-title { font-weight: bold; display: block; color: #000; font-size: 1.05em; }
         .tool-txt { font-size: 0.92em; color: #555; display: block; margin-top: 3px; border-left: 3px solid #ddd; padding-left: 10px; }
 
-        /* Le fameux bouton bleu dans le texte */
+        /* Bouton certificat dans le texte */
         .btn-inline-cert {
             display: inline-flex;
             align-items: center;
@@ -41,7 +41,7 @@
         }
         .btn-inline-cert:hover { background: #005a9e; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,120,212,0.4); }
 
-        /* Lien tuto manuel stylisé */
+        /* Lien tuto manuel */
         .link-tuto {
             display: flex;
             align-items: center;
@@ -57,7 +57,7 @@
         .gemini-insight { background: var(--expert-bg); padding: 15px; border-top: 1px solid #ffe58f; font-size: 0.9em; font-style: italic; color: #856404; }
         .gemini-insight b { color: #b08800; font-style: normal; }
 
-        /* --- SECTION TELECHARGEMENT BAS DE PAGE --- */
+        /* --- SECTION TELECHARGEMENT --- */
         .trial-section { 
             margin: 40px 0; padding: 30px; border: 2px solid var(--blue); border-radius: 12px; 
             background: #ffffff; display: flex; flex-wrap: wrap; gap: 25px; align-items: center; 
@@ -88,7 +88,7 @@
         }
 
         .verdict-final-zone { background: #f0f7ff; border: 3px solid var(--blue); border-radius: 15px; padding: 40px; margin: 60px 0; text-align: center; }
-        .big-stars { color: var(--gold); font-size: 4.5em; line-height: 1; margin: 20px 0; }
+        .big-stars { color: var(--gold); font-size: 4.5em; line-height: 1; margin: 20px 0; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1)); }
         .score-num { font-size: 2.5em; font-weight: bold; color: var(--blue); display: block; margin-bottom: 15px; }
 
         .footer { text-align: center; padding-top: 20px; border-top: 1px solid #eee; margin-top: 40px; }
@@ -97,9 +97,12 @@
         .btn-gold { display: inline-block; background: linear-gradient(135deg, #ffd700 0%, #d4af37 50%, #b8860b 100%); color: #000; padding: 18px 40px; text-decoration: none; border-radius: 8px; font-weight: bold; border: 2px solid #b8860b; }
 
         @media (max-width: 768px) {
+            body { padding: 10px; }
+            .wrapper { padding: 20px; }
             h1 { font-size: 1.6em; }
-            .feature-grid { grid-template-columns: 1fr; }
-            .btn-site, .btn-gold, .btn-trial, .btn-cert { width: 100%; text-align: center; }
+            .feature-grid { grid-template-columns: 1fr; gap: 20px; }
+            .trial-section { padding: 20px; text-align: center; }
+            .btn-site, .btn-gold, .btn-trial, .btn-cert { width: 100%; box-sizing: border-box; }
             .link-tuto { justify-content: center; }
         }
     </style>
@@ -138,41 +141,65 @@
                     <span class="tool-title">Diagnostic Mot de Passe BIOS</span>
                     <span class="tool-txt">Identification des verrouillages superviseur bloquant l'accès aux variables UEFI critiques.</span>
                 </div>
-                <div class="tool-entry">
-                    <span class="tool-title">Immunité Autorun (USB/HDD)</span>
-                    <span class="tool-txt">Vaccination NTFS des supports pour empêcher toute persistance de malwares à la racine.</span>
-                </div>
             </div>
             <div class="gemini-insight">
-                <b>L'avis de Gemini :</b> La détection d'un blocage UEFI par mot de passe BIOS est une analyse de haut vol. C'est l'un des points forts de cette suite.
+                <b>L'avis de Gemini :</b> La détection d'un blocage UEFI par mot de passe BIOS est une analyse de haut vol.
             </div>
         </div>
 
         <div class="card">
             <div class="card-content">
                 <h2>🖱️ Menu Clic Droit Expert</h2>
-                <div class="tool-entry"><span class="tool-title">📡 Coupure d'Urgence Wifi</span><span class="tool-txt">Action de désactivation immédiate via le menu contextuel.</span></div>
-                <div class="tool-entry"><span class="tool-title">🚀 Ultimate Performance Plan</span><span class="tool-txt">Activation du schéma d'énergie dissimulé de Windows.</span></div>
+                <div class="tool-entry">
+                    <span class="tool-title">⚡ Gestion de l'Énergie</span>
+                    <span class="tool-txt">Changement instantané du mode d'alimentation, incluant le mode "Performances Optimales" et l'accès direct aux options d'énergie.</span>
+                </div>
+                <div class="tool-entry">
+                    <span class="tool-title">📡 Connectivité & Maintenance</span>
+                    <span class="tool-txt"><b>Coupure d'Urgence du Wifi</b>, Vider le Presse-Papier, et accès rapide à l'outil Capture d'écran.</span>
+                </div>
+                <div class="tool-entry">
+                    <span class="tool-title">⚙️ Système & Administration</span>
+                    <span class="tool-txt">Accès au <b>Mode "Dieu"</b> (God Mode), gestion des Icônes de bureau et raccourci vers le Panneau de Configuration classique.</span>
+                </div>
             </div>
-            <div class="gemini-insight"><b>L'avis de Gemini :</b> La fonction "Coupure Wifi" est le disjoncteur ultime.</div>
+            <div class="gemini-insight">
+                <b>L'avis de Gemini :</b> La fonction "Coupure Wifi" est le disjoncteur ultime contre les intrusions.
+            </div>
         </div>
 
         <div class="card">
             <div class="card-content">
                 <h2>🛑 Maîtrise de Windows Update</h2>
-                <div class="tool-entry"><span class="tool-title">STOP Versions (Build Lock)</span><span class="tool-txt">Verrouillage sur une build spécifique (ex: 22H2).</span></div>
-                <div class="tool-entry"><span class="tool-title">Nettoyage Turbo WinSxS</span><span class="tool-txt">Purge massive des composants obsolètes.</span></div>
+                <div class="tool-entry">
+                    <span class="tool-title">STOP Versions (Build Lock)</span>
+                    <span class="tool-txt">Verrouillage sur une build spécifique (ex: 22H2) pour empêcher les changements d'OS non sollicités.</span>
+                </div>
+                <div class="tool-entry">
+                    <span class="tool-title">Nettoyage Turbo WinSxS</span>
+                    <span class="tool-txt">Purge via ResetBase des composants obsolètes pour récupérer un espace disque massif.</span>
+                </div>
             </div>
-            <div class="gemini-insight"><b>L'avis de Gemini :</b> Le "Build Lock" rend la souveraineté à l'utilisateur.</div>
+            <div class="gemini-insight">
+                <b>L'avis de Gemini :</b> Le "Build Lock" rend la souveraineté à l'utilisateur.
+            </div>
         </div>
 
         <div class="card">
             <div class="card-content">
                 <h2>💾 Sauvegarde & Profils</h2>
-                <div class="tool-entry"><span class="tool-title">Profils Utilisateurs Intégraux</span><span class="tool-txt">Sauvegarde granulaire des données personnelles.</span></div>
-                <div class="tool-entry"><span class="tool-title">Spécialiste Thunderbird</span><span class="tool-txt">Protocole de migration assurant le transfert sans échec.</span></div>
+                <div class="tool-entry">
+                    <span class="tool-title">Profils Utilisateurs Intégraux</span>
+                    <span class="tool-txt">Sauvegarde granulaire des données personnelles et des configurations d'environnement.</span>
+                </div>
+                <div class="tool-entry">
+                    <span class="tool-title">Spécialiste Thunderbird</span>
+                    <span class="tool-txt">Protocole de migration assurant le transfert sans échec des comptes et archives mail.</span>
+                </div>
             </div>
-            <div class="gemini-insight"><b>L'avis de Gemini :</b> La gestion Thunderbird sans perte est une prouesse.</div>
+            <div class="gemini-insight">
+                <b>L'avis de Gemini :</b> La gestion Thunderbird sans perte est une prouesse de maintenance.
+            </div>
         </div>
     </div> 
 
@@ -201,6 +228,7 @@
         </div>
         <p style="margin-top:30px; color:#888;">© 2026 - Jeff77 Tech • Maintenance Système Avancée</p>
     </div>
+
 </div> 
 </body>
 </html>
