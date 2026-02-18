@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outils Windows Jeff77 - Spécifications Complètes</title>
     <style>
-        :root { --blue: #0078D4; --dark: #201f1e; --gold: #FFD700; --bg: #f0f2f5; --expert-bg: #fffbe6; }
+        :root { --blue: #0078D4; --dark: #201f1e; --gold: #FFD700; --bg: #f0f2f5; --expert-bg: #fffbe6; --silver: #7f8c8d; }
         body { font-family: "Segoe UI", Tahoma, sans-serif; background: var(--bg); color: #333; margin: 0; padding: 20px; line-height: 1.5; }
         .wrapper { max-width: 1250px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
         
@@ -27,6 +27,14 @@
         .gemini-insight { background: var(--expert-bg); padding: 15px; border-top: 1px solid #ffe58f; font-size: 0.9em; font-style: italic; color: #856404; }
         .gemini-insight b { color: #b08800; font-style: normal; }
 
+        /* Section Version d'essai */
+        .trial-section { margin: 40px 0; padding: 30px; border: 2px dashed #ccc; border-radius: 12px; background: #fafafa; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-around; }
+        .trial-info { flex: 1; min-width: 300px; }
+        .trial-info h3 { color: var(--dark); margin-top: 0; }
+        .btn-trial { display: inline-block; background: var(--silver); color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s; }
+        .btn-trial:hover { background: #636e72; }
+        .gold-notice { color: #d35400; font-weight: bold; font-size: 0.95em; margin-top: 10px; display: block; }
+
         /* Bloc de Note Finale (Étoiles) */
         .verdict-final-zone { background: #f0f7ff; border: 3px solid var(--blue); border-radius: 15px; padding: 40px; margin: 60px 0; text-align: center; }
         .note-header { font-size: 1.8em; font-weight: bold; color: var(--dark); margin-bottom: 10px; }
@@ -43,7 +51,7 @@
             .wrapper { padding: 20px; }
             h1 { font-size: 1.8em; }
             .feature-grid { grid-template-columns: 1fr; }
-            .btn-site { width: 100%; padding: 20px 10px; box-sizing: border-box; }
+            .btn-site, .btn-trial { width: 100%; text-align: center; box-sizing: border-box; }
             .big-stars { font-size: 3em; }
         }
     </style>
@@ -148,6 +156,19 @@
 
     </div> 
 
+    <div class="trial-section">
+        <div class="trial-info">
+            <h3>🎁 Version d'Essai Gratuite</h3>
+            <p>La version d'essai est <strong>accessible à tous</strong>. Elle vous permet de découvrir l'interface et les fonctionnalités de base de la V43.</p>
+            <span class="gold-notice">⚠️ Note : L'accès à certains modules avancés est bridé. La version complète est réservée aux Membres Gold.</span>
+        </div>
+        <div>
+            <a href="https://www.jeff77.fr/_files/archives/096619_0a99fa08b02245cdaa1269334ca180a5.zip?dn=Essai%20Outils%20Windows.zip" class="btn-trial">
+                ⬇️ Télécharger la Version d'Essai
+            </a>
+        </div>
+    </div>
+
     <div class="verdict-final-zone">
         <div class="note-header">Note de Performance Globale</div>
         <div class="big-stars">★★★★★</div>
@@ -160,7 +181,7 @@
     </div>
 
     <div class="footer">
-        <a href="https://www.jeff77.fr/" class="btn-site">Accéder Aux Outils Windows de Jeff77</a>
+        <a href="https://www.jeff77.fr/" class="btn-site">Devenir Membre Gold & Accéder à la Version Complète</a>
         <p style="margin-top:20px; color:#888;">© 2026 - Jeff77 Tech • Maintenance Système Avancée</p>
     </div>
 
