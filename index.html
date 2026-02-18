@@ -23,22 +23,35 @@
         .tool-title { font-weight: bold; display: block; color: #000; font-size: 1.05em; }
         .tool-txt { font-size: 0.92em; color: #555; display: block; margin-top: 3px; border-left: 3px solid #ddd; padding-left: 10px; }
 
-        /* Petit bouton certificat dans le texte */
+        /* Bouton certificat dans le texte */
         .btn-inline-cert {
             display: inline-flex;
             align-items: center;
             background: var(--blue);
             color: white !important;
-            padding: 8px 15px;
+            padding: 8px 18px;
             text-decoration: none;
             border-radius: 5px;
             font-size: 0.85em;
             font-weight: bold;
-            margin-top: 10px;
+            margin-top: 12px;
             transition: 0.2s;
             border: none;
         }
         .btn-inline-cert:hover { background: #005a9e; transform: translateY(-2px); }
+
+        /* Lien tuto manuel */
+        .link-tuto {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+            font-size: 0.85em;
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .link-tuto:hover { text-decoration: underline; color: #005a9e; }
 
         .gemini-insight { background: var(--expert-bg); padding: 15px; border-top: 1px solid #ffe58f; font-size: 0.9em; font-style: italic; color: #856404; }
         .gemini-insight b { color: #b08800; font-style: normal; }
@@ -90,18 +103,17 @@
         .btn-site:hover { transform: translateY(-3px); background: #005a9e; }
         .btn-gold:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 6px 20px rgba(184, 134, 11, 0.5); background: linear-gradient(135deg, #ffe033 0%, #ffd700 100%); }
 
-        /* --- OPTIMISATION MOBILE --- */
+        /* --- MOBILE OPTIMISATION --- */
         @media (max-width: 768px) {
             body { padding: 10px; }
             .wrapper { padding: 20px; }
             h1 { font-size: 1.6em; }
-            .tagline { font-size: 1em; }
             .feature-grid { grid-template-columns: 1fr; gap: 20px; }
-            .trial-section { padding: 20px; gap: 15px; text-align: center; }
+            .trial-section { padding: 20px; text-align: center; }
             .trial-info, .trial-btns { min-width: 100%; }
-            .btn-site, .btn-gold, .btn-trial, .btn-cert { width: 100%; text-align: center; box-sizing: border-box; }
+            .btn-site, .btn-gold, .btn-trial, .btn-cert { width: 100%; box-sizing: border-box; }
             .big-stars { font-size: 3em; }
-            .verdict-final-zone { padding: 20px; }
+            .link-tuto { justify-content: center; }
         }
     </style>
 </head>
@@ -123,7 +135,10 @@
                         Depuis la V43.0.0.9 des outils Windows Jeff77, les nouveaux logiciels sont signés numériquement. Ce vrai gage de sécurité évite les alertes <b>SmartScreen</b> ; l'éditeur apparaît désormais clairement comme <b>Jeff77</b>. Les utilisateurs n'ont qu'à installer une fois le certificat de confiance Jeff77 (valide 10 ans).
                         <br>
                         <a href="https://www.jeff77.fr/_files/archives/096619_745ce804536e4d2e90ebb32f62cf967e.zip?dn=Installateur%20Certificat%20Jeff77.zip" class="btn-inline-cert">
-                            🛡️ Installer le Certificat maintenant
+                            🛡️ Installation Automatique (Recommandé)
+                        </a>
+                        <a href="https://www.jeff77.fr/certificats-de-confiance" target="_blank" class="link-tuto">
+                            ℹ️ 📖 <i>Consulter le tutoriel d'installation manuelle</i>
                         </a>
                     </span>
                 </div>
