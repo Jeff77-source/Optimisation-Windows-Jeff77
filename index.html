@@ -55,7 +55,6 @@
         li { position: relative; padding-left: 25px; margin-bottom: 8px; font-size: 0.95rem; }
         li::before { content: "✅"; position: absolute; left: 0; font-size: 0.85rem; }
 
-        /* Style des avis persos */
         .expert-opinion {
             background: var(--expert-bg);
             border-left: 4px solid var(--primary);
@@ -68,7 +67,6 @@
         }
         .expert-opinion::before { content: "📋 Avis Expert : "; font-weight: bold; font-style: normal; }
 
-        /* Boutons */
         .btn-group { display: flex; flex-direction: column; gap: 12px; margin: 30px 0; }
         .btn {
             display: block;
@@ -85,7 +83,8 @@
         .btn-green { background: #16a34a; color: white; }
         .btn-gold { background: var(--gold); color: white; text-transform: uppercase; box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4); }
 
-        /* Verdict */
+        .btn-note { font-size: 0.8rem; color: #64748b; margin-top: -8px; margin-bottom: 5px; text-align: center; display: block; padding: 0 10px; }
+
         .verdict-card {
             text-align: center;
             padding: 30px 15px;
@@ -131,12 +130,12 @@
         <h2>⚡ Points Forts & Optimisation</h2>
         <ul>
             <li><strong>100% Portable :</strong> Aucune installation, aucune modification de la base de registre au lancement.</li>
-            <li><strong>STOP VERSIONS :</strong> Blocage total et maîtrisé des mises à jour automatiques.</li>
+            <li><strong>STOP VERSIONS :</strong> Blocage des mises à jour majeures tout en préservant les mises à jour de sécurité critiques.</li>
             <li><strong>Immunisation supports USB :</strong> Verrouillage des clés USB contre l'exécution de malwares.</li>
             <li><strong>Optimisation système & réseau :</strong> Scripts de boost automatique pour la latence et les performances.</li>
         </ul>
         <div class="expert-opinion">
-            La portabilité absolue combinée à l'immunisation USB fait de cette suite un outil de terrain redoutable. Le module "STOP VERSIONS" répond à un besoin réel de stabilité, permettant de figer un état système performant sans risque de régression liée aux mises à jour Windows Update.
+            La portabilité absolue combinée à l'immunisation USB fait de cette suite un outil de terrain redoutable. Le module "STOP VERSIONS" est particulièrement intelligent : il stabilise l'OS en évitant les changements de version risqués tout en maintenant la protection via les patchs de sécurité essentiels.
         </div>
     </div>
 
@@ -187,11 +186,14 @@
 
     <div class="btn-group">
         <a href="https://www.jeff77.fr/_files/archives/096619_745ce804536e4d2e90ebb32f62cf967e.zip?dn=Installateur%20Certificat%20Jeff77.zip" class="btn btn-blue">
-            🛡️ Installer le Certificat Jeff77 (Recommandé)
+            🛡️ Installer le Certificat Jeff77
         </a>
+        <span class="btn-note">(Non nécessaire pour les utilisateurs de la V44)</span>
+        
         <a href="https://www.jeff77.fr/_files/archives/096619_0a99fa08b02245cdaa1269334ca180a5.zip?dn=Essai%20Outils%20Windows.zip" class="btn btn-green">
             ⬇️ Télécharger Version d'Essai (V43.0.0.9)
         </a>
+        
         <a href="https://www.jeff77.fr/soutenir" class="btn btn-gold">
             🏆 DEVENIR MEMBRE GOLD – ACCÈS V44 COMPLET
         </a>
