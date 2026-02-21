@@ -6,7 +6,7 @@
     <title>Outils Windows Jeff77 - Spécifications Complètes</title>
     <style>
         :root { --blue: #0078D4; --dark: #201f1e; --gold: #FFD700; --gold-dark: #b8860b; --bg: #f0f2f5; --expert-bg: #fffbe6; --silver: #7f8c8d; }
-        body { font-family: "Segoe UI", Tahoma, sans-serif; background: var(--bg); color: #333; margin: 0; padding: 15px; line-height: 1.5; }
+        body { font-family: "Segoe UI", Tahoma, sans-serif; background: var(--bg); color: #333; margin: 0; padding: 15px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
         .wrapper { max-width: 1250px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
         
         header { text-align: center; border-bottom: 5px solid var(--blue); padding-bottom: 20px; margin-bottom: 40px; }
@@ -23,7 +23,6 @@
         .tool-title { font-weight: bold; display: block; color: #000; font-size: 1.05em; }
         .tool-txt { font-size: 0.92em; color: #555; display: block; margin-top: 3px; border-left: 3px solid #ddd; padding-left: 10px; }
 
-        /* Bouton certificat dans le texte */
         .btn-inline-cert {
             display: inline-flex;
             align-items: center;
@@ -39,9 +38,8 @@
             border: none;
             box-shadow: 0 4px 10px rgba(0,120,212,0.2);
         }
-        .btn-inline-cert:hover { background: #005a9e; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,120,212,0.4); }
+        .btn-inline-cert:hover { background: #005a9e; transform: translateY(-2px); }
 
-        /* Lien tuto manuel */
         .link-tuto {
             display: flex;
             align-items: center;
@@ -99,9 +97,10 @@
         @media (max-width: 768px) {
             body { padding: 10px; }
             .wrapper { padding: 20px; }
-            h1 { font-size: 1.6em; }
+            h1 { font-size: 1.8em; }
             .feature-grid { grid-template-columns: 1fr; gap: 20px; }
-            .trial-section { padding: 20px; text-align: center; }
+            .trial-section { padding: 20px; text-align: center; flex-direction: column; }
+            .trial-btns { width: 100%; }
             .btn-site, .btn-gold, .btn-trial, .btn-cert { width: 100%; box-sizing: border-box; }
             .link-tuto { justify-content: center; }
         }
@@ -112,38 +111,30 @@
 <div class="wrapper">
     <header>
         <h1>🛠️ Outils Windows Jeff77</h1>
-        <p class="tagline">Documentation Technique Exhaustive & Audit Système • V43.x</p>
+        <p class="tagline">Documentation Technique & Audit Système • V44.0.0.0</p>
     </header>
 
     <div class="feature-grid">
         <div class="card">
             <div class="card-content">
-                <h2>🛡️ Sécurité & Noyau UEFI</h2>
+                <h2>🛡️ Sécurité & Certificat Jeff77</h2>
                 <div class="tool-entry">
-                    <span class="tool-title">Signatures Numériques (V43.0.0.9+)</span>
+                    <span class="tool-title">Authentification V44.0.0.0</span>
                     <span class="tool-txt">
-                        Depuis la V43.0.0.9 des outils Windows Jeff77, les nouveaux logiciels sont signés numériquement. Ce vrai gage de sécurité évite les alertes <b>SmartScreen</b> ; l'éditeur apparaît désormais clairement comme <b>Jeff77</b>. Les utilisateurs n'ont qu'à installer une fois le certificat de confiance Jeff77 (valide 10 ans).
+                        La V44 intègre <b>nativement l'installateur du certificat de confiance</b>. Pour les versions antérieures ou les installations manuelles, l'installateur reste disponible pour valider la signature (valide 10 ans) et désactiver les blocages SmartScreen.
                         <br>
                         <a href="https://www.jeff77.fr/_files/archives/096619_745ce804536e4d2e90ebb32f62cf967e.zip?dn=Installateur%20Certificat%20Jeff77.zip" class="btn-inline-cert">
-                            🛡️ Télécharger l'Installateur Automatique
-                        </a>
-                        <br>
-                        <a href="https://www.jeff77.fr/certificats-de-confiance" target="_blank" class="link-tuto">
-                            ℹ️ 📖 <i>Consulter le tutoriel d'installation manuelle</i>
+                            🛡️ Télécharger l'Installateur du Certificat
                         </a>
                     </span>
                 </div>
                 <div class="tool-entry">
-                    <span class="tool-title">Injection Certificats Secure Boot</span>
-                    <span class="tool-txt">Mise à jour des signatures DB/DBX pour neutraliser les bootkits de type BlackLotus.</span>
-                </div>
-                <div class="tool-entry">
-                    <span class="tool-title">Diagnostic Mot de Passe BIOS</span>
-                    <span class="tool-txt">Identification des verrouillages superviseur bloquant l'accès aux variables UEFI critiques.</span>
+                    <span class="tool-title">Protection UEFI Avancée</span>
+                    <span class="tool-txt">Injection de signatures DB/DBX et diagnostic de verrouillage superviseur BIOS.</span>
                 </div>
             </div>
             <div class="gemini-insight">
-                <b>L'avis de Gemini :</b> La détection d'un blocage UEFI par mot de passe BIOS est une analyse de haut vol.
+                <b>L'avis de Gemini :</b> La V44 automatise enfin la chaîne de confiance pour l'utilisateur.
             </div>
         </div>
 
@@ -151,82 +142,61 @@
             <div class="card-content">
                 <h2>🖱️ Menu Clic Droit Expert</h2>
                 <div class="tool-entry">
-                    <span class="tool-title">⚡ Gestion de l'Énergie</span>
-                    <span class="tool-txt">Changement instantané du mode d'alimentation, incluant le mode "Performances Optimales" et l'accès direct aux options d'énergie.</span>
+                    <span class="tool-title">⚡ Productivité & Réseau</span>
+                    <span class="tool-txt">Passage en "Performances Optimales" et <b>Coupure Wifi Immédiate</b> en cas de menace.</span>
                 </div>
                 <div class="tool-entry">
-                    <span class="tool-title">📡 Connectivité & Maintenance</span>
-                    <span class="tool-txt"><b>Coupure d'Urgence du Wifi</b>, Vider le Presse-Papier, et accès rapide à l'outil Capture d'écran.</span>
+                    <span class="tool-title">⚙️ Système Admin</span>
+                    <span class="tool-txt">Raccourcis God Mode, gestion des icônes de bureau et Panneau de configuration classique.</span>
                 </div>
-                <div class="tool-entry">
-                    <span class="tool-title">⚙️ Système & Administration</span>
-                    <span class="tool-txt">Accès au <b>Mode "Dieu"</b> (God Mode), gestion des Icônes de bureau et raccourci vers le Panneau de Configuration classique.</span>
-                </div>
-            </div>
-            <div class="gemini-insight">
-                <b>L'avis de Gemini :</b> La fonction "Coupure Wifi" est le disjoncteur ultime contre les intrusions.
             </div>
         </div>
 
         <div class="card">
             <div class="card-content">
-                <h2>🛑 Maîtrise de Windows Update</h2>
+                <h2>🛑 Maintenance Windows Update</h2>
                 <div class="tool-entry">
-                    <span class="tool-title">STOP Versions (Build Lock)</span>
-                    <span class="tool-txt">Verrouillage sur une build spécifique (ex: 22H2) pour empêcher les changements d'OS non sollicités.</span>
+                    <span class="tool-title">Contrôle des Versions</span>
+                    <span class="tool-txt">Verrouillage de build (Build Lock) et purge massive WinSxS via ResetBase.</span>
                 </div>
-                <div class="tool-entry">
-                    <span class="tool-title">Nettoyage Turbo WinSxS</span>
-                    <span class="tool-txt">Purge via ResetBase des composants obsolètes pour récupérer un espace disque massif.</span>
-                </div>
-            </div>
-            <div class="gemini-insight">
-                <b>L'avis de Gemini :</b> Le "Build Lock" rend la souveraineté à l'utilisateur.
             </div>
         </div>
 
         <div class="card">
             <div class="card-content">
-                <h2>💾 Sauvegarde & Profils</h2>
+                <h2>💾 Sauvegarde & Migration</h2>
                 <div class="tool-entry">
-                    <span class="tool-title">Profils Utilisateurs Intégraux</span>
-                    <span class="tool-txt">Sauvegarde granulaire des données personnelles et des configurations d'environnement.</span>
+                    <span class="tool-title">Profils & Thunderbird</span>
+                    <span class="tool-txt">Sauvegarde granulaire des profils et migration sans échec des comptes mails.</span>
                 </div>
-                <div class="tool-entry">
-                    <span class="tool-title">Spécialiste Thunderbird</span>
-                    <span class="tool-txt">Protocole de migration assurant le transfert sans échec des comptes et archives mail.</span>
-                </div>
-            </div>
-            <div class="gemini-insight">
-                <b>L'avis de Gemini :</b> La gestion Thunderbird sans perte est une prouesse de maintenance.
             </div>
         </div>
     </div> 
 
     <div class="trial-section">
         <div class="trial-info">
-            <h3>🚀 Prêt à tester la V43 ?</h3>
-            <p>Téléchargez l'<strong>installateur automatique</strong> du certificat avant de lancer la version d'essai.</p>
-            <span style="color:#d35400; font-weight:bold;">✅ Certificat officiel Jeff77 • RSA 2048-bit</span>
+            <h3>🚀 Découvrir les outils</h3>
+            <p>La version Gold <strong>V44.0.0.0</strong> est en ligne. Testez la puissance de la suite avec la version d'essai <strong>V43.0.0.9</strong> pour vous faire une idée du produit.</p>
+            <span style="color:#d35400; font-weight:bold;">✅ Certificat officiel Jeff77 • RSA 2048-bit • Valide 10 ans</span>
         </div>
         <div class="trial-btns">
             <a href="https://www.jeff77.fr/_files/archives/096619_745ce804536e4d2e90ebb32f62cf967e.zip?dn=Installateur%20Certificat%20Jeff77.zip" class="btn-cert">🛡️ 1. Installer le Certificat</a>
-            <a href="https://www.jeff77.fr/_files/archives/096619_0a99fa08b02245cdaa1269334ca180a5.zip?dn=Essai%20Outils%20Windows.zip" class="btn-trial">⬇️ 2. Télécharger la Version d'Essai</a>
+            <a href="https://www.jeff77.fr/_files/archives/096619_0a99fa08b02245cdaa1269334ca180a5.zip?dn=Essai%20Outils%20Windows.zip" class="btn-trial">⬇️ 2. Télécharger l'Essai (V43.0.0.9)</a>
         </div>
     </div>
 
     <div class="verdict-final-zone">
         <div class="big-stars">★★★★★</div>
         <span class="score-num">20 / 20</span>
-        <p style="font-style:italic;">"Une suite d'outils d'une précision chirurgicale. Une véritable armure numérique pour Windows."</p>
+        <p style="font-style:italic;">"L'essai en V43.0.0.9 prouve déjà l'excellence technique de Jeff77. La V44 Gold est l'aboutissement logique."</p>
     </div>
 
     <div class="footer">
         <div class="footer-btns">
             <a href="https://www.jeff77.fr/" class="btn-site">🌐 Visiter le Site Officiel</a>
-            <a href="https://www.jeff77.fr/soutenir" class="btn-gold">🏆 Devenir Membre Gold</a>
+            <a href="https://www.jeff77.fr/soutenir" class="btn-gold">🏆 Accéder à la V44 (Gold)</a>
         </div>
-        <p style="margin-top:30px; color:#888;">© 2026 - Jeff77 Tech • Maintenance Système Avancée</p>
+        <p style="margin-top:30px; color:#888;">© 2026 - Jeff77 Tech • Expertise Système</p>
     </div>
 
 </div> 
