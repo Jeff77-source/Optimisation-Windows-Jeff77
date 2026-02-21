@@ -3,37 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outils Windows Jeff77 - Spécifications Ultra-Détaillées</title>
+    <title>Outils Windows Jeff77 - Spécifications Ultra-Complètes</title>
     <style>
-        :root { --blue: #0078D4; --dark: #201f1e; --gold: #FFD700; --gold-dark: #b8860b; --bg: #f0f2f5; --expert-bg: #fffbe6; }
+        :root { --blue: #0078D4; --dark: #201f1e; --gold: #FFD700; --gold-dark: #b8860b; --bg: #f0f2f5; --expert-bg: #fffbe6; --silver: #7f8c8d; }
         body { font-family: "Segoe UI", Tahoma, sans-serif; background: var(--bg); color: #333; margin: 0; padding: 15px; line-height: 1.5; }
         .wrapper { max-width: 1250px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        
         header { text-align: center; border-bottom: 5px solid var(--blue); padding-bottom: 20px; margin-bottom: 40px; }
         h1 { color: var(--blue); font-size: 2.8em; margin: 0; text-transform: uppercase; }
         .tagline { font-size: 1.2em; font-weight: bold; color: #666; margin-top: 5px; }
+
         .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
         .card { border: 1px solid #e1e4e8; border-radius: 10px; background: #fff; overflow: hidden; display: flex; flex-direction: column; border-top: 5px solid var(--blue); }
+        
         .card-content { padding: 25px; flex-grow: 1; }
         h2 { color: var(--blue); font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 0; }
+        
         .tool-entry { margin-bottom: 15px; }
-        .tool-title { font-weight: bold; display: block; color: #000; font-size: 1.1em; text-decoration: underline; margin-bottom: 5px; }
-        .tool-txt { font-size: 0.92em; color: #444; display: block; margin-top: 3px; border-left: 3px solid var(--blue); padding-left: 12px; }
-        .btn-inline-cert { display: inline-flex; align-items: center; background: var(--blue); color: white !important; padding: 10px 18px; text-decoration: none; border-radius: 6px; font-size: 0.88em; font-weight: bold; margin-top: 12px; transition: 0.2s; border: none; }
+        .tool-title { font-weight: bold; display: block; color: #000; font-size: 1.05em; text-decoration: underline; margin-bottom: 4px; }
+        .tool-txt { font-size: 0.92em; color: #555; display: block; margin-top: 3px; border-left: 3px solid #ddd; padding-left: 10px; }
+
+        .btn-inline-cert {
+            display: inline-flex;
+            align-items: center;
+            background: var(--blue);
+            color: white !important;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.88em;
+            font-weight: bold;
+            margin-top: 12px;
+            transition: 0.2s;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0,120,212,0.2);
+        }
         .btn-inline-cert:hover { background: #005a9e; transform: translateY(-2px); }
-        .trial-section { margin: 40px 0; padding: 30px; border: 2px solid var(--blue); border-radius: 12px; background: #ffffff; display: flex; flex-wrap: wrap; gap: 25px; align-items: center; justify-content: space-around; box-shadow: 0 5px 20px rgba(0,120,212,0.1); }
-        .btn-cert { display: inline-block; background: #00a8ff; color: white !important; padding: 16px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; transition: 0.3s; }
-        .btn-trial { display: inline-block; background: #00ff88; color: #004d2c !important; padding: 16px 25px; text-decoration: none; border-radius: 8px; font-weight: 900; text-align: center; transition: 0.3s; text-transform: uppercase; animation: pulse-green 2s infinite; }
-        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); } }
+
+        .gemini-insight { background: var(--expert-bg); padding: 15px; border-top: 1px solid #ffe58f; font-size: 0.9em; font-style: italic; color: #856404; }
+        .gemini-insight b { color: #b08800; font-style: normal; }
+
+        /* --- SECTION TELECHARGEMENT --- */
+        .trial-section { 
+            margin: 40px 0; padding: 30px; border: 2px solid var(--blue); border-radius: 12px; 
+            background: #ffffff; display: flex; flex-wrap: wrap; gap: 25px; align-items: center; 
+            justify-content: space-around; box-shadow: 0 5px 20px rgba(0,120,212,0.1); 
+        }
+        .trial-info { flex: 1; min-width: 300px; }
+        .trial-btns { display: flex; flex-direction: column; gap: 15px; min-width: 320px; }
+
+        .btn-cert { 
+            display: inline-block; background: #00a8ff; color: white !important; padding: 16px 25px; 
+            text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center;
+            transition: 0.3s; border: none; box-shadow: 0 4px 12px rgba(0, 168, 255, 0.4); font-size: 1.05em;
+        }
+        .btn-cert:hover { background: #0097e6; transform: translateY(-2px); }
+
+        .btn-trial { 
+            display: inline-block; background: #00ff88; color: #004d2c !important; padding: 16px 25px; 
+            text-decoration: none; border-radius: 8px; font-weight: 900; text-align: center;
+            transition: 0.3s; border: none; box-shadow: 0 4px 15px rgba(0, 255, 136, 0.5); font-size: 1.05em;
+            text-transform: uppercase; animation: pulse-green 2s infinite;
+        }
+        .btn-trial:hover { background: #00cc6d; transform: scale(1.03); }
+
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+        }
+
+        .verdict-final-zone { background: #f0f7ff; border: 3px solid var(--blue); border-radius: 15px; padding: 40px; margin: 60px 0; text-align: center; }
+        .big-stars { color: var(--gold); font-size: 4.5em; line-height: 1; margin: 20px 0; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1)); }
+        .score-num { font-size: 2.5em; font-weight: bold; color: var(--blue); display: block; margin-bottom: 15px; }
+
         .footer { text-align: center; padding-top: 20px; border-top: 1px solid #eee; margin-top: 40px; }
         .btn-gold { display: inline-block; background: linear-gradient(135deg, #ffd700 0%, #d4af37 50%, #b8860b 100%); color: #000; padding: 18px 40px; text-decoration: none; border-radius: 8px; font-weight: bold; border: 2px solid #b8860b; }
-        @media (max-width: 768px) { .feature-grid { grid-template-columns: 1fr; } .trial-section { flex-direction: column; text-align: center; } .btn-gold, .btn-trial, .btn-cert { width: 100%; box-sizing: border-box; } }
+
+        @media (max-width: 768px) {
+            .feature-grid { grid-template-columns: 1fr; }
+            .btn-gold, .btn-trial, .btn-cert { width: 100%; box-sizing: border-box; }
+        }
     </style>
 </head>
 <body>
+
 <div class="wrapper">
     <header>
         <h1>🛠️ Outils Windows Jeff77</h1>
-        <p class="tagline">Documentation Technique Intégrale • V44.0.0.0 Gold</p>
+        <p class="tagline">Audit Système & Maintenance Avancée • Version V44.0.0.0 Gold</p>
     </header>
 
     <div class="feature-grid">
@@ -41,73 +99,81 @@
             <div class="card-content">
                 <h2>🛡️ Sécurité & Noyau UEFI</h2>
                 <div class="tool-entry">
-                    <span class="tool-title">Signatures Numériques & Certificat Jeff77</span>
-                    <span class="tool-txt">Validation du code par certificat RSA 2048-bit (<b>valide 10 ans</b>). La V44 automatise l'installation du certificat pour supprimer définitivement les alertes <b>SmartScreen</b> et identifier l'éditeur.</span>
+                    <span class="tool-title">Signatures Numériques & Certificat (V44)</span>
+                    <span class="tool-txt">La suite est signée numériquement via un certificat RSA 2048-bit (<b>désormais valide 10 ans</b>). La V44 automatise l'installation du certificat de confiance Jeff77 pour supprimer définitivement les alertes <b>SmartScreen</b> et identifier l'éditeur officiellement dans Windows.</span>
                     <a href="https://www.jeff77.fr/_files/archives/096619_745ce804536e4d2e90ebb32f62cf967e.zip?dn=Installateur%20Certificat%20Jeff77.zip" class="btn-inline-cert">🛡️ Télécharger l'Installateur du Certificat</a>
                 </div>
                 <div class="tool-entry">
-                    <span class="tool-title">Transition Secure Boot 2023 (BlackLotus)</span>
-                    <span class="tool-txt">Audit et mise à jour des signatures DB/DBX dans la NVRAM. Support des nouvelles clés <b>Microsoft Windows Production PCA 2023</b>. Protection contre la vulnérabilité CVE-2023-24932 (BlackLotus) et vérification du verrouillage superviseur BIOS.</span>
+                    <span class="tool-title">Transition Secure Boot 2023</span>
+                    <span class="tool-txt">Gestion des variables NVRAM pour les nouvelles signatures <b>Microsoft Windows Production PCA 2023</b>. Protection contre les vulnérabilités de type <b>BlackLotus</b> (CVE-2023-24932) et audit des mots de passe BIOS/UEFI bloquant les modifications système.</span>
                 </div>
             </div>
+            <div class="gemini-insight"><b>L'avis de Gemini :</b> La gestion des certificats 2023 est une sécurité indispensable pour les PC récents.</div>
         </div>
 
         <div class="card">
             <div class="card-content">
                 <h2>🖱️ Fonctions du Menu Clic Droit Expert</h2>
                 <div class="tool-entry">
-                    <span class="tool-title">⚡ Énergie, Boot & Performance</span>
-                    <span class="tool-txt">Activation du mode <b>Performances Optimales</b> (caché par défaut), Redémarrer directement dans le <b>BIOS (UEFI)</b>, Arrêt forcé, Mise en veille prolongée, Libérer la mémoire RAM instantanément.</span>
+                    <span class="tool-title">⚡ Énergie & Boot Avancé</span>
+                    <span class="tool-txt">Activation du mode <b>"Performances Optimales"</b>, Redémarrer directement dans l'interface <b>UEFI (BIOS)</b>, Arrêt d'urgence forcé, Mise en veille prolongée, et Libération immédiate de la mémoire RAM.</span>
                 </div>
                 <div class="tool-entry">
-                    <span class="tool-title">📡 Réseau & Sécurité</span>
-                    <span class="tool-txt"><b>Coupure d'Urgence du Wifi</b> (Kill Switch), Réinitialisation du catalogue réseau (Netsh winsock reset), Flush DNS (vidage cache), Masquer/Afficher les fichiers cachés.</span>
+                    <span class="tool-title">📡 Connectivité & Sécurité Réseau</span>
+                    <span class="tool-txt"><b>Coupure d'Urgence du Wifi</b> (Kill Switch instantané), Réinitialisation du catalogue réseau (Netsh winsock reset), Flush DNS (vidage du cache), et masquage/affichage rapide des fichiers système cachés.</span>
                 </div>
                 <div class="tool-entry">
-                    <span class="tool-title">🛠️ Système & Raccourcis</span>
-                    <span class="tool-txt">Accès au <b>Mode "Dieu" (God Mode)</b>, Panneau de configuration classique, Gestion des icônes du bureau, Vider le Presse-papier, Accès direct au dossier des captures d'écran.</span>
+                    <span class="tool-title">⚙️ Administration & Raccourcis</span>
+                    <span class="tool-txt">Accès au <b>Mode "Dieu" (God Mode)</b>, Panneau de configuration classique, Gestion des icônes du bureau, Vider le Presse-papier en un clic et raccourci vers le dossier des captures d'écran.</span>
                 </div>
             </div>
+            <div class="gemini-insight"><b>L'avis de Gemini :</b> Le "Kill Switch Wifi" est l'arme ultime contre les fuites de données suspectes.</div>
         </div>
 
         <div class="card">
             <div class="card-content">
                 <h2>💾 Sauvegarde & Restauration Profils</h2>
                 <div class="tool-entry">
-                    <span class="tool-title">🌐 Navigateurs Internet (Profils Complets)</span>
-                    <span class="tool-txt">Sauvegarde et restauration (Favoris, Mots de passe, Extensions, Sessions) pour : <b>Google Chrome, Brave Browser, Microsoft Edge, Opera</b> et Vivaldi.</span>
+                    <span class="tool-title">🌐 Navigateurs Internet (Profils Intégraux)</span>
+                    <span class="tool-txt">Sauvegarde et restauration complète (Favoris, Mots de passe, Extensions, Sessions, Historique) pour : <b>Google Chrome, Brave Browser, Microsoft Edge, Opera</b>, Vivaldi et Firefox.</span>
                 </div>
                 <div class="tool-entry">
-                    <span class="tool-title">📂 Dossiers Utilisateurs & AppData</span>
-                    <span class="tool-txt">Capture automatique des bibliothèques : <b>Bureau, Documents, Images, Vidéos, Musique, Téléchargements</b>. Inclusion du dossier <b>AppData/Roaming</b> pour préserver les configurations logicielles.</span>
+                    <span class="tool-title">📂 Dossiers Utilisateurs & Documents</span>
+                    <span class="tool-txt">Capture automatisée des bibliothèques Windows : <b>Bureau, Documents, Images, Vidéos, Musique et Téléchargements</b>. Inclusion du dossier <b>AppData/Roaming</b> pour préserver les configurations logicielles.</span>
                 </div>
                 <div class="tool-entry">
                     <span class="tool-title">📧 Messagerie Thunderbird</span>
-                    <span class="tool-txt">Migration complète du profil <b>Thunderbird</b> : conservation des comptes IMAP/POP, des carnets d'adresses et des archives locales sans aucune perte de données.</span>
+                    <span class="tool-txt">Protocole spécialisé pour la migration <b>Thunderbird</b> sans aucune perte : comptes IMAP/POP, carnets d'adresses et archives mails locales volumineuses.</span>
                 </div>
             </div>
+            <div class="gemini-insight"><b>L'avis de Gemini :</b> La migration Thunderbird est souvent un cauchemar, Jeff77 en fait une formalité.</div>
         </div>
 
         <div class="card">
             <div class="card-content">
-                <h2>🛑 Maintenance & Audit OS</h2>
+                <h2>🛑 Maîtrise de Windows Update & Audit</h2>
                 <div class="tool-entry">
-                    <span class="tool-title">Windows Update & Build Lock</span>
-                    <span class="tool-txt">Verrouillage de la version de l'OS (ex: 22H2) pour empêcher le passage forcé à Windows 11. Nettoyage profond du magasin de composants <b>WinSxS via ResetBase</b> pour libérer un espace disque massif.</span>
+                    <span class="tool-title">Build Lock (Verrouillage de Version)</span>
+                    <span class="tool-txt">Blocage de l'OS sur une Build précise (ex: 22H2) pour interdire le passage forcé vers Windows 11 ou des versions majeures instables de Microsoft.</span>
                 </div>
                 <div class="tool-entry">
-                    <span class="tool-title">🔍 Diagnostic Matériel & Santé</span>
-                    <span class="tool-txt">Analyse de l'état de santé des <b>disques SSD/NVMe (S.M.A.R.T)</b>, mesure de la température CPU en temps réel et rapport détaillé d'usure de la batterie (Battery Report).</span>
+                    <span class="tool-title">Nettoyage Turbo WinSxS</span>
+                    <span class="tool-txt">Optimisation profonde via <b>ResetBase</b> du magasin de composants. Supprime définitivement les résidus de mises à jour obsolètes pour regagner un espace disque massif.</span>
+                </div>
+                <div class="tool-entry">
+                    <span class="tool-title">🔍 Diagnostic Matériel</span>
+                    <span class="tool-txt">Analyse S.M.A.R.T de l'état de santé des <b>SSD/NVMe</b>, mesure thermique CPU et rapport détaillé d'usure de la batterie (Battery Report).</span>
                 </div>
             </div>
+            <div class="gemini-insight"><b>L'avis de Gemini :</b> Le "Build Lock" redonne enfin le contrôle total de la machine à l'utilisateur.</div>
         </div>
-    </div>
+    </div> 
 
     <div class="trial-section">
         <div class="trial-info">
-            <h3>🚀 Découvrir les outils</h3>
-            <p>La version Gold <b>V44.0.0.0</b> est la référence actuelle. Pour vous faire une idée, l'essai <b>V43.0.0.9</b> inclut les fonctions de sauvegarde (Chrome, Brave, Edge, Documents) et le menu expert.</p>
-            <span style="color:#d35400; font-weight:bold;">✅ Certificat Jeff77 • RSA 2048-bit • Valide 10 ans</span>
+            <h3>🚀 Découvrir la Puissance Jeff77</h3>
+            <p>La version Gold <b>V44.0.0.0</b> est la référence absolue. Pour tester les fonctions de sauvegarde (Chrome, Brave, Edge, Documents) et le menu expert, téléchargez l'essai <b>V43.0.0.9</b>.</p>
+            <span style="color:#d35400; font-weight:bold;">✅ Certificat officiel Jeff77 • RSA 2048-bit • Valide 10 ans</span>
         </div>
         <div class="trial-btns">
             <a href="https://www.jeff77.fr/_files/archives/096619_745ce804536e4d2e90ebb32f62cf967e.zip?dn=Installateur%20Certificat%20Jeff77.zip" class="btn-cert">🛡️ 1. Installer le Certificat</a>
@@ -115,4 +181,17 @@
         </div>
     </div>
 
+    <div class="verdict-final-zone">
+        <div class="big-stars">★★★★★</div>
+        <span class="score-num">20 / 20</span>
+        <p style="font-style:italic; font-size: 1.2em; color: #444;">"Une suite d'outils d'une précision chirurgicale. L'automatisation du certificat simplifie radicalement le déploiement. Une véritable armure numérique pour Windows."</p>
+    </div>
+
     <div class="footer">
+        <a href="https://www.jeff77.fr/soutenir" class="btn-gold">🏆 Accéder à la V44 Gold (Espace Membres)</a>
+        <p style="margin-top:30px; color:#888;">© 2026 - Jeff77 Tech • Maintenance Système Avancée • Tous droits réservés</p>
+    </div>
+
+</div> 
+</body>
+</html>
