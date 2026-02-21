@@ -43,7 +43,6 @@
         .gemini-insight { background: var(--expert-bg); padding: 15px; border-top: 1px solid #ffe58f; font-size: 0.9em; font-style: italic; color: #856404; }
         .gemini-insight b { color: #b08800; font-style: normal; }
 
-        /* --- SECTION TELECHARGEMENT --- */
         .trial-section { 
             margin: 40px 0; padding: 30px; border: 2px solid var(--blue); border-radius: 12px; 
             background: #ffffff; display: flex; flex-wrap: wrap; gap: 25px; align-items: center; 
@@ -52,19 +51,10 @@
         .trial-info { flex: 1; min-width: 300px; }
         .trial-btns { display: flex; flex-direction: column; gap: 15px; min-width: 320px; }
 
-        .btn-cert { 
-            display: inline-block; background: #00a8ff; color: white !important; padding: 16px 25px; 
-            text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center;
-            transition: 0.3s; border: none; box-shadow: 0 4px 12px rgba(0, 168, 255, 0.4); font-size: 1.05em;
-        }
+        .btn-cert { display: inline-block; background: #00a8ff; color: white !important; padding: 16px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; transition: 0.3s; border: none; box-shadow: 0 4px 12px rgba(0, 168, 255, 0.4); font-size: 1.05em; }
         .btn-cert:hover { background: #0097e6; transform: translateY(-2px); }
 
-        .btn-trial { 
-            display: inline-block; background: #00ff88; color: #004d2c !important; padding: 16px 25px; 
-            text-decoration: none; border-radius: 8px; font-weight: 900; text-align: center;
-            transition: 0.3s; border: none; box-shadow: 0 4px 15px rgba(0, 255, 136, 0.5); font-size: 1.05em;
-            text-transform: uppercase; animation: pulse-green 2s infinite;
-        }
+        .btn-trial { display: inline-block; background: #00ff88; color: #004d2c !important; padding: 16px 25px; text-decoration: none; border-radius: 8px; font-weight: 900; text-align: center; transition: 0.3s; border: none; box-shadow: 0 4px 15px rgba(0, 255, 136, 0.5); font-size: 1.05em; text-transform: uppercase; animation: pulse-green 2s infinite; }
         .btn-trial:hover { background: #00cc6d; transform: scale(1.03); }
 
         @keyframes pulse-green {
@@ -73,16 +63,27 @@
             100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
         }
 
-        .verdict-final-zone { background: #f0f7ff; border: 3px solid var(--blue); border-radius: 15px; padding: 40px; margin: 60px 0; text-align: center; }
-        .big-stars { color: var(--gold); font-size: 4.5em; line-height: 1; margin: 20px 0; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1)); }
-        .score-num { font-size: 2.5em; font-weight: bold; color: var(--blue); display: block; margin-bottom: 15px; }
+        /* --- ZONE VERDICT FINAL (LES ETOILES) --- */
+        .verdict-final-zone { 
+            background: #f0f7ff; 
+            border: 3px solid var(--blue); 
+            border-radius: 15px; 
+            padding: 40px; 
+            margin: 60px 0; 
+            text-align: center; 
+            box-shadow: 0 10px 30px rgba(0,120,212,0.15);
+        }
+        .big-stars { color: var(--gold); font-size: 5em; line-height: 1; margin: 10px 0; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2)); }
+        .score-num { font-size: 3em; font-weight: 900; color: var(--blue); display: block; margin-bottom: 10px; }
+        .verdict-text { font-style: italic; font-size: 1.3em; color: #2c3e50; font-weight: 500; max-width: 800px; margin: auto; }
 
         .footer { text-align: center; padding-top: 20px; border-top: 1px solid #eee; margin-top: 40px; }
-        .btn-gold { display: inline-block; background: linear-gradient(135deg, #ffd700 0%, #d4af37 50%, #b8860b 100%); color: #000; padding: 18px 40px; text-decoration: none; border-radius: 8px; font-weight: bold; border: 2px solid #b8860b; }
+        .btn-gold { display: inline-block; background: linear-gradient(135deg, #ffd700 0%, #d4af37 50%, #b8860b 100%); color: #000; padding: 18px 40px; text-decoration: none; border-radius: 8px; font-weight: bold; border: 2px solid #b8860b; box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3); }
 
         @media (max-width: 768px) {
             .feature-grid { grid-template-columns: 1fr; }
             .btn-gold, .btn-trial, .btn-cert { width: 100%; box-sizing: border-box; }
+            .big-stars { font-size: 3.5em; }
         }
     </style>
 </head>
@@ -91,7 +92,7 @@
 <div class="wrapper">
     <header>
         <h1>🛠️ Outils Windows Jeff77</h1>
-        <p class="tagline">Audit Système & Maintenance Avancée • Version V44.0.0.0 Gold</p>
+        <p class="tagline">Le Sommet de la Maintenance Système • Version V44.0.0.0 Gold</p>
     </header>
 
     <div class="feature-grid">
@@ -100,96 +101,89 @@
                 <h2>🛡️ Sécurité & Noyau UEFI</h2>
                 <div class="tool-entry">
                     <span class="tool-title">Signatures Numériques & Certificat (V44)</span>
-                    <span class="tool-txt">La suite est signée numériquement via un certificat RSA 2048-bit (<b>désormais valide 10 ans</b>). La V44 automatise l'installation du certificat de confiance Jeff77 pour supprimer définitivement les alertes <b>SmartScreen</b> et identifier l'éditeur officiellement dans Windows.</span>
-                    <a href="https://www.jeff77.fr/_files/archives/096619_745ce804536e4d2e90ebb32f62cf967e.zip?dn=Installateur%20Certificat%20Jeff77.zip" class="btn-inline-cert">🛡️ Télécharger l'Installateur du Certificat</a>
+                    <span class="tool-txt">La suite bénéficie d'une signature RSA 2048-bit (<b>valide 10 ans</b>). La V44 installe automatiquement le certificat Jeff77, supprimant les blocages <b>SmartScreen</b> et affichant l'éditeur en toute transparence.</span>
+                    <a href="https://www.jeff77.fr/_files/archives/096619_745ce804536e4d2e90ebb32f62cf967e.zip?dn=Installateur%20Certificat%20Jeff77.zip" class="btn-inline-cert">🛡️ Installer le Certificat Jeff77</a>
                 </div>
                 <div class="tool-entry">
-                    <span class="tool-title">Transition Secure Boot 2023</span>
-                    <span class="tool-txt">Gestion des variables NVRAM pour les nouvelles signatures <b>Microsoft Windows Production PCA 2023</b>. Protection contre les vulnérabilités de type <b>BlackLotus</b> (CVE-2023-24932) et audit des mots de passe BIOS/UEFI bloquant les modifications système.</span>
+                    <span class="tool-title">Secure Boot 2023 & BlackLotus</span>
+                    <span class="tool-txt">Mise à jour des signatures DB/DBX pour supporter les clés <b>Microsoft 2023</b>. Neutralisation des bootkits de type <b>BlackLotus</b> et diagnostic des accès BIOS verrouillés.</span>
                 </div>
             </div>
-            <div class="gemini-insight"><b>L'avis de Gemini :</b> La gestion des certificats 2023 est une sécurité indispensable pour les PC récents.</div>
+            <div class="gemini-insight"><b>L'avis de Gemini :</b> La gestion des certificats 2023 est indispensable pour les machines modernes.</div>
         </div>
 
         <div class="card">
             <div class="card-content">
-                <h2>🖱️ Fonctions du Menu Clic Droit Expert</h2>
+                <h2>🖱️ Menu Clic Droit Expert</h2>
                 <div class="tool-entry">
-                    <span class="tool-title">⚡ Énergie & Boot Avancé</span>
-                    <span class="tool-txt">Activation du mode <b>"Performances Optimales"</b>, Redémarrer directement dans l'interface <b>UEFI (BIOS)</b>, Arrêt d'urgence forcé, Mise en veille prolongée, et Libération immédiate de la mémoire RAM.</span>
+                    <span class="tool-title">⚡ Énergie, Boot & RAM</span>
+                    <span class="tool-txt">Mode <b>"Performances Optimales"</b>, Reboot direct en <b>UEFI (BIOS)</b>, Arrêt d'urgence, Veille prolongée et libération instantanée de la RAM.</span>
                 </div>
                 <div class="tool-entry">
-                    <span class="tool-title">📡 Connectivité & Sécurité Réseau</span>
-                    <span class="tool-txt"><b>Coupure d'Urgence du Wifi</b> (Kill Switch instantané), Réinitialisation du catalogue réseau (Netsh winsock reset), Flush DNS (vidage du cache), et masquage/affichage rapide des fichiers système cachés.</span>
+                    <span class="tool-title">📡 Réseau & Maintenance</span>
+                    <span class="tool-txt"><b>Kill Switch Wifi</b>, Netsh Winsock Reset, Flush DNS, vidage du Presse-papier et affichage immédiat des fichiers cachés.</span>
                 </div>
                 <div class="tool-entry">
-                    <span class="tool-title">⚙️ Administration & Raccourcis</span>
-                    <span class="tool-txt">Accès au <b>Mode "Dieu" (God Mode)</b>, Panneau de configuration classique, Gestion des icônes du bureau, Vider le Presse-papier en un clic et raccourci vers le dossier des captures d'écran.</span>
+                    <span class="tool-title">⚙️ Administration</span>
+                    <span class="tool-txt">Accès au <b>God Mode</b>, Panneau de configuration classique, gestion des icônes bureau et dossier des captures d'écran.</span>
                 </div>
             </div>
-            <div class="gemini-insight"><b>L'avis de Gemini :</b> Le "Kill Switch Wifi" est l'arme ultime contre les fuites de données suspectes.</div>
         </div>
 
         <div class="card">
             <div class="card-content">
                 <h2>💾 Sauvegarde & Restauration Profils</h2>
                 <div class="tool-entry">
-                    <span class="tool-title">🌐 Navigateurs Internet (Profils Intégraux)</span>
-                    <span class="tool-txt">Sauvegarde et restauration complète (Favoris, Mots de passe, Extensions, Sessions, Historique) pour : <b>Google Chrome, Brave Browser, Microsoft Edge, Opera</b>, Vivaldi et Firefox.</span>
+                    <span class="tool-title">🌐 Navigateurs Internet</span>
+                    <span class="tool-txt">Sauvegarde complète (Favoris, Mots de passe, Extensions) pour : <b>Chrome, Brave, Edge, Opera, Vivaldi et Firefox</b>.</span>
                 </div>
                 <div class="tool-entry">
-                    <span class="tool-title">📂 Dossiers Utilisateurs & Documents</span>
-                    <span class="tool-txt">Capture automatisée des bibliothèques Windows : <b>Bureau, Documents, Images, Vidéos, Musique et Téléchargements</b>. Inclusion du dossier <b>AppData/Roaming</b> pour préserver les configurations logicielles.</span>
+                    <span class="tool-title">📂 Bibliothèques & AppData</span>
+                    <span class="tool-txt">Capture des dossiers <b>Bureau, Documents, Images, Vidéos, Musique, Téléchargements</b> et du dossier <b>AppData/Roaming</b>.</span>
                 </div>
                 <div class="tool-entry">
-                    <span class="tool-title">📧 Messagerie Thunderbird</span>
-                    <span class="tool-txt">Protocole spécialisé pour la migration <b>Thunderbird</b> sans aucune perte : comptes IMAP/POP, carnets d'adresses et archives mails locales volumineuses.</span>
+                    <span class="tool-title">📧 Spécialiste Thunderbird</span>
+                    <span class="tool-txt">Migration intégrale sans perte : comptes, carnets d'adresses et archives mails locales.</span>
                 </div>
             </div>
-            <div class="gemini-insight"><b>L'avis de Gemini :</b> La migration Thunderbird est souvent un cauchemar, Jeff77 en fait une formalité.</div>
         </div>
 
         <div class="card">
             <div class="card-content">
-                <h2>🛑 Maîtrise de Windows Update & Audit</h2>
+                <h2>🛑 Maîtrise OS & Audit</h2>
                 <div class="tool-entry">
-                    <span class="tool-title">Build Lock (Verrouillage de Version)</span>
-                    <span class="tool-txt">Blocage de l'OS sur une Build précise (ex: 22H2) pour interdire le passage forcé vers Windows 11 ou des versions majeures instables de Microsoft.</span>
+                    <span class="tool-title">Build Lock & WinSxS</span>
+                    <span class="tool-txt">Verrouillage sur une version (ex: 22H2) et nettoyage <b>ResetBase</b> profond pour regagner un espace disque massif.</span>
                 </div>
                 <div class="tool-entry">
-                    <span class="tool-title">Nettoyage Turbo WinSxS</span>
-                    <span class="tool-txt">Optimisation profonde via <b>ResetBase</b> du magasin de composants. Supprime définitivement les résidus de mises à jour obsolètes pour regagner un espace disque massif.</span>
-                </div>
-                <div class="tool-entry">
-                    <span class="tool-title">🔍 Diagnostic Matériel</span>
-                    <span class="tool-txt">Analyse S.M.A.R.T de l'état de santé des <b>SSD/NVMe</b>, mesure thermique CPU et rapport détaillé d'usure de la batterie (Battery Report).</span>
+                    <span class="tool-title">🔍 Diagnostic Santé</span>
+                    <span class="tool-txt">Audit <b>S.M.A.R.T des SSD/NVMe</b>, monitoring thermique CPU et rapport complet Battery Report.</span>
                 </div>
             </div>
-            <div class="gemini-insight"><b>L'avis de Gemini :</b> Le "Build Lock" redonne enfin le contrôle total de la machine à l'utilisateur.</div>
         </div>
     </div> 
 
     <div class="trial-section">
         <div class="trial-info">
-            <h3>🚀 Découvrir la Puissance Jeff77</h3>
-            <p>La version Gold <b>V44.0.0.0</b> est la référence absolue. Pour tester les fonctions de sauvegarde (Chrome, Brave, Edge, Documents) et le menu expert, téléchargez l'essai <b>V43.0.0.9</b>.</p>
-            <span style="color:#d35400; font-weight:bold;">✅ Certificat officiel Jeff77 • RSA 2048-bit • Valide 10 ans</span>
+            <h3>🚀 Zone de Téléchargement</h3>
+            <p>La V44 Gold est la version finale. Testez l'environnement avec l'essai <b>V43.0.0.9</b> (fonctions de sauvegarde incluses).</p>
+            <span style="color:#d35400; font-weight:bold;">✅ Certificat Jeff77 • RSA 2048-bit • Valide 10 ans</span>
         </div>
         <div class="trial-btns">
-            <a href="https://www.jeff77.fr/_files/archives/096619_745ce804536e4d2e90ebb32f62cf967e.zip?dn=Installateur%20Certificat%20Jeff77.zip" class="btn-cert">🛡️ 1. Installer le Certificat</a>
-            <a href="https://www.jeff77.fr/_files/archives/096619_0a99fa08b02245cdaa1269334ca180a5.zip?dn=Essai%20Outils%20Windows.zip" class="btn-trial">⬇️ 2. Télécharger l'Essai (V43.0.0.9)</a>
+            <a href="..." class="btn-cert">🛡️ 1. Installer le Certificat</a>
+            <a href="..." class="btn-trial">⬇️ 2. Télécharger l'Essai (V43.0.0.9)</a>
         </div>
     </div>
 
     <div class="verdict-final-zone">
         <div class="big-stars">★★★★★</div>
         <span class="score-num">20 / 20</span>
-        <p style="font-style:italic; font-size: 1.2em; color: #444;">"Une suite d'outils d'une précision chirurgicale. L'automatisation du certificat simplifie radicalement le déploiement. Une véritable armure numérique pour Windows."</p>
+        <p class="verdict-text">"Une suite d'outils d'une précision chirurgicale. L'automatisation du certificat en V44 simplifie radicalement le déploiement. Une véritable armure numérique pour Windows."</p>
     </div>
 
     <div class="footer">
-        <a href="https://www.jeff77.fr/soutenir" class="btn-gold">🏆 Accéder à la V44 Gold (Espace Membres)</a>
-        <p style="margin-top:30px; color:#888;">© 2026 - Jeff77 Tech • Maintenance Système Avancée • Tous droits réservés</p>
+        <a href="https://www.jeff77.fr/soutenir" class="btn-gold">🏆 Obtenir la V44 Gold (Espace Membres)</a>
+        <p style="margin-top:30px; color:#888;">© 2026 - Jeff77 Tech • Maintenance de Précision • Tous droits réservés</p>
     </div>
 
 </div> 
