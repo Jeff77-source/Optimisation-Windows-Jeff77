@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -15,224 +14,234 @@
             --expert-bg: #f0f7ff;
         }
 
-```
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body {
-        font-family: 'Segoe UI', system-ui, sans-serif;
-        background-color: var(--bg);
-        color: #334155;
-        line-height: 1.6;
-        overflow-x: hidden;
-    }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: #334155;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    .container { max-width: 900px; margin: 0 auto; padding: 12px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 12px; }
 
-    header {
-        background: var(--dark);
-        color: white;
-        padding: 30px 15px;
-        border-radius: 15px;
-        text-align: center;
-        margin-bottom: 20px;
-        border-bottom: 5px solid var(--primary);
-    }
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 30px 15px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 5px solid var(--primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    h1 { font-size: clamp(1.2rem, 6vw, 2.2rem); margin-bottom: 8px; }
-    .version-info { font-weight: bold; color: var(--primary); background: #fff; display: inline-block; padding: 2px 12px; border-radius: 20px; font-size: 0.9rem; }
+        h1 { font-size: clamp(1.2rem, 6vw, 2.2rem); margin-bottom: 8px; }
+        
+        /* STYLE DU LOGO CENTRÉ */
+        .header-logo {
+            display: block;
+            margin: 15px auto;
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
 
-    .section-box {
-        background: var(--card-bg);
-        border-radius: 12px;
-        padding: 20px;
-        margin-bottom: 25px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        border: 1px solid #e2e8f0;
-    }
+        .version-info { font-weight: bold; color: var(--primary); background: #fff; display: inline-block; padding: 2px 12px; border-radius: 20px; font-size: 0.9rem; margin-top: 10px; }
 
-    h2 { color: var(--primary); font-size: 1.2rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
-    h3 { font-size: 1rem; margin: 15px 0 8px 0; color: var(--dark); }
+        .section-box {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
 
-    ul { list-style: none; }
-    li { position: relative; padding-left: 25px; margin-bottom: 8px; font-size: 0.95rem; }
-    li::before { content: "✅"; position: absolute; left: 0; font-size: 0.85rem; }
+        h2 { color: var(--primary); font-size: 1.2rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
+        h3 { font-size: 1rem; margin: 15px 0 8px 0; color: var(--dark); }
 
-    .expert-opinion {
-        background: var(--expert-bg);
-        border-left: 4px solid var(--primary);
-        padding: 15px;
-        margin-top: 15px;
-        font-size: 0.88rem;
-        color: #1e40af;
-        border-radius: 0 8px 8px 0;
-        font-style: italic;
-    }
-    .expert-opinion::before { content: "📋 Avis Expert : "; font-weight: bold; font-style: normal; }
+        ul { list-style: none; }
+        li { position: relative; padding-left: 25px; margin-bottom: 8px; font-size: 0.95rem; }
+        li::before { content: "✅"; position: absolute; left: 0; font-size: 0.85rem; }
 
-    .btn-group { display: flex; flex-direction: column; gap: 12px; margin: 30px 0; }
-    .btn {
-        display: block;
-        text-align: center;
-        padding: 18px;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1rem;
-        transition: 0.2s;
-        border: none;
-    }
-    .btn-blue { background: #e0f2fe; color: var(--primary); border: 1px solid var(--primary); }
-    .btn-green { background: #16a34a; color: white; }
-    .btn-gold { background: var(--gold); color: white; text-transform: uppercase; box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4); }
+        .expert-opinion {
+            background: var(--expert-bg);
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin-top: 15px;
+            font-size: 0.88rem;
+            color: #1e40af;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+        .expert-opinion::before { content: "📋 Avis Expert : "; font-weight: bold; font-style: normal; }
 
-    .btn-note { font-size: 0.82rem; color: #b8860b; margin-top: -8px; margin-bottom: 5px; text-align: center; display: block; padding: 0 10px; font-weight: 600; }
+        .btn-group { display: flex; flex-direction: column; gap: 12px; margin: 30px 0; }
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: 0.2s;
+            border: none;
+        }
+        .btn-blue { background: #e0f2fe; color: var(--primary); border: 1px solid var(--primary); }
+        .btn-green { background: #16a34a; color: white; }
+        .btn-gold { background: var(--gold); color: white; text-transform: uppercase; box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4); }
 
-    .verdict-card {
-        text-align: center;
-        padding: 30px 15px;
-        background: white;
-        border-radius: 20px;
-        border: 2px solid var(--primary);
-        margin-top: 40px;
-    }
-    .stars { color: #fbbf24; font-size: clamp(1.8rem, 10vw, 2.5rem); letter-spacing: 3px; }
-    .big-score { font-size: 3rem; font-weight: 900; color: var(--primary); margin: 10px 0; }
+        .btn-note { font-size: 0.82rem; color: #b8860b; margin-top: -8px; margin-bottom: 5px; text-align: center; display: block; padding: 0 10px; font-weight: 600; }
 
-    footer { text-align: center; padding: 30px; font-size: 0.8rem; color: #94a3b8; }
+        .verdict-card {
+            text-align: center;
+            padding: 30px 15px;
+            background: white;
+            border-radius: 20px;
+            border: 2px solid var(--primary);
+            margin-top: 40px;
+        }
+        .stars { color: #fbbf24; font-size: clamp(1.8rem, 10vw, 2.5rem); letter-spacing: 3px; }
+        .big-score { font-size: 3rem; font-weight: 900; color: var(--primary); margin: 10px 0; }
 
-    @media (max-width: 480px) {
-        .container { padding: 8px; }
-        .section-box { padding: 15px; }
-        header { padding: 20px 10px; }
-    }
-</style>
-```
+        footer { text-align: center; padding: 30px; font-size: 0.8rem; color: #94a3b8; }
 
+        @media (max-width: 480px) {
+            .container { padding: 8px; }
+            .section-box { padding: 15px; }
+            header { padding: 20px 10px; }
+        }
+    </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>🛠️ Outils Windows</h1>
+        <h1>Outils Windows</h1>
+        
+        <img src="[https://static.wixstatic.com/media/096619_cfbad2fcbb654893a35e1865d4b5febf~mv2.jpg/v1/fill/w_560,h_562,al_c,lg_1,q_80,enc_avif,quality_auto/Logo%20Outils%20Windows.jpg](https://static.wixstatic.com/media/096619_cfbad2fcbb654893a35e1865d4b5febf~mv2.jpg/v1/fill/w_560,h_562,al_c,lg_1,q_80,enc_avif,quality_auto/Logo%20Outils%20Windows.jpg)" 
+             alt="Logo Outils Windows" 
+             class="header-logo">
+
         <p>Le Couteau Suisse Informatique</p>
         <div class="version-info">Version Actuelle : V44.0.0.5</div>
     </header>
 
-```
-<!-- NOUVEAUTÉS -->
-<div class="section-box">
-    <h2>🚀 Nouveautés Récentes</h2>
-    <ul>
-        <li>Modules de nettoyage améliorés et mieux adaptés aux antivirus</li>
-        <li>Installation automatique de la dernière version de Windows Terminal si nécessaire</li>
-        <li>Refonte complète du module "Changer de version de Windows"</li>
-        <li>Suppression optimisée du dossier Windows.Old</li>
-        <li>Automatisation renforcée de plusieurs modules système</li>
-        <li>Ajout d’un raccourci Explorateur sur le Bureau</li>
-        <li>Affichage des secondes dans l’heure de la barre des tâches sous Windows 10 LTSC</li>
-        <li>Popup d'information automatique en fin d’analyses SFC / DISM</li>
-    </ul>
-</div>
-
-<div class="section-box">
-    <h2>🛡️ Signatures Numériques & Certificat</h2>
-    <p><strong>Certificat officiel Jeff77 • RSA 2048-bit • Valide 10 ans</strong></p>
-    <ul>
-        <li><strong>Audit & Installation par Choix :</strong> Dans le Sommaire de la V44, le choix dédié au "Certificat de Confiance" déclenche une vérification immédiate du système.</li>
-        <li><strong>Automatisation intelligente :</strong> L'outil vérifie la présence du certificat et l'installe de manière automatique s'il est manquant.</li>
-        <li>Suppression définitive des alertes Microsoft SmartScreen.</li>
-        <li>Validation officielle de l'éditeur auprès du système Windows.</li>
-    </ul>
-    <div class="expert-opinion">
-        L'intégration de l'audit automatique via un simple choix dans le Sommaire de la V44 est une solution d'une grande efficacité. En sélectionnant cette option, l'utilisateur s'assure que son environnement est conforme, laissant l'installateur gérer l'aspect technique sans friction. C'est le mariage parfait entre simplicité d'utilisation et rigueur technique.
+    <div class="section-box">
+        <h2>🚀 Nouveautés Récentes</h2>
+        <ul>
+            <li>Modules de nettoyage améliorés et mieux adaptés aux antivirus</li>
+            <li>Installation automatique de la dernière version de Windows Terminal si nécessaire</li>
+            <li>Refonte complète du module "Changer de version de Windows"</li>
+            <li>Suppression optimisée du dossier Windows.Old</li>
+            <li>Automatisation renforcée de plusieurs modules système</li>
+            <li>Ajout d’un raccourci Explorateur sur le Bureau</li>
+            <li>Affichage des secondes dans l’heure de la barre des tâches sous Windows 10 LTSC</li>
+            <li>Popup d'information automatique en fin d’analyses SFC / DISM</li>
+        </ul>
     </div>
-</div>
 
-<!-- Les autres sections restent inchangées, elles sont copiées telles quelles -->
-
-<div class="section-box">
-    <h2>⚡ Points Forts & Optimisation</h2>
-    <ul>
-        <li><strong>100% Portable :</strong> Aucune installation, aucune modification de la base de registre au lancement.</li>
-        <li><strong>STOP VERSIONS :</strong> Blocage des mises à jour majeures tout en préservant les mises à jour de sécurité critiques.</li>
-        <li><strong>Immunisation supports USB :</strong> Verrouillage des clés USB contre l'exécution de malwares.</li>
-        <li><strong>Optimisation système & réseau :</strong> Scripts de boost automatique pour la latence et les performances.</li>
-    </ul>
-    <div class="expert-opinion">
-        La portabilité absolue combinée à l'immunisation USB fait de cette suite un outil de terrain redoutable. Le module "STOP VERSIONS" est particulièrement intelligent : il stabilise l'OS en évitant les changements de version risqués tout en maintenant la protection via les patchs de sécurité essentiels.
+    <div class="section-box">
+        <h2>🛡️ Signatures Numériques & Certificat</h2>
+        <p><strong>Certificat officiel Jeff77 • RSA 2048-bit • Valide 10 ans</strong></p>
+        <ul>
+            <li><strong>Audit & Installation par Choix :</strong> Dans le Sommaire de la V44, le choix dédié au "Certificat de Confiance" déclenche une vérification immédiate du système.</li>
+            <li><strong>Automatisation intelligente :</strong> L'outil vérifie la présence du certificat et l'installe de manière automatique s'il est manquant.</li>
+            <li>Suppression définitive des alertes Microsoft SmartScreen.</li>
+            <li>Validation officielle de l'éditeur auprès du système Windows.</li>
+        </ul>
+        <div class="expert-opinion">
+            L'intégration de l'audit automatique via un simple choix dans le Sommaire de la V44 est une solution d'une grande efficacité. En sélectionnant cette option, l'utilisateur s'assure que son environnement est conforme, laissant l'installateur gérer l'aspect technique sans friction. C'est le mariage parfait entre simplicité d'utilisation et rigueur technique.
+        </div>
     </div>
-</div>
 
-<div class="section-box">
-    <h2>💾 Sauvegarde & Restauration Complète</h2>
-    <h3>Données Logicielles :</h3>
-    <ul>
-        <li>Profils complets Chrome, Brave et Edge (Favoris, MDP, Extensions).</li>
-        <li>Profil complet Thunderbird (Comptes, Mails, Archives).</li>
-    </ul>
-    <h3>Données Personnelles :</h3>
-    <ul>
-        <li>Bibliothèques : Documents, Photos, Musiques, Vidéos.</li>
-        <li>Environnement : Bureau & Téléchargements.</li>
-    </ul>
-    <div class="expert-opinion">
-        Cette fonction de sauvegarde est l'une des plus complètes pour la migration. La capacité à extraire les profils Thunderbird et les données des navigateurs Chromium sécurise l'essentiel du patrimoine numérique de l'utilisateur, rendant la restauration sur un nouveau système d'une simplicité exemplaire.
+    <div class="section-box">
+        <h2>⚡ Points Forts & Optimisation</h2>
+        <ul>
+            <li><strong>100% Portable :</strong> Aucune installation, aucune modification de la base de registre au lancement.</li>
+            <li><strong>STOP VERSIONS :</strong> Blocage des mises à jour majeures tout en préservant les mises à jour de sécurité critiques.</li>
+            <li><strong>Immunisation supports USB :</strong> Verrouillage des clés USB contre l'exécution de malwares.</li>
+            <li><strong>Optimisation système & réseau :</strong> Scripts de boost automatique pour la latence et les performances.</li>
+        </ul>
+        <div class="expert-opinion">
+            La portabilité absolue combinée à l'immunisation USB fait de cette suite un outil de terrain redoutable. Le module "STOP VERSIONS" est particulièrement intelligent : il stabilise l'OS en évitant les changements de version risqués tout en maintenant la protection via les patchs de sécurité essentiels.
+        </div>
     </div>
-</div>
 
-<div class="section-box">
-    <h2>🖱️ Menu Contextuel Avancé (Clic Droit)</h2>
-    <ul>
-        <li><strong>Modes d’alimentation :</strong> Équilibré, Économie, Performances Optimales.</li>
-        <li><strong>Coupure WiFi urgente :</strong> Isolation instantanée du PC en cas d'attaque ou intrusion.</li>
-        <li><strong>Mode Dieu (God Mode) :</strong> Accès à l'intégralité des réglages cachés de l'OS.</li>
-        <li>Capture écran et Capture Vidéo native.</li>
-        <li>Gestion icônes bureau & Accès direct Panneau de configuration.</li>
-        <li>Vider le presse-papier en un clic.</li>
-    </ul>
-    <div class="expert-opinion">
-        Le menu contextuel transforme Windows en une station de travail haute performance. L'ajout de la coupure WiFi urgente est une fonctionnalité de sécurité proactive brillante, offrant un interrupteur de secours physique virtuel indispensable en situation de crise informatique.
+    <div class="section-box">
+        <h2>💾 Sauvegarde & Restauration Complète</h2>
+        <h3>Données Logicielles :</h3>
+        <ul>
+            <li>Profils complets Chrome, Brave et Edge (Favoris, MDP, Extensions).</li>
+            <li>Profil complet Thunderbird (Comptes, Mails, Archives).</li>
+        </ul>
+        <h3>Données Personnelles :</h3>
+        <ul>
+            <li>Bibliothèques : Documents, Photos, Musiques, Vidéos.</li>
+            <li>Environnement : Bureau & Téléchargements.</li>
+        </ul>
+        <div class="expert-opinion">
+            Cette fonction de sauvegarde est l'une des plus complètes pour la migration. La capacité à extraire les profils Thunderbird et les données des navigateurs Chromium sécurise l'essentiel du patrimoine numérique de l'utilisateur, rendant la restauration sur un nouveau système d'une simplicité exemplaire.
+        </div>
     </div>
-</div>
 
-<div class="section-box">
-    <h2>🔐 Sécurité, UEFI & Secure Boot 2023</h2>
-    <ul>
-        <li><strong>Audit automatique UEFI :</strong> Analyse de la conformité du micrologiciel.</li>
-        <li><strong>Gestion Secure Boot :</strong> Vérification et installation des certificats Secure Boot 2023.</li>
-        <li><strong>Détection MDP BIOS/UEFI :</strong> Identification des verrous pouvant bloquer les certificats.</li>
-        <li><strong>Migration Windows 11 :</strong> Simplification et validation automatique des critères matériels.</li>
-    </ul>
-    <div class="expert-opinion">
-        La gestion des certificats Secure Boot 2023 démontre une expertise technique de pointe. En automatisant l'audit et la détection des blocages BIOS, la suite permet une transition vers Windows 11 totalement transparente, même sur des configurations initialement complexes.
+    <div class="section-box">
+        <h2>鼠标 Menu Contextuel Avancé (Clic Droit)</h2>
+        <ul>
+            <li><strong>Modes d’alimentation :</strong> Équilibré, Économie, Performances Optimales.</li>
+            <li><strong>Coupure WiFi urgente :</strong> Isolation instantanée du PC en cas d'attaque ou intrusion.</li>
+            <li><strong>Mode Dieu (God Mode) :</strong> Accès à l'intégralité des réglages cachés de l'OS.</li>
+            <li>Capture écran et Capture Vidéo native.</li>
+            <li>Gestion icônes bureau & Accès direct Panneau de configuration.</li>
+            <li>Vider le presse-papier en un clic.</li>
+        </ul>
+        <div class="expert-opinion">
+            Le menu contextuel transforme Windows en une station de travail haute performance. L'ajout de la coupure WiFi urgente est une fonctionnalité de sécurité proactive brillante, offrant un interrupteur de secours physique virtuel indispensable en situation de crise informatique.
+        </div>
     </div>
-</div>
 
-<div class="btn-group">
-    <a href="https://www.jeff77.fr/_files/archives/096619_745ce804536e4d2e90ebb32f62cf967e.zip?dn=Installateur%20Certificat%20Jeff77.zip" class="btn btn-blue">
-        🛡️ Télécharger l'Installateur du Certificat Jeff77
-    </a>
-    <span class="btn-note">Note : Choix déjà intégré au Sommaire de la V44 (Installation automatique)</span>
-    
-    <a href="https://www.jeff77.fr/_files/archives/096619_34b3bf6b3c094788be5b8a32d34496ea.zip?dn=Essai%20Outils%20Windows%20V44.zip" class="btn btn-green">
-        ⬇️ Télécharger Version d'Essai (V44.0.0.5)
-    </a>
-    
-    <a href="https://www.jeff77.fr/soutenir" class="btn btn-gold">
-        🏆 DEVENIR MEMBRE GOLD – ACCÈS V44 COMPLET
-    </a>
-</div>
+    <div class="section-box">
+        <h2>🔐 Sécurité, UEFI & Secure Boot 2023</h2>
+        <ul>
+            <li><strong>Audit automatique UEFI :</strong> Analyse de la conformité du micrologiciel.</li>
+            <li><strong>Gestion Secure Boot :</strong> Vérification et installation des certificats Secure Boot 2023.</li>
+            <li><strong>Détection MDP BIOS/UEFI :</strong> Identification des verrous pouvant bloquer les certificats.</li>
+            <li><strong>Migration Windows 11 :</strong> Simplification et validation automatique des critères matériels.</li>
+        </ul>
+        <div class="expert-opinion">
+            La gestion des certificats Secure Boot 2023 démontre une expertise technique de pointe. En automatisant l'audit et la détection des blocages BIOS, la suite permet une transition vers Windows 11 totalement transparente, même sur des configurations initialement complexes.
+        </div>
+    </div>
 
-<div class="verdict-card">
-    <div class="stars">★★★★★</div>
-    <div class="big-score">20 / 20</div>
-    <p><strong>Évaluation Finale :</strong> Une solution portable, sécurisée et optimisée. La V44 s'établit comme la référence absolue pour garder un système Windows sous contrôle total.</p>
-</div>
+    <div class="btn-group">
+        <a href="[https://www.jeff77.fr/_files/archives/096619_745ce804536e4d2e90ebb32f62cf967e.zip?dn=Installateur%20Certificat%20Jeff77.zip](https://www.jeff77.fr/_files/archives/096619_745ce804536e4d2e90ebb32f62cf967e.zip?dn=Installateur%20Certificat%20Jeff77.zip)" class="btn btn-blue">
+            🛡️ Télécharger l'Installateur du Certificat Jeff77
+        </a>
+        <span class="btn-note">Note : Choix déjà intégré au Sommaire de la V44 (Installation automatique)</span>
+        
+        <a href="[https://www.jeff77.fr/_files/archives/096619_34b3bf6b3c094788be5b8a32d34496ea.zip?dn=Essai%20Outils%20Windows%20V44.zip](https://www.jeff77.fr/_files/archives/096619_34b3bf6b3c094788be5b8a32d34496ea.zip?dn=Essai%20Outils%20Windows%20V44.zip)" class="btn btn-green">
+            ⬇️ Télécharger Version d'Essai (V44.0.0.5)
+        </a>
+        
+        <a href="[https://www.jeff77.fr/soutenir](https://www.jeff77.fr/soutenir)" class="btn btn-gold">
+            🏆 DEVENIR MEMBRE GOLD – ACCÈS V44 COMPLET
+        </a>
+    </div>
 
-<footer>
-    © 2026 Jeff77 Tech • Signature RSA 2048-bit • Solution certifiée
-</footer>
-```
+    <div class="verdict-card">
+        <div class="stars">★★★★★</div>
+        <div class="big-score">20 / 20</div>
+        <p><strong>Évaluation Finale :</strong> Une solution portable, sécurisée et optimisée. La V44 s'établit comme la référence absolue pour garder un système Windows sous contrôle total.</p>
+    </div>
+
+    <footer>
+        © 2026 Jeff77 Tech • Signature RSA 2048-bit • Solution certifiée
+    </footer>
 
 </div>
 
