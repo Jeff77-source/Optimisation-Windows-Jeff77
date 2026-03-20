@@ -50,6 +50,11 @@
             border-radius: 12px;
             border: 2px solid rgba(255, 255, 255, 0.8); /* Cadre blanc léger */
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombre pour le relief */
+            transition: transform 0.2s;
+        }
+
+        .header-logo:hover {
+            transform: scale(1.02);
         }
 
         /* AJOUT D'UN ESPACEMENT AU-DESSUS DE LA VERSION */
@@ -122,6 +127,7 @@
         .big-score { font-size: 3rem; font-weight: 900; color: var(--primary); margin: 10px 0; }
 
         footer { text-align: center; padding: 30px; font-size: 0.8rem; color: #94a3b8; }
+        footer a { color: var(--primary); text-decoration: none; font-weight: bold; }
 
         @media (max-width: 480px) {
             .container { padding: 8px; }
@@ -136,15 +142,16 @@
     <header>
         <h1>Outils Windows</h1>
         
-        <img src="https://static.wixstatic.com/media/096619_cfbad2fcbb654893a35e1865d4b5febf~mv2.jpg/v1/fill/w_560,h_562,al_c,lg_1,q_80,enc_avif,quality_auto/Logo%20Outils%20Windows.jpg" 
-             alt="Logo Outils Windows" 
-             class="header-logo">
+        <a href="https://www.jeff77.fr/" target="_blank">
+            <img src="https://static.wixstatic.com/media/096619_cfbad2fcbb654893a35e1865d4b5febf~mv2.jpg/v1/fill/w_560,h_562,al_c,lg_1,q_80,enc_avif,quality_auto/Logo%20Outils%20Windows.jpg" 
+                 alt="Logo Outils Windows" 
+                 class="header-logo">
+        </a>
 
         <p>Le Couteau Suisse Informatique</p>
         <div class="version-info">Version Actuelle : V44.0.0.6</div>
     </header>
 
-    <!-- NOUVEAUTÉS -->
     <div class="section-box">
         <h2>🚀 Nouveautés Récentes</h2>
         <ul>
@@ -160,7 +167,6 @@
         </ul>
     </div>
 
-    <!-- CERTIFICAT -->
     <div class="section-box">
         <h2>🛡️ Signatures Numériques & Certificat</h2>
         <p><strong>Certificat officiel Jeff77 • RSA 2048-bit • Valide 10 ans</strong></p>
@@ -175,7 +181,6 @@
         </div>
     </div>
 
-    <!-- POINTS FORTS -->
     <div class="section-box">
         <h2>⚡ Points Forts & Optimisation</h2>
         <ul>
@@ -189,7 +194,6 @@
         </div>
     </div>
 
-    <!-- SAUVEGARDE -->
     <div class="section-box">
         <h2>💾 Sauvegarde & Restauration Complète</h2>
         <h3>Données Logicielles :</h3>
@@ -207,7 +211,6 @@
         </div>
     </div>
 
-    <!-- MENU CONTEXTUEL -->
     <div class="section-box">
         <h2>🖱️ Menu Contextuel Avancé (Clic Droit)</h2>
         <ul>
@@ -223,7 +226,6 @@
         </div>
     </div>
 
-    <!-- SÉCURITÉ & UEFI -->
     <div class="section-box">
         <h2>🔐 Sécurité, UEFI & Secure Boot 2023</h2>
         <ul>
@@ -237,7 +239,6 @@
         </div>
     </div>
 
-    <!-- BOUTONS -->
     <div class="btn-group">
         <a href="https://www.jeff77.fr/_files/archives/096619_745ce804536e4d2e90ebb32f62cf967e.zip?dn=Installateur%20Certificat%20Jeff77.zip" class="btn btn-blue">
             🛡️ Télécharger l'Installateur du Certificat Jeff77
@@ -253,7 +254,6 @@
         </a>
     </div>
 
-    <!-- VERDICT -->
     <div class="verdict-card">
         <div class="stars">★★★★★</div>
         <div class="big-score">20 / 20</div>
@@ -261,7 +261,8 @@
     </div>
 
     <footer>
-        © 2026 Jeff77 Tech • Signature RSA 2048-bit • Solution certifiée
+        <p>© 2026 Jeff77 Tech • Signature RSA 2048-bit • Solution certifiée</p>
+        <p><a href="https://www.jeff77.fr/" target="_blank">Visiter le site officiel : www.jeff77.fr</a></p>
     </footer>
 
 </div>
