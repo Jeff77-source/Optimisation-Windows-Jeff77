@@ -181,12 +181,13 @@
         <h2>🚀 Améliorations Récentes (V44.0.0.7)</h2>
         <ul>
             <li><strong>Migration Windows :</strong> Passage Famille vers Pro (sans ISO), Migrer vers W11 25H2 ou vers Windows LTSC (avec ISO, sans perte de données).</li>
-            <li><strong>Nettoyage Précis :</strong> Vider la liste des Documents Ouverts Récemment.</li>
-            <li>Module Powershell amélioré: Installation de la Dernière Version - Mise à Jour ou Suppression.</li>
-            <li>Installation automatique de la dernière version de Windows Terminal si nécessaire.</li>
-            <li>Suppression optimisée du dossier Windows.Old.</li>
-            <li>Affichage des secondes dans l’heure de la barre des tâches sous Windows 10 LTSC.</li>
-            <li>Popup d'information automatique en fin d’analyses SFC / DISM.</li>
+            <li><strong>Nettoyage Précis :</strong> Vider la liste des Documents Ouverts Récemment (uniquement les raccourcis Internet de cette liste).</li>
+            <li><strong>Powershell :</strong> Installation Dernière Version - Mise à Jour ou Suppression.</li>
+            <li><strong>Modules de nettoyage :</strong> Améliorations majeures et meilleure adaptation aux antivirus.</li>
+            <li><strong>Windows Terminal :</strong> Installation automatique de la dernière version si nécessaire.</li>
+            <li><strong>Maintenance :</strong> Suppression optimisée du dossier Windows.Old.</li>
+            <li><strong>LTSC :</strong> Affichage des secondes dans l’heure de la barre des tâches réactivé.</li>
+            <li><strong>Analyse :</strong> Popup d'information automatique en fin d’analyses SFC / DISM.</li>
         </ul>
     </div>
 
@@ -194,12 +195,13 @@
         <h2>🛡️ Signatures Numériques & Certificat</h2>
         <p><strong>Certificat officiel Jeff77 • RSA 2048-bit • Valide 10 ans</strong></p>
         <ul>
-            <li><strong>Audit & Installation par Choix :</strong> Choix dédié au "Certificat de Confiance" dans le Sommaire V44 pour une vérification immédiate.</li>
-            <li><strong>Automatisation intelligente :</strong> Installation automatique si le certificat est manquant.</li>
+            <li><strong>Audit & Installation par Choix :</strong> Dans le Sommaire de la V44, le choix dédié au "Certificat de Confiance" déclenche une vérification immédiate du système.</li>
+            <li><strong>Automatisation intelligente :</strong> L'outil vérifie la présence du certificat et l'installe de manière automatique s'il est manquant.</li>
             <li>Suppression définitive des alertes Microsoft SmartScreen.</li>
+            <li>Validation officielle de l'éditeur auprès du système Windows.</li>
         </ul>
         <div class="expert-opinion">
-            L'intégration de l'audit automatique via un simple choix dans le Sommaire est une solution d'une grande efficacité. C'est le mariage parfait entre simplicité d'utilisation et rigueur technique.
+            L'intégration de l'audit automatique via un simple choix dans le Sommaire de la V44 est une solution d'une grande efficacité. En sélectionnant cette option, l'utilisateur s'assure que son environnement est conforme, laissant l'installateur gérer l'aspect technique sans friction. C'est le mariage parfait entre simplicité d'utilisation et rigueur technique.
         </div>
     </div>
 
@@ -208,12 +210,12 @@
         <ul>
             <li><strong>Migration Express :</strong> Passage ultra-rapide Famille vers Pro sans ISO ou migration vers W11 25H2 et LTSC sans perte de données.</li>
             <li><strong>100% Portable :</strong> Aucune installation, aucune modification de la base de registre au lancement.</li>
-            <li><strong>STOP VERSIONS :</strong> Blocage des mises à jour majeures (préserve la sécurité).</li>
-            <li><strong>Immunisation supports USB :</strong> Verrouillage contre l'exécution de malwares.</li>
-            <li><strong>Optimisation système & réseau :</strong> Scripts de boost pour la latence et les performances.</li>
+            <li><strong>Maîtrise des Versions :</strong> Privilégie la stabilité de votre système en évitant les mises à jour majeures forcées, tout en maintenant les correctifs de sécurité indispensables.</li>
+            <li><strong>Immunisation supports USB :</strong> Verrouillage des clés USB contre l'exécution de malwares.</li>
+            <li><strong>Optimisation système & réseau :</strong> Scripts de boost automatique pour la latence et les performances.</li>
         </ul>
         <div class="expert-opinion">
-            La capacité de migrer entre les éditions (Famille vers Pro ou vers LTSC) sans perte de données est un atout majeur qui complète parfaitement la portabilité de la suite. Cela en fait l'outil ultime de maintenance et de déploiement.
+            La capacité de migrer entre les éditions sans perte de données est un atout majeur qui complète parfaitement la portabilité de la suite. La fonction de maîtrise des versions assure que votre PC reste performant et stable sans subir les bugs potentiels des nouvelles versions de Windows.
         </div>
     </div>
 
@@ -229,39 +231,56 @@
         <h3>Optimisation Spéciale SSD :</h3>
         <ul>
             <li>Gestion intelligente du Prefetch, SuperFetch et fonction TRIM.</li>
-            <li>Défragmentation optimisée au démarrage.</li>
+            <li>Défragmentation optimisée au démarrage pour la fluidité système.</li>
         </ul>
         <div class="expert-opinion">
-            Indispensable pour prolonger la durée de vie des disques SSD en réduisant les processus d'écriture inutiles.
+            Ce module est indispensable pour regagner en fluidité immédiate et prolonger la durée de vie des disques SSD. En désactivant les processus d'écriture inutiles comme l'indexation ou l'hibernation, on réduit l'usure prématurée des cellules de stockage tout en libérant des ressources CPU précieuses.
         </div>
     </div>
 
     <div class="section-box">
         <h2>💾 Sauvegarde & Restauration Complète</h2>
+        <h3>Données Logicielles :</h3>
         <ul>
-            <li><strong>Profils Logiciels :</strong> Chrome, Brave, Edge et Thunderbird (Comptes, Favoris, MDP).</li>
-            <li><strong>Données Personnelles :</strong> Documents, Photos, Musiques, Vidéos, Bureau & Téléchargements.</li>
+            <li>Profils complets Chrome, Brave et Edge (Favoris, MDP, Extensions).</li>
+            <li>Profil complet Thunderbird (Comptes, Mails, Archives).</li>
+        </ul>
+        <h3>Données Personnelles :</h3>
+        <ul>
+            <li>Bibliothèques : Documents, Photos, Musiques, Vidéos.</li>
+            <li>Environnement : Bureau & Téléchargements.</li>
         </ul>
         <div class="expert-opinion">
-            Sécurise l'essentiel du patrimoine numérique, rendant la restauration sur un nouveau système d'une simplicité exemplaire.
+            Cette fonction de sauvegarde est l'une des plus complètes pour la migration. La capacité à extraire les profils Thunderbird et les données des navigateurs Chromium sécurise l'essentiel du patrimoine numérique de l'utilisateur, rendant la restauration sur un nouveau système d'une simplicité exemplaire.
         </div>
     </div>
 
     <div class="section-box">
         <h2>🖱️ Menu Contextuel Avancé (Clic Droit)</h2>
         <ul>
-            <li>Modes d’alimentation & Coupure WiFi urgente.</li>
-            <li>Mode Dieu (God Mode) & Capture écran/vidéo native.</li>
-            <li>Gestion icônes bureau & Vider le presse-papier.</li>
+            <li><strong>Modes d’alimentation :</strong> Équilibré, Économie, Performances Optimales.</li>
+            <li><strong>Coupure WiFi urgente :</strong> Isolation instantanée du PC en cas d'attaque ou intrusion.</li>
+            <li><strong>Mode Dieu (God Mode) :</strong> Accès à l'intégralité des réglages cachés de l'OS.</li>
+            <li>Capture écran et Capture Vidéo native.</li>
+            <li>Gestion icônes bureau & Accès direct Panneau de configuration.</li>
+            <li>Vider le presse-papier en un clic.</li>
         </ul>
+        <div class="expert-opinion">
+            Le menu contextuel transforme Windows en une station de travail haute performance. L'ajout de la coupure WiFi urgente est une fonctionnalité de sécurité proactive brillante, offrant un interrupteur de secours physique virtuel indispensable en situation de crise informatique.
+        </div>
     </div>
 
     <div class="section-box">
         <h2>🔐 Sécurité, UEFI & Secure Boot 2023</h2>
         <ul>
-            <li>Audit automatique UEFI et gestion Secure Boot 2023.</li>
-            <li>Détection MDP BIOS/UEFI & Migration Windows 11 simplifiée.</li>
+            <li><strong>Audit automatique UEFI :</strong> Analyse de la conformité du micrologiciel.</li>
+            <li><strong>Gestion Secure Boot :</strong> Vérification et installation des certificats Secure Boot 2023.</li>
+            <li><strong>Détection MDP BIOS/UEFI :</strong> Identification des verrous pouvant bloquer les certificats.</li>
+            <li><strong>Migration Windows 11 :</strong> Simplification et validation automatique des critères matériels.</li>
         </ul>
+        <div class="expert-opinion">
+            La gestion des certificats Secure Boot 2023 démontre une expertise technique de pointe. En automatisant l'audit et la détection des blocages BIOS, la suite permet une transition vers Windows 11 totalement transparente, même sur des configurations initialement complexes.
+        </div>
     </div>
 
     <div class="btn-group">
@@ -282,7 +301,7 @@
     <div class="verdict-card">
         <div class="stars">★★★★★</div>
         <div class="big-score">20 / 20</div>
-        <p><strong>Évaluation Finale :</strong> La V44 s'établit comme la référence absolue pour garder un système Windows sous contrôle total.</p>
+        <p><strong>Évaluation Finale :</strong> Une solution portable, sécurisée et optimisée. La V44 s'établit comme la référence absolue pour garder un système Windows sous contrôle total.</p>
     </div>
 
     <div class="site-link-container">
