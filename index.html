@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Outils Windows Jeff77 - Suite Complète V46.0.0.0</title>
+    <title>Outils Windows Jeff77 - Suite Complète V46.0.0.1</title>
     <style>
         :root {
             --primary: #0078D4;
             --dark: #0f172a;
             --gold: linear-gradient(135deg, #ffd700, #d4af37, #b8860b);
+            --gold-dark: #b8860b;
             --bg: #f8fafc;
             --card-bg: #ffffff;
             --expert-bg: #f0f7ff;
@@ -87,6 +88,37 @@
             margin-bottom: 25px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             border: 1px solid #e2e8f0;
+        }
+
+        /* Section Loterie adaptée au design */
+        .loterie-box {
+            background: linear-gradient(135deg, #fffdf0, #fff3b3);
+            border: 2px dashed var(--gold-dark);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .loterie-box h2 {
+            color: #7a5800;
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 8px;
+            justify-content: center;
+        }
+
+        .btn-loterie {
+            background: #0f172a;
+            color: #ffd700;
+            border: 2px solid #ffd700;
+            max-width: 420px;
+            margin: 15px auto 0 auto;
+        }
+
+        .btn-loterie:hover {
+            background: #1e293b;
         }
 
         h2 { color: var(--primary); font-size: 1.2rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
@@ -182,13 +214,24 @@
         </a>
 
         <p>Le Couteau Suisse Informatique</p>
-        <div class="version-info">Version Actuelle : V46.0.0.0 (Gold)</div>
-        <div class="version-date">Dernière Mise à jour : 5 Mai 2026</div>
+        <div class="version-info">Version Actuelle : V46.0.0.1 (Gold)</div>
+        <div class="version-date">Dernière Mise à jour : 15 Mai 2026</div>
     </header>
+
+    <div class="loterie-box">
+        <h2>🎲 GRANDE LOTERIE GOLD X2 🎲</h2>
+        <p style="font-weight: bold; margin: 5px 0 5px 0; color: #444;">Participez dès maintenant au tirage du 9 Juin prochain et tentez de doubler vos avantages !</p>
+        <a href="https://www.jeff77.fr/loterie-gold-x2" target="_blank" class="btn btn-loterie">
+            🎯 CLIQUER ICI POUR PARTICIPER A LA LOTERIE
+        </a>
+    </div>
 
     <div class="section-box">
         <h2>🚀 Nouveautés & Améliorations (V46.0.0.0)</h2>
         <ul>
+            <li><strong>Nouveau (V46.0.0.1) :</strong> Ajout d'une vérification automatique de la disponibilité d'une prochaine Mise à Jour des Outils Windows.</li>
+            <li><strong>Grosse Amélioration (V46.0.0.1 - Exclusivité Gold) :</strong> Module "LISTER LES FICHIERS EN TEXTE" revu en profondeur (plus simple et intuitif) avec l'ajout de 2 autres Types de tri : Tri par Taille (plus gros en tête) et Tri par Extension (groupés alphabétiquement par type).</li>
+            <li><strong>Modification (V46.0.0.1) :</strong> La Durée de vie de chaque Version Gold des Outils Windows passe de 60 à 120 Jours.</li>
             <li><strong>Majeur (V46) :</strong> Refonte complète des Modules Wifi (Support des noms avec Espaces).</li>
             <li><strong>Wifi Pro :</strong> Afficher, Exporter, Sauvegarder et Importer ses Profils et Mots de Passe Wifi.</li>
             <li><strong>Gestion :</strong> Supprimer un Réseau Wifi et accès aux OPTIONS des Profils Réseau.</li>
@@ -197,7 +240,7 @@
             <li><strong>Maintenance (V45.0.0.6) :</strong> Améliorations diverses pour une stabilité maximale.</li>
             <li><strong>Sécurité (V45.0.0.5) :</strong> Fonction "Mise à Jour et Scan Complet Windows Defender".</li>
             <li><strong>Optimisation (V45.0.0.3) :</strong> Code allégé et mise à jour majeure de fonctionnement.</li>
-            <li><strong>Validité :</strong> Durée étendue (60 j. Gold / 90 j. Essai) pour plus de sérénité.</li>
+            <li><strong>Validité :</strong> Durée étendue (120 j. Gold / 90 j. Essai) pour plus de sérénité.</li>
             <li><strong>Performance :</strong> Diagnostic Système, Matériel et Consommation Électrique (V45.0.0.1).</li>
             <li><strong>Certificat Jeff77 :</strong> Installation automatique et transparente au lancement.</li>
             <li><strong>Migration :</strong> Famille vers Pro (Sans ISO), W11 25H2 ou LTSC (Avec ISO).</li>
@@ -226,7 +269,7 @@
             <li><strong>Réparer le Réseau :</strong> Réparation automatique des couches Wi-Fi/Ethernet.</li>
             <li><strong>Migration Express :</strong> Passage rapide Famille vers Pro ou éditions LTSC sans perte.</li>
             <li><strong>100% Portable :</strong> Pas d'installation, respect total du registre au lancement.</li>
-            <li><strong>Maîtrise des Versions :</strong> Validité de 60 à 90 jours selon version pour garantir la sécurité.</li>
+            <li><strong>Maîtrise des Versions :</strong> Validité de 120 à 90 jours selon version pour garantir la sécurité.</li>
             <li><strong>Immunisation USB :</strong> Protection active contre l'exécution de malwares.</li>
         </ul>
         <div class="expert-opinion">
@@ -251,21 +294,21 @@
 
     <div class="btn-group">
         
-        <a href="https://www.jeff77.fr/_files/archives/096619_0c25b44b4b804679973fb12ad5005e80.zip?dn=Essai%20Outils%20Windows%20V46.zip" class="btn btn-green">
-            ⬇️ Télécharger Version d'Essai (V46.0.0.0)
+        <a href="https://www.jeff77.fr/_files/archives/096619_03fe029542a1465cb273d3f83371a2fb.zip?dn=Essai%20Outils%20Windows%20V46.zip" class="btn btn-green">
+            ⬇️ Télécharger Version d'Essai (V46.0.0.1)
         </a>
         <span class="btn-note">Chaque version d'essai (bridée) est valable 90 Jours.</span>
         
         <a href="https://www.jeff77.fr/soutenir" class="btn btn-gold">
             🏆 DEVENIR MEMBRE GOLD – ACCÈS COMPLET
         </a>
-        <span class="btn-note">Validité de chaque version Gold (V46.0.0.0), complète et non bridée : 60 Jours. Téléchargement illimité de chaque Version en tant que Membre Gold.</span>
+        <span class="btn-note">Validité de chaque version Gold (V46.0.0.1), complète et non bridée : 120 Jours. Téléchargement illimité de chaque Version en tant que Membre Gold.</span>
     </div>
 
     <div class="verdict-card">
         <div class="stars">★★★★★</div>
         <div class="big-score">20 / 20</div>
-        <p><strong>Évaluation Finale :</strong> Une solution portable, sécurisée et optimisée. La V46.0.0.0 s'établit comme la référence absolue pour garder un système Windows sous contrôle total.</p>
+        <p><strong>Évaluation Finale :</strong> Une solution portable, sécurisée et optimisée. La V46.0.0.1 s'établit comme la référence absolue pour garder un système Windows sous contrôle total.</p>
     </div>
 
     <div class="site-link-container">
@@ -273,7 +316,7 @@
     </div>
 
     <footer>
-        <p>© 2026 Jeff77 Tech • Signature RSA 2048-bit • Solution certifiée • V46.0.0.0</p>
+        <p>© 2026 Jeff77 Tech • Signature RSA 2048-bit • Solution certifiée • V46.0.0.1</p>
     </footer>
 
 </div>
