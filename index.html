@@ -25,7 +25,7 @@
             overflow-x: hidden;
         }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 12px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 12px; }
 
         header {
             background: var(--dark);
@@ -40,7 +40,7 @@
             text-align: center;
         }
 
-        h1 { font-size: clamp(1.2rem, 6vw, 2.2rem); margin-bottom: 8px; }
+        h1 { font-size: clamp(1.2rem, 6vw, 2.2rem); margin-bottom: 8px; color: var(--primary); }
 
         .logo-link {
             display: inline-block;
@@ -50,7 +50,7 @@
 
         .header-logo {
             display: block;
-            width: 200px;
+            width: 250px;
             height: auto;
             border-radius: 12px;
             border: 2px solid rgba(255, 255, 255, 0.8);
@@ -67,7 +67,7 @@
             color: var(--primary); 
             background: #fff; 
             display: inline-block; 
-            padding: 2px 12px; 
+            padding: 4px 15px; 
             border-radius: 20px; 
             font-size: 0.9rem; 
             margin-top: 10px; 
@@ -75,7 +75,7 @@
 
         .version-date {
             display: block;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: #ffffff;
             margin-top: 5px;
             opacity: 0.9;
@@ -90,12 +90,53 @@
             border: 1px solid #e2e8f0;
         }
 
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            border: 1px solid #e5e5e5;
+            border-top: 5px solid var(--primary);
+            border-radius: 10px;
+            padding: 18px;
+            background: #fff;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
         h2 { color: var(--primary); font-size: 1.2rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
+        .card h2 { border-bottom: none; padding-bottom: 0; margin-top: 0; }
         h3 { font-size: 1rem; margin: 15px 0 8px 0; color: var(--dark); }
 
         ul { list-style: none; }
         li { position: relative; padding-left: 25px; margin-bottom: 8px; font-size: 0.95rem; }
         li::before { content: "✅"; position: absolute; left: 0; font-size: 0.85rem; }
+
+        .avis {
+            font-size: 0.85rem;
+            background: #f0f7ff;
+            padding: 8px;
+            border-left: 3px solid var(--primary);
+            margin-top: 12px;
+            border-radius: 0 6px 6px 0;
+            color: #1e40af;
+        }
+
+        .highlight-cert {
+            background: #e8f3ff;
+            border-left: 5px solid var(--primary);
+            padding: 15px;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-align: left;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
 
         .expert-opinion {
             background: var(--expert-bg);
@@ -109,9 +150,11 @@
         }
         .expert-opinion::before { content: "📋 Avis Expert : "; font-weight: bold; font-style: normal; }
 
-        .btn-group { display: flex; flex-direction: column; gap: 12px; margin: 30px 0 15px 0; }
+        .btn-group { display: flex; flex-direction: column; gap: 12px; margin: 30px 0 15px 0; align-items: center; }
         .btn {
             display: block;
+            width: 100%;
+            max-width: 420px;
             text-align: center;
             padding: 18px;
             border-radius: 10px;
@@ -121,25 +164,25 @@
             transition: 0.2s;
             border: none;
         }
-        .btn-green { background: #16a34a; color: white; }
-        .btn-gold { background: var(--gold); color: white; text-transform: uppercase; box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4); }
+        .btn-green { background: #00ff88; color: #004d2c; text-transform: uppercase; }
+        .btn-gold { background: var(--gold); color: #000; text-transform: uppercase; font-weight: 900; box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4); }
 
-        .btn-note { font-size: 0.82rem; color: #b8860b; margin-top: -8px; margin-bottom: 5px; text-align: center; display: block; padding: 0 10px; font-weight: 600; }
+        .btn-note { font-size: 0.82rem; color: #666; margin-top: -4px; margin-bottom: 5px; text-align: center; display: block; padding: 0 10px; font-weight: 600; }
 
         .verdict-card {
             text-align: center;
             padding: 30px 15px;
-            background: white;
-            border-radius: 20px;
-            border: 2px solid var(--primary);
+            background: #f0f7ff;
+            border-radius: 15px;
+            border: 3px solid var(--primary);
             margin-top: 10px;
         }
-        .stars { color: #fbbf24; font-size: clamp(1.8rem, 10vw, 2.5rem); letter-spacing: 3px; }
-        .big-score { font-size: 3rem; font-weight: 900; color: var(--primary); margin: 10px 0; }
+        .stars { color: #FFD700; font-size: clamp(1.8rem, 10vw, 2.8rem); letter-spacing: 3px; }
+        .big-score { font-size: 2rem; font-weight: bold; color: var(--primary); margin: 10px 0; }
 
         .site-link-container {
             text-align: center;
-            margin: 15px 0 10px 0;
+            margin: 20px 0 10px 0;
             font-size: 1.1rem;
         }
         .site-link-container a {
@@ -156,8 +199,8 @@
         footer { 
             text-align: center; 
             padding: 20px; 
-            font-size: 0.8rem; 
-            color: #94a3b8; 
+            font-size: 0.85rem; 
+            color: #777; 
             border-top: 1px solid #e2e8f0;
             margin-top: 15px;
         }
@@ -175,118 +218,130 @@
                  class="header-logo">
         </a>
 
-        <p>Le Couteau Suisse Informatique</p>
-        <div class="version-info">Version Actuelle : V47.0.0.4 (Gold)</div>
-        <div class="version-date">Dernière Mise à jour : 24 Juillet 2026</div>
+        <p style="font-weight:bold; margin-top:0; margin-bottom: 10px; font-size: 1.2em;">Le Couteau Suisse Informatique</p>
+        <div class="version-info">Version actuelle : V47.0.0.4 (Membres Gold)</div>
+        <div class="version-date">Dernière mise à jour : 24 Juillet 2026<br>Version d'essai (bridée): V46.0.0.7<br>100% Portable • Certificat officiel Jeff77 • RSA 2048-bit • Valide 10 ans</div>
     </header>
 
-    <div class="section-box">
-        <h2>🤝 Développement Rigoureux & Sécurité</h2>
-        <p>Les outils Windows de Jeff77 sont analysés et validés en collaboration directe avec les experts en cybersécurité du laboratoire <b>Kaspersky</b>. 🛡️</p>
-        <p>🔍 <b>Transparence Totale :</b> Vous pouvez vérifier l'intégrité des outils en temps réel sur la plateforme officielle <a href="https://opentip.kaspersky.com/" target="_blank">Kaspersky OpenTip</a>.</p>
-        <p>✅ <b>Engagement Qualité :</b> Chaque version est signée numériquement pour garantir son authenticité et sa sécurité. 🔑</p>
+    <div class="highlight-cert">
+        🚀 <b>Nouveautés Majeures V47.0.0.4 :</b><br>
+        ✅ <b>Environnement Sécurisé :</b> Intégration d'un nouvel environnement sécurisé dans le module Windows Defender - Mises à Jour et Scans pour une protection renforcée.<br><br>
+        ✅ <b>Développement Rigoureux & Sécurité :</b> Les Outils Windows de Jeff77 sont analysés et validés en collaboration directe avec les experts en cybersécurité du laboratoire <b>Kaspersky</b>.<br>
+        ✅ <b>Transparence Totale :</b> Vous pouvez vérifier l'intégrité des outils en temps réel sur la plateforme officielle <a href="https://opentip.kaspersky.com/" target="_blank">Kaspersky OpenTip</a>.<br>
+        ✅ <b>Engagement Qualité :</b> Chaque version est signée numériquement pour garantir son authenticité et sa sécurité. 🔑<br><br>
+        <b>Change Log :</b><br>
+        • <b>V47.0.0.4 - 24 Juillet 2026 :</b> Ajout de l'Environnement Sécurisé dans le Module Windows Defender, amélioration des scans réseau (Rapide/Approfondi) et des résultats de réparation DISM.<br>
+        • <b>V47.0.0.3 - 21 Juillet 2026 :</b> Ajout du module de Scan Réseau Rapide et Approfondi avec cartographie des appareils et détection d'intrus.<br>
+        • <b>V47.0.0.2 - 13 Juillet 2026 :</b> Mise à niveau générale des outils et optimisation de la stabilité.<br>
+        • <b>V47.0.0.1 - 11 Juillet 2026 :</b> Ajout Activation Optimale de Tous les Paramètres Recommandés dans Audit et Optimisation de Windows Defender (Sécurité Maximale).<br>
+        • <b>V47.0.0.0 - 10 Juillet 2026 :</b> Amélioration de l'affichage de l'audit et de l'optimisation de Windows Defender, avec un regroupement des paramètres.<br>
+        • <b>V46.0.0.9 - 10 Juillet 2026 :</b> Ajout Restaurer les Paramètres par Défaut dans le Menu Audit et Optimisation de Windows Defender (Sécurité Maximale).<br>
+        • <b>V46.0.0.8 - 09 Juillet 2026 :</b> Amélioration de la Détection d'Usure de la Batterie sur les ordinateurs Portables / Ajout Audit et Optimisation de Windows Defender (Sécurité Maximale) depuis le Menu Environnement Sécurisé.
     </div>
 
-    <div class="section-box">
-        <h2>🛠️ Modules Spécifiques & Fonctionnalités Intégrées</h2>
-        <ul>
-            <li><strong>Module Identification ISO (:IDENTIFICATION_ISO) :</strong> Restauration et gestion intelligente des modules ISO et versions système.</li>
-            <li><strong>Gestion Wi-Fi Pro :</strong> Affichage, exportation, sauvegarde et importation des profils et mots de passe Wi-Fi avec prise en charge complète des SSID avec espaces.</li>
-            <li><strong>Sécurité & Antivirus :</strong> Environnement sécurisé intégré, gestion des certificats Secure Boot UEFI, mises à jour, scan complet Windows Defender et réinitialisation de la sécurité.</li>
-            <li><strong>Maintenance & Logs :</strong> Change log détaillé, audit UEFI & Secure Boot, installation/mise à jour PowerShell & Terminal, et popups automatiques pour SFC / DISM.</li>
-            <li><strong>Réseau & Performance :</strong> Réparation réseau optimisée, module Adresse IP publique, scans réseau rapide et approfondi (cartographie IP, MAC, DNS, fabricant et repérage des intrus), et affichage des secondes sur Windows LTSC.</li>
-            <li><strong>Menu Contextuel Avancé :</strong> Modes et options d'alimentation, vidage du presse-papier, coupure Wi-Fi urgente, capture écran/vidéo, God Mode et gestion des icônes du bureau.</li>
-            <li><strong>Migration & Licence :</strong> Passage Famille vers Pro sans ISO, migration vers W11 25H2 ou Windows LTSC avec ISO.</li>
-        </ul>
-    </div>
+    <div class="feature-grid">
 
-    <div class="section-box">
-        <h2>🚀 Nouveautés & Améliorations (V47.0.0.4)</h2>
-        <ul>
-            <li><strong>Nouveau (V47.0.0.4) :</strong> Ajout d'un Environnement Sécurisé dans le Module Windows Defender - Mises à Jour et Scans.</li>
-            <li><strong>Nouveau (V47.0.0.4) :</strong> Amélioration des Scans Rapide et Approfondi du Réseau Wifi / Ethernet.</li>
-            <li><strong>Nouveau (V47.0.0.4) :</strong> Amélioration des Résultats de la Réparation DISM.</li>
-            <li><strong>Nouveau (V47.0.0.4) :</strong> Améliorations Diverses pour une stabilité accrue.</li>
-            <li><strong>Nouveau (V47.0.0.3) :</strong> Intégration d'un double mode de Scan Réseau (Rapide et Approfondi) pour cartographier le réseau local (Wi-Fi / Ethernet), identifier précisément les équipements (Adresses IP, MAC, Noms DNS, Fabricants) et détecter activement les intrus.</li>
-            <li><strong>Nouveau (V47.0.0.2) :</strong> Mise à niveau générale des outils et optimisation de la stabilité.</li>
-            <li><strong>Nouveau (V47.0.0.1) :</strong> Activation Optimale de Tous les Paramètres Recommandés dans Audit et Optimisation de Windows Defender (Sécurité Maximale).</li>
-            <li><strong>Nouveau (V47.0.0.0) :</strong> Optimisation de l'audit Windows Defender avec regroupement logique des paramètres (Activation RECOMMANDÉE puis Activation FACULTATIVE).</li>
-            <li><strong>Nouveau (V46.0.0.9) :</strong> Ajout Restaurer les Paramètres par Défaut dans le Menu Audit et Optimisation de Windows Defender (Sécurité Maximale).</li>
-            <li><strong>Nouveau (V46.0.0.8) :</strong> Amélioration de la Détection d'Usure de la Batterie sur les ordinateurs Portables.</li>
-            <li><strong>Nouveau (V46.0.0.8) :</strong> Ajout Audit et Optimisation de Windows Defender (Sécurité Maximale) depuis le Menu Environnement Sécurisé.</li>
-            <li><strong>Nouveau (V46.0.0.7) :</strong> Mise à Niveau des Outils Windows suite aux dernières MAJ de Windows et ajout de la MAJ de Windows Store dans le Module "Problèmes Internet / Store / Sécurité Win / Hosts".</li>
-            <li><strong>Nouveau (V46.0.0.6) :</strong> Modification du code de vérification de l'Espace Libre sur la Partition EFI (mieux adapté aux antivirus).</li>
-            <li><strong>Nouveau (V46.0.0.5) :</strong> Ajout de la vérification de l'Espace Libre sur la Partition EFI (50 Mo requis pour Certificats 2023) et Popup d'informations en fin de Nettoyage.</li>
-            <li><strong>Nouveau (V46.0.0.4) :</strong> Mises à Niveau diverses et amélioration du Module Adresse IP Publique.</li>
-            <li><strong>Nouveau (V46.0.0.3) :</strong> Popup d'Avertissement de Mise à Jour (désactivable) et correction bug Mise à jour Logiciels.</li>
-            <li><strong>Nouveau (V46.0.0.2) :</strong> Assistant de navigation (Pop-up guidé) Windows Defender.</li>
-            <li><strong>Nouveau (V46.0.0.1) :</strong> Versions Gold validité 120 jours et amélioration "LISTER LES FICHIERS EN TEXTE".</li>
-            <li><strong>Majeur (V46) :</strong> Refonte complète des Modules Wifi (Support des noms avec Espaces).</li>
-            <li><strong>Wifi Pro :</strong> Afficher, Exporter, Sauvegarder et Importer ses Profils et Mots de Passe Wifi.</li>
-            <li><strong>Gestion :</strong> Supprimer un Réseau Wifi et accès aux OPTIONS des Profils Réseau.</li>
-            <li><strong>Change Log :</strong> Intégration de la liste complète des modifications.</li>
-            <li><strong>Sécurité :</strong> Ajout Autres Certificats [Secure Boot UEFI] dans le Menu Certificat.</li>
-            <li><strong>Maintenance :</strong> Améliorations diverses pour une stabilité maximale.</li>
-            <li><strong>Certificat Jeff77 :</strong> Installation automatique et transparente au lancement.</li>
-            <li><strong>Migration :</strong> Famille vers Pro (Sans ISO), W11 25H2 ou LTSC (Avec ISO).</li>
-        </ul>
-    </div>
-
-    <div class="section-box">
-        <h2>🛡️ Signatures Numériques & Certificat</h2>
-        <p><strong>Certificat officiel Jeff77 • RSA 2048-bit • Valide 10 ans</strong></p>
-        <ul>
-            <li><strong>Installation Native :</strong> Vérification et installation automatique si absent.</li>
-            <li><strong>Audit & Installation par Choix :</strong> Option dédiée dans le Sommaire pour conformité immédiate.</li>
-            <li>Suppression définitive des alertes Microsoft SmartScreen.</li>
-            <li>Validation officielle de l'éditeur auprès du noyau Windows.</li>
-        </ul>
-        <div class="expert-opinion">
-            L'intégration de l'audit automatique via un simple choix dans le Sommaire est une solution d'une grande efficacité. En sélectionnant cette option, l'utilisateur s'assure que son environnement est conforme.
+        <div class="card">
+            <h2>📡 Gestion Wi-Fi (Nouveau V46)</h2>
+            <b>Refonte complète des modules sans-fil.</b><br>
+            Afficher et Exporter ses mots de passe Wi-Fi.<br>
+            Sauvegarde & Importation des Profils Réseau.<br>
+            Prise en charge des SSID avec <b>Espaces</b>.<br>
+            Suppression simplifiée de réseaux obsolètes.
+            <div class="avis">
+                💬 Avis utilisateur : La gestion des profils avec espaces fonctionne enfin parfaitement, un vrai gain de confort !
+            </div>
         </div>
-    </div>
 
-    <div class="section-box">
-        <h2>⚡ Points Forts & Optimisation</h2>
-        <ul>
-            <li><strong>Logiciel Allégé :</strong> Code optimisé pour une exécution plus fluide.</li>
-            <li><strong>Diagnostics Avancés :</strong> Analyse détaillée du matériel et de l'énergie.</li>
-            <li><strong>Réparer le Réseau :</strong> Réparation automatique des couches Wi-Fi/Ethernet.</li>
-            <li><strong>Scan Réseau Intelligent :</strong> Analyse rapide et approfondie (optimisée V47.0.0.4) pour détecter les appareils connectés et repérer les intrus.</li>
-            <li><strong>Migration Express :</strong> Passage rapide Famille vers Pro ou éditions LTSC sans perte.</li>
-            <li><strong>100% Portable :</strong> Pas d'installation, respect total du registre au lancement.</li>
-            <li><strong>Validité :</strong> Durée étendue (120 j. Gold / 90 j. Essai) pour plus de sérénité.</li>
-            <li><strong>Immunisation USB :</strong> Protection active contre l'exécution de malwares.</li>
-        </ul>
-        <div class="expert-opinion">
-            La capacité de migrer entre les éditions sans perte de données est un atout majeur. La fonction de maîtrise des versions assure que votre PC reste performant en utilisant toujours le code le plus récent.
+        <div class="card">
+            <h2>🛡️ Sécurité & Antivirus</h2>
+            Gestion avancée des certificats Secure Boot UEFI.<br>
+            Mise à Jour et Scan Complet Windows Defender.<br>
+            Réinitialisation de la Sécurité Windows.<br>
+            <b>Optimisé (V47.0.0.4) :</b> Intégration d'un Environnement Sécurisé (Mises à Jour et Scans).<br>
+            <b>Signature RSA 2048-bit :</b> Certificat officiel Jeff77.
+            <div class="avis">
+                💬 Avis utilisateur : L'intégration du nouvel environnement sécurisé blinde encore plus la protection antivirus !
+            </div>
         </div>
+
+        <div class="card">
+            <h2>🛠️ Maintenance & Logs</h2>
+            <b>Change Log :</b> Liste détaillée des modifications.<br>
+            Audit UEFI & Secure Boot 2023.<br>
+            Installation / Mise à jour <b>PowerShell</b> & <b>Terminal</b>.<br>
+            Popups automatiques en fin d'analyses SFC / DISM (Amélioré V47.0.0.4).<br>
+            <b>Amélioration continue :</b> Détection d'Usure de la Batterie sur les ordinateurs Portables.
+            <div class="avis">
+                💬 Avis utilisateur : Les résultats et le traitement des réparations DISM sont encore plus performants.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>⚡ Réseau & Performance</h2>
+            <b>Réparation Réseau optimisée.</b><br>
+            <b>Amélioration : Module Adresse IP Publique.</b><br>
+            <b>Amélioré (V47.0.0.4) :</b> Scans Réseau Rapide et Approfondi optimisés (Détection IP, MAC, DNS, Fabricant et repérage des intrus).<br>
+            Affichage des secondes sur <b>Windows LTSC</b>.<br>
+            <b>Diagnostics Système, Matériel et Électrique.</b>
+            <div class="avis">
+                💬 Avis utilisateur : Les scans réseau sont devenus d'une fluidité et d'une précision redoutables !
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🖱️ Menu Contextuel Avancé</h2>
+            Modes et Options d'alimentation.<br>
+            Vider presse-papier & Coupure WiFi urgente.<br>
+            Capture écran & vidéo.<br>
+            Mode Dieu (God Mode).<br>
+            Gestion des icônes du bureau.
+            <div class="avis">
+                💬 Avis utilisateur : Toutes les fonctions vitales de Windows sont à portée de clic droit.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>💾 Migration & Licence</h2>
+            <b>Passage Famille vers Pro (sans ISO).</b><br>
+            <b>Migrer vers W11 25H2 ou Windows LTSC (avec ISO).</b><br>
+            Durée : <b>120 Jours</b> (Gold) / <b>90 Jours</b> (Essai).<br>
+            Mises à jour fréquentes des versions Gold.
+            <div class="avis">
+                💬 Avis utilisateur : Migrer de Famille vers Pro se fait en quelques minutes sans perdre de fichiers.
+            </div>
+        </div>
+
     </div>
 
-    <div class="btn-group">
-        <a href="https://www.jeff77.fr/telecharger-essai-outils" class="btn btn-green">
-            ⬇️ Télécharger Version d'Essai (V46.0.0.7)
-        </a>
-        <span class="btn-note">Chaque version d'essai (bridée) est valable 90 Jours.</span>
-        
-        <a href="https://www.jeff77.fr/soutenir" class="btn btn-gold">
-            🏆 DEVENIR MEMBRE GOLD – ACCÈS COMPLET
-        </a>
-        <span class="btn-note">Validité de chaque version Gold (V47.0.0.4), complète et non bridée : 120 Jours. Téléchargement illimité de chaque Version en tant que Membre Gold.</span>
+    <div class="section-box" style="text-align: center;">
+        <h2>🚀 Zone de Téléchargement</h2>
+        <div class="btn-group">
+            <a href="https://www.jeff77.fr/telecharger-essai-outils" class="btn btn-green">
+                ⬇ Télécharger Version d'Essai V46.0.0.7
+            </a>
+            <span class="btn-note">Chaque version d'essai (bridée) est valable 90 Jours.</span>
+            
+            <a href="https://www.jeff77.fr/soutenir" class="btn btn-gold">
+                🏆 DEVENIR MEMBRE GOLD
+            </a>
+            <p style="font-size: 1.05rem; font-weight: bold; color: #333; margin-top: 5px;">ACCÈS COMPLET AU SITE</p>
+            <span class="btn-note" style="margin-top: 0;">Chaque version Gold (V47.0.0.4), complète et non bridée, est valable 120 Jours. Accès illimité aux Téléchargements. Pour les Membres Gold, téléchargez la dernière version dès qu'elle sort, sans limite.</span>
+        </div>
     </div>
 
     <div class="verdict-card">
         <div class="stars">★★★★★</div>
         <div class="big-score">20 / 20</div>
-        <p><strong>Évaluation Finale :</strong> La V47.0.0.4 enrichit le module Windows Defender avec un environnement sécurisé et optimise les performances globales des scans réseau et des réparations DISM.</p>
+        <p>La V47.0.0.4 enrichit le module Windows Defender avec un environnement sécurisé et optimise les performances globales des scans réseau et des réparations DISM.</p>
     </div>
 
     <div class="site-link-container">
-        <a href="https://www.jeff77.fr/" target="_blank">🌐 Visiter le site officiel : www.jeff77.fr</a>
+        <a href="https://www.jeff77.fr/" target="_blank">🌐 Accéder au site officiel : www.jeff77.fr</a>
     </div>
 
     <footer>
-        <p>© 2026 Jeff77 Tech • Signature RSA 2048-bit • Solution certifiée • V47.0.0.4</p>
+        © 2026 Jeff77 Tech • Solution portable signée numériquement • V47.0.0.4
     </footer>
 
 </div>
