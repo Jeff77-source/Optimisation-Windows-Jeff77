@@ -1,397 +1,412 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Outils Windows Jeff77 - Suite Complète V49.0.0.5</title>
-    <style>
-        :root {
-            --primary: #0078D4;
-            --dark: #0f172a;
-            --gold: linear-gradient(135deg, #ffd700, #d4af37, #b8860b);
-            --gold-dark: #b8860b;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --expert-bg: #f0f7ff;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outils Windows Jeff77 - V49.0.0.6</title>
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+<style>
+:root{
+--blue:#0078D4;
+--gold:#FFD700;
+--gold-dark:#b8860b;
+--bg:#f0f2f5;
+}
 
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background-color: var(--bg);
-            color: #334155;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+*{box-sizing:border-box;}
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 12px; }
+body{
+margin:0;
+padding:12px;
+background:var(--bg);
+font-family:"Segoe UI",Tahoma,sans-serif;
+line-height:1.5;
+color:#333;
+}
 
-        header {
-            background: var(--dark);
-            color: white;
-            padding: 30px 15px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            border-bottom: 5px solid var(--primary);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+.wrapper{
+max-width:1200px;
+margin:auto;
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 8px 30px rgba(0,0,0,0.08);
+display: flex;
+flex-direction: column;
+align-items: center;
+}
 
-        h1 { font-size: clamp(1.2rem, 6vw, 2.8rem); margin-bottom: 8px; color: #ffffff; }
+header{
+text-align:center;
+border-bottom:4px solid var(--blue);
+padding-bottom:15px;
+margin-bottom:25px;
+width: 100%;
+}
 
-        .logo-link {
-            display: inline-block;
-            text-decoration: none;
-            margin: 15px auto;
-        }
+h1{
+margin:20px 0 10px 0;
+font-size:clamp(1.6rem,4vw,2.8rem);
+color:var(--blue);
+text-align: center;
+}
 
-        .header-logo {
-            display: block;
-            width: 250px;
-            height: auto;
-            border-radius: 12px;
-            border: 2px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s;
-        }
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 auto 15px auto;
+}
 
-        .header-logo:hover {
-            transform: scale(1.02);
-        }
+.header-logo {
+display: block;
+width: 250px;
+height: auto;
+border-radius: 8px;
+transition: transform 0.2s;
+}
 
-        .version-info { 
-            font-weight: bold; 
-            color: var(--primary); 
-            background: #fff; 
-            display: inline-block; 
-            padding: 6px 18px; 
-            border-radius: 20px; 
-            font-size: 0.95rem; 
-            margin-top: 10px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+.header-logo:hover {
+    transform: scale(1.02);
+}
 
-        .version-date {
-            display: block;
-            font-size: 0.85rem;
-            color: #ffffff;
-            margin-top: 8px;
-            opacity: 0.9;
-        }
+.tagline{
+font-weight:bold;
+margin-top:0;
+margin-bottom: 20px;
+font-size: 1.2em;
+text-align: center;
+}
 
-        .section-box {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-        }
+.version{
+margin-top:10px;
+font-weight:bold;
+color:#0a5ea8;
+font-size: 0.9em;
+opacity: 0.8;
+text-align: center;
+}
 
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            width: 100%;
-            margin-bottom: 25px;
-        }
+.version-date {
+    display: block;
+    font-size: 0.85rem;
+    color: #444;
+    margin-top: 4px;
+    font-weight: normal;
+}
 
-        .card {
-            border: 1px solid #e5e5e5;
-            border-top: 5px solid var(--primary);
-            border-radius: 10px;
-            padding: 20px;
-            background: #fff;
-            text-align: left;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+.highlight-cert{
+background:#e8f3ff;
+border-left:5px solid var(--blue);
+padding:12px;
+margin-top:15px;
+font-size:0.95rem;
+font-weight:500;
+text-align: left;
+width: 100%;
+}
 
-        h2 { color: var(--primary); font-size: 1.2rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
-        .card h2 { border-bottom: none; padding-bottom: 0; margin-top: 0; font-size: 1.15rem; }
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+width: 100%;
+margin-top: 20px;
+}
 
-        ul { list-style: none; margin-top: 8px; }
-        li { position: relative; padding-left: 22px; margin-bottom: 6px; font-size: 0.92rem; }
-        li::before { content: "🔹"; position: absolute; left: 0; font-size: 0.75rem; top: 2px; }
+.card{
+border:1px solid #e5e5e5;
+border-top:5px solid var(--blue);
+border-radius:10px;
+padding:18px;
+background:#fff;
+text-align: left;
+}
 
-        .avis {
-            font-size: 0.85rem;
-            background: #f0f7ff;
-            padding: 10px;
-            border-left: 3px solid var(--primary);
-            margin-top: 15px;
-            border-radius: 0 6px 6px 0;
-            color: #1e40af;
-            font-style: italic;
-        }
+h2{
+margin-top:0;
+font-size:1.2rem;
+color:#0078D4;
+}
 
-        .highlight-cert {
-            background: #e8f3ff;
-            border-left: 5px solid var(--primary);
-            padding: 20px;
-            margin-bottom: 25px;
-            font-size: 0.95rem;
-            text-align: left;
-            border-radius: 0 8px 8px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-        }
+.avis{
+font-size:0.85rem;
+background:#f0f7ff;
+padding:8px;
+border-left:3px solid var(--blue);
+margin-top:8px;
+}
 
-        .btn-group { display: flex; flex-direction: column; gap: 12px; margin: 30px 0 15px 0; align-items: center; }
-        .btn {
-            display: block;
-            width: 100%;
-            max-width: 420px;
-            text-align: center;
-            padding: 18px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: 0.2s;
-            border: none;
-        }
-        .btn-green { background: #00ff88; color: #004d2c; text-transform: uppercase; box-shadow: 0 4px 10px rgba(0,255,136,0.2); }
-        .btn-gold { background: var(--gold); color: #000; text-transform: uppercase; font-weight: 900; box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4); }
+/* Boutons */
+.btn{
+display:block;
+width:100%;
+max-width:420px;
+margin:12px auto;
+padding:15px;
+text-align:center;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+transition:0.2s;
+}
 
-        .btn-note { font-size: 0.82rem; color: #555; margin-top: -4px; margin-bottom: 5px; text-align: center; display: block; padding: 0 10px; font-weight: 600; }
+.btn-trial{
+background:#00ff88;
+color:#004d2c;
+text-transform:uppercase;
+}
 
-        .verdict-card {
-            text-align: center;
-            padding: 30px 15px;
-            background: #f0f7ff;
-            border-radius: 15px;
-            border: 3px solid var(--primary);
-            margin-top: 10px;
-        }
-        .stars { color: #FFD700; font-size: clamp(1.8rem, 10vw, 2.8rem); letter-spacing: 3px; }
-        .big-score { font-size: 2rem; font-weight: bold; color: var(--primary); margin: 10px 0; }
+.btn-gold{
+background:linear-gradient(135deg,#ffd700,#d4af37,#b8860b);
+color:#000;
+padding:18px;
+font-size:1.05rem;
+border-radius:10px;
+font-weight:900;
+}
 
-        .site-link-container {
-            text-align: center;
-            margin: 20px 0 10px 0;
-            font-size: 1.1rem;
-        }
-        .site-link-container a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: bold;
-            border-bottom: 2px solid transparent;
-            transition: 0.2s;
-        }
-        .site-link-container a:hover {
-            border-bottom: 2px solid var(--primary);
-        }
+.verdict{
+margin-top:15px;
+padding:25px;
+border:3px solid var(--blue);
+border-radius:15px;
+text-align:center;
+background:#f0f7ff;
+width: 100%;
+}
 
-        footer { 
-            text-align: center; 
-            padding: 20px; 
-            font-size: 0.85rem; 
-            color: #777; 
-            border-top: 1px solid #e2e8f0;
-            margin-top: 15px;
-        }
-    </style>
+.stars{
+font-size:2.8rem;
+color:var(--gold);
+}
+
+.score{
+font-size:2rem;
+font-weight:bold;
+color:#0078D4;
+}
+
+.footer-site-link {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.footer-site-link a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.footer-site-link a:hover {
+    border-bottom: 2px solid var(--blue);
+}
+
+.footer{
+text-align:center;
+margin-top:10px;
+padding-top: 20px;
+font-size:0.85rem;
+color:#777;
+width: 100%;
+border-top: 1px solid #eee;
+}
+</style>
 </head>
+
 <body>
+<div class="wrapper">
 
-<div class="container">
-    <header>
-        <h1>Outils Windows</h1>
-        
-        <a href="https://www.jeff77.fr/" target="_blank" class="logo-link">
-            <img src="https://static.wixstatic.com/media/096619_cfbad2fcbb654893a35e1865d4b5febf~mv2.jpg/v1/fill/w_560,h_562,al_c,lg_1,q_80,enc_avif,quality_auto/Logo%20Outils%20Windows.jpg" 
-                 alt="Logo Outils Windows" 
-                 class="header-logo">
-        </a>
+<header>
+    <h1>Outils Windows</h1>
 
-        <p style="font-weight:bold; margin-top:0; margin-bottom: 10px; font-size: 1.2em;">Le Couteau Suisse Informatique</p>
-        <div class="version-info">Version actuelle : V49.0.0.5 (Membres Gold)</div>
-        <div class="version-date">Dernière mise à jour : 9 Septembre 2026<br>Version d'essai (bridée): V49.0.0.5<br>100% Portable • Certificat officiel Jeff77 • RSA 2048-bit • Valide 10 ans</div>
-    </header>
+    <a href="https://www.jeff77.fr/" target="_blank" class="logo-link">
+        <img src="https://static.wixstatic.com/media/096619_cfbad2fcbb654893a35e1865d4b5febf~mv2.jpg/v1/fill/w_560,h_562,al_c,lg_1,q_80,enc_avif,quality_auto/Logo%20Outils%20Windows.jpg" 
+             alt="Logo Outils Windows" 
+             class="header-logo">
+    </a>
 
-    <div class="highlight-cert">
-        🚀 <b>Nouveautés Majeures & Change Log Complet :</b><br><br>
-        • <b>V49.0.0.5 - 9 Septembre 2026 :</b> Ajout d'Informations Supplémentaires dans les détails des Disques branchés (Marque et Lettre de Lecteur).<br>
-        • <b>V49.0.0.4 - 9 Septembre 2026 :</b> Mises à jour majeures, améliorations de la robustesse des scripts et optimisations de la compatibilité globale de la suite.<br>
-        • <b>V49.0.0.3 - 7 Septembre 2026 :</b> Mises à jour diverses, optimisations de la stabilité globale et intégration des derniers correctifs de compatibilité système.<br>
-        • <b>V49.0.0.2 - 5 Septembre 2026 :</b> Mises à Jour Diverses.<br>
-        • <b>V49.0.0.1 - 5 Septembre 2026 :</b> Amélioration du Calcul de l'Age du PC et Correction Bugs Mineurs. Calcul et formatage ultra-précis avec affichage strict sur 2 chiffres pour les années, les mois et les jours, garantissant l'absence totale de décalage des bordures de la console.<br>
-        • <b>V49.0.0.0 - 4 Septembre 2026 :</b> Améliorations Diverses et Correction de Bugs Mineurs. Enrichissement global des informations pour le processeur, la mémoire RAM, les cartes vidéos et les disques. Section Disques : Fusion des anciens sous-menus de description et d'état de santé en une vue unique et centralisée, intégrant directement la santé, le type de média et les systèmes de fichiers. Recherche Internet : Optimisation intelligente des requêtes dynamiques pour des recherches plus ciblées et pertinentes sur le web.<br>
-        • <b>V48.0.0.9 - 3 Septembre 2026 :</b> Modernisation du Menu "Matériel Installé" : importante mise à jour globale de l'ensemble des modules matériels (PC/BIOS, CPU, RAM, Disques et Cartes Vidéos) pour finaliser le remplacement définitif de WMIC par des commandes hautement performantes, et enrichissement significatif des informations disponibles avec l'affichage de données techniques plus précises, détaillées et actualisées sur l'ensemble de ces modules.<br>
-        • <b>V48.0.0.8 - 2 Septembre 2026 :</b> Refonte complète de l'ensemble des modules d'outils et de diagnostic système suite au retrait définitif de l'outil WMIC par Microsoft : transition proactive de l'ensemble des fonctionnalités concernées vers des méthodes d'extraction alternatives et pérennes, et intégration de nouvelles routines d'analyse modernes et robustes garantissant une compatibilité et une fiabilité accrue face aux évolutions des environnements Windows récents.<br>
-        • <b>V48.0.0.7 - 28 Août 2026 :</b> Optimisation des modules Réseau et Mises à Jour des Logiciels : amélioration de la gestion des changements d'adresse IP lors des Scans Réseau (nettoyage automatique des anciennes adresses et conservation de l'entrée active), ajout d'un popup d'information signalant les changements d'IP avec indication du type de scan, optimisation du nettoyage des appareils connus pour éviter les doublons, et ajout d'un popup d'information en l'absence de mises à jour logicielles disponibles avant l'affichage du Sommaire.<br>
-        • <b>V48.0.0.6 - 19 Août 2026 :</b> Optimisation du module "Bloqueur de Pubs uBlock Origin" : si aucun navigateur tiers n'est détecté et que Microsoft Edge n'est pas ouvert, le module déclenche désormais automatiquement l'ouverture de Microsoft Edge pour permettre l'installation et la configuration de l'extension.<br>
-        • <b>V48.0.0.5 - 18 Août 2026 :</b> Correction du bug d'aiguillage dans le module "Accès / Réseaux" (Choix 18 : Afficher les Infos du Pilote Wifi), présent depuis l'introduction du scan Réseau Wifi/Ethernet.<br>
-        • <b>V48.0.0.4 - 18 Août 2026 :</b> Optimisation des Scans Réseau (Rapide et Approfondi) avec automatisation de la mise à jour des appareils connus en cas de modification d'adresse IP (adresse MAC existante) et refonte de la structure d'affichage pour fluidifier l'enchaînement des résultats.<br>
-        • <b>V48.0.0.3 - 17 Août 2026 :</b> Ajout d'une nouvelle option dans le Module Windows Defender et le menu "Environnement Sécurisé" permettant d'installer le "Bloqueur de Pubs uBlock Origin (Extension Gratuite)", 100 % compatible avec les antivirus tiers, offrant un blocage efficace des pubs, une protection de la vie privée, une amélioration des performances et un renforcement de la sécurité de navigation.<br>
-        • <b>V48.0.0.2 - 14 Août 2026 :</b> Optimisation complète des colonnes d'affichage et des exports de rapports. Ajustement des largeurs de colonnes pour garantir une lisibilité parfaite sans aucune troncature des données (IP, MAC, Noms d'hôtes).<br>
-        • <b>V48.0.0.1 - 11 Août 2026 :</b> Optimisation de la gestion des adresses IP dynamiques et des appareils connus lors des scans Réseau (mention explicite "(Nouvelle Adresse IP)" et nettoyage automatique des anciennes entrées du même appareil).<br>
-        • <b>V48.0.0.0 - 05 Août 2026 :</b> Ajout d'une Temporisation déclenchée en l'absence de mises à jour logicielles ou de nouveaux appareils détectés. Qu'il s'agisse d'un lancement Automatique ou manuel, le Sommaire s'affiche automatiquement après quelques secondes.<br>
-        • <b>V47.0.0.9 - 03 Août 2026 :</b> Mises à jour mineures, correctifs divers et optimisations de stabilité.<br>
-        • <b>V47.0.0.8 - 30 Juillet 2026 :</b> Ajout de la possibilité d'Activer le Scan Automatique du Réseau au démarrage des Outils Windows (Scan Rapide ou Approfondi).<br>
-        • <b>V47.0.0.7 - 27 Juillet 2026 :</b> Correction d'un bug d'affichage de la durée d'exécution des sauvegardes dans le module Sauvegarder ses Données.<br>
-        • <b>V47.0.0.6 - 27 Juillet 2026 :</b> Améliorations Mineures des Scans Rapide et Approfondi du Réseau Wifi / Ethernet.<br>
-        • <b>V47.0.0.5 - 26 Juillet 2026 :</b> Mises à niveau diverses des modules suite aux dernières MAJ de Windows.<br>
-        • <b>V47.0.0.4 - 24 Juillet 2026 :</b> Ajout de l'Environnement Sécurisé dans le Module Windows Defender, amélioration des scans réseau et des résultats de réparation DISM.<br>
-        • <b>V47.0.0.3 - 21 Juillet 2026 :</b> Ajout du module de Scan Réseau Rapide et Approfondi avec cartographie des appareils et détection d'intrus.<br>
-        • <b>V47.0.0.2 - 13 Juillet 2026 :</b> Mise à niveau générale des outils et optimisation de la stabilité.<br>
-        • <b>V47.0.0.1 - 11 Juillet 2026 :</b> Ajout Activation Optimale de Tous les Paramètres Recommandés dans Audit et Optimisation de Windows Defender (Sécurité Maximale).<br>
-        • <b>V47.0.0.0 - 10 Juillet 2026 :</b> Amélioration de l'affichage de l'audit et de l'optimisation de Windows Defender.<br>
-        • <b>V46.0.0.9 - 10 Juillet 2026 :</b> Ajout Restaurer les Paramètres par Défaut dans le Menu Audit et Optimisation.<br>
-        • <b>V46.0.0.8 - 09 Juillet 2026 :</b> Amélioration de la Détection d'Usure de la Batterie / Ajout Audit et Optimisation de Windows Defender (Sécurité Maximale).<br>
-        • <b>V46.0.0.7 - Mises à niveau :</b> Mise à Niveau des Outils Windows suite aux dernières MAJ de Windows.<br>
-        • <b>V46.0.0.6 - Partitions EFI :</b> Modification du code de vérification de l'Espace Libre sur la Partition EFI.<br>
-        • <b>V46.0.0.5 - Espace EFI & Nettoyage :</b> Ajout de la vérification de l'Espace Libre sur la Partition EFI (50 Mo requis pour Certificats 2023).<br>
-        • <b>V46.0.0.4 - IP Publique :</b> Mises à Niveau diverses et amélioration du Module Adresse IP Publique.<br>
-        • <b>V46.0.0.3 - Mises à jour :</b> Popup d'Avertissement de Mise à Jour (désactivable).<br>
-        • <b>V46.0.0.2 - Assistant :</b> Assistant de navigation (Pop-up guidé) Windows Defender.<br>
-        • <b>V46.0.0.1 - Licences :</b> Versions Gold validité 120 jours et amélioration "LISTER LES FICHIERS EN TEXTE".<br><br>
-        🛡️ <b>Sécurité & Partenariat :</b> Analyse et validation en collaboration directe avec les experts en cybersécurité du laboratoire <b>Kaspersky</b> (<a href="https://opentip.kaspersky.com/" target="_blank">Vérification OpenTip</a>). Signature numérique RSA 2048-bit.
+    <p class="tagline">Le Couteau Suisse Informatique</p>
+    <div class="version">
+        Version actuelle : <b>V49.0.0.6</b> (Membres Gold)
+        <span class="version-date">Dernière mise à jour : 10 Septembre 2026</span>
+        Version d'essai (bridée): V49.0.0.5<br>
+        100% Portable • Certificat officiel Jeff77 • RSA 2048-bit • Valide 10 ans
     </div>
+</header>
 
-    <div class="feature-grid">
+<div class="highlight-cert">
+    🚀 <b>Nouveautés Majeures V49.0.0.6 :</b><br>
+    ✅ <b>Mémoire RAM :</b> Ajout du calcul automatique de la capacité maximale autorisée par barrette et intégration d'un avertissement visuel en synthèse globale.<br>
+    <br>
+    ✅ <b>Menu Matériel Installé :</b><br>
+    • Enrichissement global des informations pour le processeur, la mémoire RAM, les cartes vidéos et les disques.<br>
+    • Section Disques : Fusion des anciens sous-menus de description et d'état de santé en une vue unique et centralisée, intégrant directement la santé, le type de média, les systèmes de fichiers, la marque et la lettre de lecteur.<br>
+    ✅ <b>Recherche Internet :</b> Optimisation intelligente des requêtes dynamiques (intégration du fabricant et du modèle du PC) pour des recherches plus ciblées et pertinentes sur le web.<br>
+    <br>
+    ✅ <b>Développement Rigoureux & Sécurité :</b> Les Outils Windows de Jeff77 sont analysés et validés en collaboration directe avec les experts en cybersécurité du laboratoire <b>Kaspersky</b>.<br>
+    ✅ <b>Transparence Totale :</b> Vous pouvez vérifier l'intégrité des outils en temps réel sur la plateforme officielle <a href="https://opentip.kaspersky.com/" target="_blank">Kaspersky OpenTip</a>.<br>
+    ✅ <b>Engagement Qualité :</b> Chaque version est signée numériquement pour garantir son authenticité et sa sécurité. 🔑<br>
+    <br>
+    <b>Change Log :</b><br>
+    • <b>V49.0.0.6 - 10 Septembre 2026 :</b> Ajout du calcul automatique de la Capacité Maximale Autorisée par Barrette dans le diagnostic RAM, intégration d'un avertissement visuel en Synthèse Globale pour prévenir les erreurs d'achat de mémoire sur les configurations limitées, et amélioration de la recherche Internet des barrettes RAM (ciblage affiné avec le fabricant et le modèle du PC).<br>
+    • <b>V49.0.0.5 - 9 Septembre 2026 :</b> Ajout d'Informations Supplémentaires dans les détails des Disques branchés (Marque et Lettre de Lecteur).<br>
+    • <b>V49.0.0.4 - 9 Septembre 2026 :</b> Amélioration des détails dans le pop-up de changement d'adresse IP lors d'un scan approfondi du réseau, amélioration de la classification des appareils lors des scans réseau Rapide ou Approfondi, et correction d'un bug concernant la détection des certificats Secure Boot UEFI 2023 (introduit par la suppression de WMIC).<br>
+    • <b>V49.0.0.3 - 7 Septembre 2026 :</b> Correction de bugs mineurs.<br>
+    • <b>V49.0.0.2 - 5 Septembre 2026 :</b> Mises à Jour Diverses.<br>
+    • <b>V49.0.0.1 - 5 Septembre 2026 :</b> Amélioration du Calcul de l'Age du PC et Correction Bugs Mineurs.<br>
+    • <b>V49.0.0.0 - 4 Septembre 2026 :</b> Améliorations Diverses et Correction de Bugs Mineurs, enrichissement global du menu Matériel Installé (CPU, RAM, Cartes vidéos, Disques avec fusion de la description et de l'état de santé en une vue unique centralisée), et optimisation intelligente des requêtes dynamiques pour la recherche Internet.<br>
+    • <b>V48.0.0.9 - 3 Septembre 2026 :</b> Modernisation du Menu "Matériel Installé" avec une importante mise à jour globale de l'ensemble des modules matériels (PC/BIOS, CPU, RAM, Disques et Cartes Vidéos) pour finaliser le remplacement définitif de WMIC, et enrichissement significatif des informations disponibles (données techniques plus précises, détaillées et actualisées).<br>
+    • <b>V48.0.0.8 - 2 Septembre 2026 :</b> Refonte complète de l'ensemble des modules d'outils et de diagnostic système suite au retrait définitif de l'outil WMIC par Microsoft (transition vers des méthodes d'extraction alternatives et intégration de nouvelles routines d'analyse modernes et robustes).<br>
+    • <b>V48.0.0.7 - 28 Août 2026 :</b> Optimisation des modules Réseau (gestion des changements d'adresse IP, popups d'information dédiés, nettoyage des doublons) et ajout d'un popup d'information en l'absence de mises à jour logicielles.<br>
+    • <b>V48.0.0.6 - 19 Août 2026 :</b> Optimisation du module "Bloqueur de Pubs uBlock Origin" : Ouverture automatique de Microsoft Edge si aucun navigateur tiers n'est détecté pour permettre une installation fluide.<br>
+    • <b>V48.0.0.5 - 18 Août 2026 :</b> Correction du bug d'aiguillage dans le module "Accès / Réseaux" (Choix 18 : Afficher les Infos du Pilote Wifi), présent depuis l'introduction du scan Réseau Wifi/Ethernet.<br>
+    • <b>V48.0.0.4 - 18 Août 2026 :</b> Optimisation des Scans Réseau (Rapide et Approfondi) avec automatisation de la mise à jour des appareils connus en cas de modification d'adresse IP (adresse MAC existante) et refonte de la structure d'affichage pour fluidifier l'enchaînement des résultats.<br>
+    • <b>V48.0.0.3 - 17 Août 2026 :</b> Ajout d'une nouvelle option dans le Module Windows Defender et le menu "Environnement Sécurisé" permettant d'installer le "Bloqueur de Pubs uBlock Origin (Extension Gratuite)".<br>
+    • <b>V48.0.0.2 - 14 Août 2026 :</b> Élargissement des fenêtres des rapports et tableaux réseau pour permettre un affichage complet des informations (Fabricant, Catégorie, adresses IP, MAC et noms d'hôtes).<br>
+    • <b>V48.0.0.1 - 11 Août 2026 :</b> Optimisation de la gestion des adresses IP dynamiques et des appareils connus lors des scans Réseau (mention explicite "(Nouvelle Adresse IP)" et nettoyage automatique des anciennes entrées du même appareil).<br>
+    • <b>V48.0.0.0 - 05 Août 2026 :</b> Ajout d'une Temporisation déclenchée en l'absence de mises à jour logicielles ou de nouveaux appareils détectés. Sommaire automatique après quelques secondes si aucun élément nouveau n'est trouvé.<br>
+    • <b>V47.0.0.9 - 03 Août 2026 :</b> Mises à jour mineures, correctifs divers et optimisations de stabilité.<br>
+    • <b>V47.0.0.8 - 30 Juillet 2026 :</b> Ajout de la possibilité d'Activer le Scan Automatique du Réseau au démarrage des Outils Windows.<br>
+    • <b>V47.0.0.7 - 28 Juillet 2026 :</b> Correction d'un bug d'affichage de la durée d'exécution des sauvegardes dans le module Sauvegarder ses Données.<br>
+    • <b>V47.0.0.6 - 27 Juillet 2026 :</b> Améliorations Mineures des Scans Rapide et Approfondi du Réseau Wifi / Ethernet.<br>
+    • <b>V47.0.0.5 - 26 Juillet 2026 :</b> Mises à niveau diverses des modules suite aux dernières MAJ de Windows.<br>
+    • <b>V47.0.0.4 - 24 Juillet 2026 :</b> Ajout de l'Environnement Sécurisé dans le Module Windows Defender.<br>
+    • <b>V47.0.0.3 - 21 Juillet 2026 :</b> Ajout du module de Scan Réseau Rapide et Approfondi avec cartographie des appareils et détection d'intrus.<br>
+    • <b>V47.0.0.2 - 13 Juillet 2026 :</b> Mise à niveau générale des outils et optimisation de la stabilité.<br>
+    • <b>V47.0.0.1 - 11 Juillet 2026 :</b> Ajout Activation Optimale de Tous les Paramètres Recommandés dans Audit et Optimisation de Windows Defender.<br>
+    • <b>V47.0.0.0 - 10 Juillet 2026 :</b> Amélioration de l'affichage de l'audit et de l'optimisation de Windows Defender.<br>
+    • <b>V46.0.0.9 - 10 Juillet 2026 :</b> Ajout Restaurer les Paramètres par Défaut dans le Menu Audit et Optimisation de Windows Defender.<br>
+    • <b>V46.0.0.8 - 09 Juillet 2026 :</b> Amélioration de la Détection d'Usure de la Batterie sur les ordinateurs Portables / Ajout Audit et Optimisation de Windows Defender.
+</div>
 
-        <div class="card">
-            <div>
-                <h2>📡 Gestion Wi-Fi Pro (Nouveau V46)</h2>
-                <ul>
-                    <li>Refonte complète des modules sans-fil.</li>
-                    <li>Affichage et exportation des mots de passe Wi-Fi.</li>
-                    <li>Sauvegarde et importation des profils réseau.</li>
-                    <li>Prise en charge intégrale des SSID avec <b>Espaces</b>.</li>
-                    <li>Suppression simplifiée de réseaux obsolètes et accès aux options.</li>
-                </ul>
-            </div>
-            <div class="avis">
-                💡 Analyse Gemini : La prise en charge native des espaces dans les SSID résout un écueil classique de l'API réseau Windows, garantissant une portabilité totale des profils sans-fil.
-            </div>
-        </div>
+<div class="feature-grid">
 
-        <div class="card">
-            <div>
-                <h2>🛡️ Sécurité & Antivirus Avancé</h2>
-                <ul>
-                    <li>Gestion avancée des certificats Secure Boot UEFI et autres certificats 2023.</li>
-                    <li>Mise à jour et scan complet Windows Defender.</li>
-                    <li>Réinitialisation complète de la Sécurité Windows.</li>
-                    <li>Intégration de l'Environnement Sécurisé (Mises à Jour et Scans - V47.0.0.5 & V48.0.0.3).</li>
-                    <li>Option d'installation du bloqueur de pubs uBlock Origin, 100 % compatible avec les antivirus tiers (avec ouverture automatique de Edge si aucun autre navigateur n'est actif - V48.0.0.6).</li>
-                    <li>Assistant de navigation guidé et audit/optimisation (Sécurité Maximale).</li>
-                </ul>
-            </div>
-            <div class="avis">
-                💡 Analyse Gemini : L'intégration d'un espace d'exécution sécurisé et de uBlock Origin élève ce module au niveau des exigences des plus grands standards d'entreprise.
-            </div>
-        </div>
+<div class="card">
+<h2>📡 Gestion Wi-Fi (Nouveau V46)</h2>
+<b>Refonte complète des modules sans-fil.</b><br>
+Afficher et Exporter ses mots de passe Wi-Fi.<br>
+Sauvegarde & Importation des Profils Réseau.<br>
+Prise en charge des SSID avec <b>Espaces</b>.<br>
+Suppression simplifiée de réseaux obsolètes.
 
-        <div class="card">
-            <div>
-                <h2>🛠️ Maintenance, EFI & Logs</h2>
-                <ul>
-                    <li>Change Log exhaustif intégré de toutes les versions.</li>
-                    <li>Audit UEFI & Secure Boot.</li>
-                    <li>Installation et mise à jour de PowerShell & Terminal.</li>
-                    <li>Popups automatiques en fin d'analyses SFC / DISM et de Nettoyage (Amélioré V47.0.0.5).</li>
-                    <li>Correction du bug d'affichage de la durée des sauvegardes (Module Sauvegarder ses Données - V47.0.0.7).</li>
-                    <li>Vérification de l'Espace Libre sur la Partition EFI (50 Mo requis) avec code adapté aux antivirus.</li>
-                    <li>Détection d'usure de la batterie sur ordinateurs portables.</li>
-                </ul>
-            </div>
-            <div class="avis">
-                💡 Analyse Gemini : Le contrôle préventif de l'espace sur la partition EFI sécurise l'application des certificats et évite les pannes de boot inattendues lors des opérations lourdes.
-            </div>
-        </div>
+<div class="avis">
+💬 Avis utilisateur : La gestion des profils avec espaces fonctionne enfin parfaitement, un vrai gain de confort !
+</div>
+</div>
 
-        <div class="card">
-            <div>
-                <h2>⚡ Réseau & Performance</h2>
-                <ul>
-                    <li>Réparation réseau et des couches Wi-Fi / Ethernet optimisée.</li>
-                    <li>Module d'adresse IP publique amélioré et optimisation des requêtes dynamiques pour la recherche Internet (V49.0.0.0).</li>
-                    <li>Scans réseau (V48.0.0.2 & V48.0.0.7) : Optimisation des colonnes, des exports et de la gestion des adresses IP dynamiques avec popups d'information et nettoyage des doublons.</li>
-                    <li>Activation possible du Scan Automatique du Réseau au démarrage (Scan Rapide ou Approfondi).</li>
-                    <li>Temporisation et popup d'information en l'absence de mises à jour logicielles (V48.0.0.0 & V48.0.0.7).</li>
-                    <li>Gestion IP dynamique & MAJ auto (V48.0.0.1, V48.0.0.4 & V48.0.0.7).</li>
-                    <li>Correction d'aiguillage (V48.0.0.5) : Résolution du bug sur le choix 18 (Afficher les Infos du Pilote Wifi) du module "Accès / Réseaux".</li>
-                    <li>Affichage des secondes sur l'horloge de Windows LTSC.</li>
-                    <li>Diagnostics Système, Matériel et Électrique complets (avec enrichissement global processeur/RAM/GPU, vue centralisée Disques incluant marque et lettre de lecteur - V49.0.0.0 & V49.0.0.5, et <b>calcul ultra-précis de l'âge du PC avec formatage strict sur 2 chiffres sans décalage de bordure console - V49.0.0.1</b>).</li>
-                </ul>
-            </div>
-            <div class="avis">
-                💡 Analyse Gemini : Le formatage strict sur deux chiffres pour l'âge du PC assure une présentation console rigoureuse, complétant parfaitement l'arsenal de diagnostic matériel.
-            </div>
-        </div>
+<div class="card">
+<h2>🛡️ Sécurité & Antivirus</h2>
+Gestion avancée des certificats Secure Boot UEFI.<br>
+Mise à Jour et Scan Complet Windows Defender.<br>
+Réinitialisation de la Sécurité Windows.<br>
+<b>Optimisé (V48.0.0.6) :</b> Environnement Sécurisé avec installation automatisée d'uBlock Origin (ouverture forcée de Edge si nécessaire).<br>
+<b>Signature RSA 2048-bit :</b> Certificat officiel Jeff77.
 
-        <div class="card">
-            <div>
-                <h2>🖱️ Menu Contextuel Avancé</h2>
-                <ul>
-                    <li>Gestion centralisée des modes et options d'alimentation.</li>
-                    <li>Fonctions d'urgence : vidage du presse-papier et coupure Wi-Fi rapide.</li>
-                    <li>Outils multimédias : capture d'écran et vidéo intégrée.</li>
-                    <li>Accès direct au Mode Dieu (God Mode).</li>
-                    <li>Outils d'organisation et de gestion des icônes du bureau.</li>
-                </ul>
-            </div>
-            <div class="avis">
-                💡 Analyse Gemini : Regrouper ces commandes critiques dans le clic droit supprime les allers-retours fastidieux dans les menus imbriqués du Panneau de configuration.
-            </div>
-        </div>
+<div class="avis">
+💬 Avis utilisateur : L'installation automatisée d'uBlock Origin rend la sécurisation encore plus intuitive, même sans navigateur tiers !
+</div>
+</div>
 
-        <div class="card">
-            <div>
-                <h2>💾 Migration, Licences & Outils</h2>
-                <ul>
-                    <li>Passage de l'édition Famille vers Pro sans support ISO.</li>
-                    <li>Migration assistée vers Windows 11 25H2 ou Windows LTSC avec ISO.</li>
-                    <li>Gestion des licences : Durée de 120 Jours (Gold) / 90 Jours (Essai).</li>
-                    <li>Module "LISTER LES FICHIERS EN TEXTE" et immunisation USB active.</li>
-                    <li>Mises à jour des problèmes Internet / Store / Sécurité Win / Hosts.</li>
-                </ul>
-            </div>
-            <div class="avis">
-                💡 Analyse Gemini : La possibilité de basculer d'une édition à l'autre sans perte de données représente un gain de temps exceptionnel pour la mise à niveau de postes nomades.
-            </div>
-        </div>
+<div class="card">
+<h2>🛠️ Maintenance & Logs</h2>
+<b>Change Log :</b> Liste détaillée des modifications.<br>
+Audit UEFI & Secure Boot 2023.<br>
+Installation / Mise à jour <b>PowerShell</b> & <b>Terminal</b>.<br>
+Popups automatiques en fin d'analyses SFC / DISM.<br>
+<b>Amélioré (V47.0.0.7) :</b> Correction du bug d'affichage de la durée d'exécution des sauvegardes.
 
-    </div>
+<div class="avis">
+💬 Avis utilisateur : Les résultats et le traitement des réparations DISM sont encore plus performants.
+</div>
+</div>
 
-    <div class="section-box" style="text-align: center;">
-        <h2>🚀 Zone de Téléchargement</h2>
-        <div class="btn-group">
-            <a href="https://www.jeff77.fr/telecharger-essai-outils" class="btn btn-green">
-                ⬇ Télécharger Version d'Essai V49.0.0.5
-            </a>
-            <span class="btn-note">Chaque version d'essai (bridée) est valable 90 Jours.</span>
-            
-            <a href="https://www.jeff77.fr/soutenir" class="btn btn-gold">
-                🏆 DEVENIR MEMBRE GOLD
-            </a>
-            <p style="font-size: 1.05rem; font-weight: bold; color: #333; margin-top: 5px;">ACCÈS COMPLET AU SITE</p>
-            <span class="btn-note" style="margin-top: 0;">Chaque version Gold (V49.0.0.5), complète et non bridée, est valable 120 Jours. Accès illimité aux Téléchargements. Pour les Membres Gold, téléchargez la dernière version dès qu'elle sort, sans limite.</span>
-        </div>
-    </div>
+<div class="card">
+<h2>⚡ Réseau & Performance</h2>
+<b>Réparation Réseau optimisée.</b><br>
+<b>Amélioration : Module Adresse IP Publique.</b><br>
+<b>Amélioré (V47.0.0.6) :</b> Scans Réseau Rapide et Approfondi Wifi / Ethernet optimisés.<br>
+<b>Nouveau (V47.0.0.8) :</b> Activation du Scan Automatique du Réseau au démarrage.<br>
+<b>Nouveau (V48.0.0.0) :</b> Temporisation déclenchée en l'absence de mises à jour ou de nouveaux appareils.<br>
+<b>Nouveau (V48.0.0.1) :</b> Gestion intelligente des adresses IP dynamiques.<br>
+<b>Nouveau (V48.0.0.2) :</b> Élargissement des fenêtres des rapports et tableaux réseau.<br>
+<b>Nouveau (V48.0.0.4) :</b> Automatisation de la mise à jour du fichier des appareils connus.<br>
+<b>Nouveau (V48.0.0.5) :</b> Correction du bug d'aiguillage sur le choix 18 du module "Accès / Réseaux".<br>
+<b>Amélioré (V48.0.0.7) :</b> Gestion avancée des changements d'IP avec popups d'information et nettoyage des doublons.<br>
+<b>Amélioré (V48.0.0.8) :</b> Migration globale vers des méthodes d'extraction alternatives suite à la suppression de WMIC.<br>
+<b>Amélioré (V48.0.0.9) :</b> Importante mise à jour du menu "Matériel Installé" (PC/BIOS, CPU, RAM, Disques, Cartes Vidéos) avec données plus précises.<br>
+<b>Nouveau (V49.0.0.0) :</b> Enrichissement global des infos matérielles et vue unique/centralisée pour les Disques (santé, type, systèmes de fichiers).<br>
+<b>Amélioré (V49.0.0.0) :</b> Optimisation des requêtes dynamiques pour la recherche Internet.<br>
+<b>Amélioré (V49.0.0.1) :</b> Calcul ultra-précis de l'âge du PC avec formatage strict sur 2 chiffres (années, mois, jours) sans décalage de bordure console.<br>
+<b>Amélioré (V49.0.0.4) :</b> Amélioration des détails du pop-up de changement d'IP et de la classification des appareils (Rapide/Approfondi).<br>
+<b>Nouveau (V49.0.0.5) :</b> Ajout d'informations supplémentaires dans les détails des disques branchés (Marque et Lettre de Lecteur).<br>
+<b>Nouveau (V49.0.0.6) :</b> Calcul automatique de la capacité maximale par barrette RAM et avertissement visuel en synthèse globale.<br>
+<b>Diagnostics Système, Matériel et Électrique.</b>
 
-    <div class="verdict-card">
-        <div class="stars">★★★★★</div>
-        <div class="big-score">20 / 20</div>
-        <p><strong>Évaluation de Gemini :</strong> La V49.0.0.5 consolide l'ensemble des scripts de la suite avec l'ajout d'informations supplémentaires sur les disques (marque et lettre de lecteur), tout en maintenant les standards d'excellence de la gamme V49.</p>
-    </div>
+<div class="avis">
+💬 Avis utilisateur : La transition proactive vers de nouvelles méthodes d'extraction garantit une compatibilité parfaite sur tous les PC !
+</div>
+</div>
 
-    <div class="site-link-container">
-        <a href="https://www.jeff77.fr/" target="_blank">🌐 Accéder au site officiel : www.jeff77.fr</a>
-    </div>
+<div class="card">
+<h2>🖱️ Menu Contextuel Avancé</h2>
+Modes et Options d'alimentation.<br>
+Vider presse-papier & Coupure WiFi urgente.<br>
+Capture écran & vidéo.<br>
+Mode Dieu (God Mode).<br>
+Gestion des icônes du bureau.
 
-    <footer>
-        © 2026 Jeff77 Tech • Solution portable signée numériquement • V49.0.0.5
-    </footer>
+<div class="avis">
+💬 Avis utilisateur : Toutes les fonctions vitales de Windows sont à portée de clic droit.
+</div>
+</div>
+
+<div class="card">
+<h2>💾 Migration & Licence</h2>
+<b>Passage Famille vers Pro (sans ISO).</b><br>
+<b>Migrer vers W11 25H2 ou Windows LTSC (avec ISO).</b><br>
+Durée : <b>120 Jours</b> (Gold) / <b>90 Jours</b> (Essai).<br>
+Mises à jour fréquentes des versions Gold.
+
+<div class="avis">
+💬 Avis utilisateur : Migrer de Famille vers Pro se fait en quelques minutes sans perdre de fichiers.
+</div>
+</div>
 
 </div>
 
+<div style="margin-top:40px;text-align:center;width:100%;">
+<h2>🚀 Zone de Téléchargement</h2>
+<a href="https://www.jeff77.fr/telecharger-essai-outils" class="btn btn-trial">
+⬇ Télécharger Version d'Essai V49.0.0.5
+</a>
+<p style="font-size: 0.8rem; color: #666;">Chaque version d'essai (bridée) est valable 90 Jours.</p>
+</div>
+
+<div class="verdict">
+<div class="stars">★★★★★</div>
+<div class="score">20 / 20</div>
+<p>La V49.0.0.6 intègre le calcul automatique de la capacité maximale par barrette RAM et un avertissement visuel en synthèse globale.</p>
+</div>
+
+<div style="text-align:center; width:100%;">
+    <a href="https://www.jeff77.fr/soutenir" class="btn btn-gold">
+    🏆 DEVENIR MEMBRE GOLD
+    </a>
+    <p style="font-size: 1.05rem; font-weight: bold; color: #333; margin-top: 10px;">ACCÈS COMPLET AU SITE</p>
+    <p style="font-size: 0.8rem; color: #666; margin-top: 5px; margin-bottom: 20px;">Chaque version Gold (V49.0.0.6), complète et non bridée, est valable 120 Jours. Accès illimité aux Téléchargements. Pour les Membres Gold, téléchargez la dernière version dès qu'outils sort, sans limite.</p>
+</div>
+
+<div class="footer-site-link">
+    <a href="https://www.jeff77.fr/" target="_blank">🌐 Accéder au site officiel : www.jeff77.fr</a>
+</div>
+
+<div class="footer">
+© 2026 Jeff77 Tech • Solution portable signée numériquement • V49.0.0.6
+</div>
+
+</div>
 </body>
 </html>
